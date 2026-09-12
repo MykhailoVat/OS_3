@@ -8,6 +8,10 @@ class Kernel:
         self.processes_list = []
         self.current_process_id = 0
         self.process_count = 0
+        self.task = None
+
+    def start(self):
+        self.task = asyncio.create_task(self.run())
 
     async def run(self):
         while True:

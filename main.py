@@ -18,7 +18,7 @@ async def run_system():
     mmu = MMU()
     kernel = Kernel(mmu)
 
-    asyncio.create_task(kernel.run())
+    kernel.start()
 
     while True:
         kernel.append_process(random.choice(processes))
