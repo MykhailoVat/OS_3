@@ -8,21 +8,24 @@ from process import Process
 from mmu import MMU
 from kernel import Kernel
 
+def create_process():
+    addresses = random.choice([
+        ['0x1000', '0x2000', '0x3000'],
+        ['0xABCD', '0x1234', '0x5678'],
+        ['0x1111', '0x2222', '0x3333']
+    ])
+
+    return Process(addresses)
+
 async def run_system():
-    process1 = Process([0x1000, 0x2000, 0x3000])
-    process2 = Process([0xABCD, 0x1234, 0x5678])
-    process3 = Process([0x1111, 0x2222, 0x3333])
-
-    processes = [process1, process2, process3]
-
     mmu = MMU()
     kernel = Kernel(mmu)
 
     kernel.start()
 
     while True:
-        kernel.append_process(random.choice(processes))
-        await asyncio.sleep(0)
+        kernel.append_process(create_process())
+        await asyncio.sleep(1)
 
 
 if __name__ == "__main__":
