@@ -25,7 +25,7 @@ async def run_system():
 
     while True:
         kernel.append_process(create_process())
-        await asyncio.sleep(1)
+        await asyncio.sleep(0)
 
 
 if __name__ == "__main__":

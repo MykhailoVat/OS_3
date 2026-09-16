@@ -30,8 +30,8 @@ class Kernel:
             mapped_address = self.mmu.map_address(v_address)
             print(mapped_address)
 
-            # value 1 for slow stdout demonstration
-            await asyncio.sleep(0)
+            # value for slow stdout demonstration
+            await asyncio.sleep(1)
 
 
     def append_process(self, process):
