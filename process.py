@@ -1,7 +1,8 @@
 # process
 
 class Process:
-    def __init__(self, v_addresses):
+    def __init__(self, name, v_addresses):
+        self.name = name
         self._v_addresses = v_addresses
         self._current_address = 0
 

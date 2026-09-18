@@ -2,7 +2,10 @@
 
 import asyncio
 
-class Kernel:
+from singleton import Singleton
+
+class Kernel(metaclass=Singleton):
+
     def __init__(self, mmu):
         self.mmu = mmu
         self.processes_list = []
