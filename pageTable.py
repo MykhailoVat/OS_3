@@ -1,6 +1,6 @@
 # pageTable
 
-from singleton import Singleton
+from opt.singleton import Singleton
 
 class PageTable(metaclass=Singleton):
     def __init__(self, amount):

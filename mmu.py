@@ -1,6 +1,8 @@
 # mmu
 
-class MMU:
+from opt.singleton import Singleton
+
+class MMU(metaclass=Singleton):
     def __init__(self):
         pass
 

@@ -1,6 +1,6 @@
 # physicalMemory
 
-from singleton import Singleton
+from opt.singleton import Singleton
 
 class Frame:
     def __init__(self, size, base):

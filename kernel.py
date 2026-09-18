@@ -2,7 +2,7 @@
 
 import asyncio
 
-from singleton import Singleton
+from opt.singleton import Singleton
 
 class Kernel(metaclass=Singleton):
 
