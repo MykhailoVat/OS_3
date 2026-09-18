@@ -6,10 +6,13 @@ class Frame:
 class PhysicalMemory:
     def __init__(self, capacity = 65536, frame_size = 4096): #64 and 4 KiB
         self.frame_list = []
+        self.frame_count = capacity // frame_size
 
-        frame_count = capacity // frame_size
         base = 0x0000
-        for i in range(frame_count):
+        for i in range(self.frame_count):
             frame = Frame(frame_size, base)
             self.frame_list.append(frame)
             base += frame_size
+
+    def get_frame_count(self):
+        return self.frame_count
