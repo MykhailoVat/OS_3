@@ -6,8 +6,10 @@ from opt.singleton import Singleton
 
 class Kernel(metaclass=Singleton):
 
-    def __init__(self, mmu):
+    def __init__(self, mmu, fs):
         self.mmu = mmu
+        self.fs = fs
+
         self.processes_list = []
         self.current_process_id = 0
         self.process_count = 0
@@ -31,7 +33,10 @@ class Kernel(metaclass=Singleton):
 
             # not mapped at this point of development
             mapped_address = self.mmu.map_address(v_address)
-            print(mapped_address)
+
+            # print
+            print(f'process_name: {current_process.name}')
+            print(f'address: {mapped_address}')
 
             # value for slow stdout demonstration
             await asyncio.sleep(1)
