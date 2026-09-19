@@ -1,8 +1,6 @@
 # pageTable
 
-from opt.singleton import Singleton
-
-class PageTable(metaclass=Singleton):
+class PageTable:
     def __init__(self, amount):
         self.pages = [
             {"P": False, "R": False, "M": False, "PPN": None}
