@@ -2,6 +2,7 @@
 
 import asyncio
 
+from opt.pageFault import PageFault
 from opt.singleton import Singleton
 
 class Kernel(metaclass=Singleton):
@@ -34,13 +35,17 @@ class Kernel(metaclass=Singleton):
                 self.processes_list.pop(self.current_process_id)
                 continue
 
-            # not mapped at this point of development
-            mapped_address = self.mmu.map_address(v_address,self.current_process.table)
+            try:
+                p_address = self.mmu.map_address(
+                    v_address,
+                    self.current_process.table.pages
+                )
+            except PageFault as fault:
+                self.handle_page_fault()
 
             # print
             print(f'process_name: {self.current_process.name}')
             print(f'address: {v_address}')
-            print(f'address: {mapped_address}')
 
             # value for slow stdout demonstration
             await asyncio.sleep(1)
@@ -49,3 +54,6 @@ class Kernel(metaclass=Singleton):
     def append_process(self, process):
         self.processes_list.append(process)
         self.process_count += 1
+
+    def handle_page_fault(self):
+        print("Page Fault")

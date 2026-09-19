@@ -25,7 +25,7 @@ def create_process():
     amount = random.randint(MIN_ACCESSES,MAX_ACCESSES)
     accesses = generate_accesses(len(fs_data[name]),amount)
 
-    return Process(name, accesses, PAGE_SIZE)
+    return Process(name, accesses, fs_data[name],PAGE_SIZE)
 
 async def run_system():
     mmu = MMU(PAGE_SIZE)

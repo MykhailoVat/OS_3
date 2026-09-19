@@ -2,8 +2,8 @@
 from pageTable import PageTable
 
 class Process:
-    def __init__(self, name, v_addresses, page_size):
-        amount = (len(v_addresses) + page_size - 1) // page_size
+    def __init__(self, name, v_addresses, data, page_size):
+        amount = (len(data) + page_size - 1) // page_size
         self.table = PageTable(amount)
 
         self.name = name
