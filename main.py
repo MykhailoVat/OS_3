@@ -4,6 +4,8 @@ from time import sleep
 import random
 import asyncio
 
+from opt.data import fs_data
+from fileSystem import FileSystem
 from process import Process
 from mmu import MMU
 from kernel import Kernel
@@ -21,6 +23,8 @@ def create_process():
 
 async def run_system():
     mmu = MMU()
+    fs = FileSystem(fs_data)
+
     kernel = Kernel(mmu)
 
     kernel.start()
