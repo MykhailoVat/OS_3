@@ -11,11 +11,10 @@ class MMU(metaclass=Singleton):
         v_page = v_address // self.page_size
         offset = v_address % self.page_size
 
-        if not table[v_page]["P"]:
+        if not table.get_p(v_page):
             raise PageFault(v_page)
 
         return [v_page, offset]
 
-    @property
     def get_page_size(self):
         return self.page_size

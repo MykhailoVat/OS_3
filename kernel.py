@@ -2,7 +2,6 @@
 
 import asyncio
 
-from mmu import MMU
 from opt.pageFault import PageFault
 from opt.singleton import Singleton
 
@@ -17,11 +16,10 @@ class Kernel(metaclass=Singleton):
         self.current_process = None
         self.current_process_id = 0
 
-        self.process_count = 0
-        self.task = None
+        self.task_run = None
 
     def start(self):
-        self.task = asyncio.create_task(self.run())
+        self.task_run = asyncio.create_task(self.run())
 
     async def run(self):
         while True:
@@ -55,7 +53,7 @@ class Kernel(metaclass=Singleton):
             await asyncio.sleep(1)
 
     def handle_page_fault(self, v_page):
-        page_size = self.mmu.get_page_size
+        page_size = self.mmu.get_page_size()
         name = self.current_process.get_name()
 
         offset = page_size * v_page
@@ -66,10 +64,9 @@ class Kernel(metaclass=Singleton):
 
         self.memory.fill_frame(T_good_frame, data)
 
-        self.current_process.set_table_p(v_page, True)
-        self.current_process.set_table_ppn(v_page, T_good_frame)
+        self.current_process.set_p(v_page, True)
+        self.current_process.set_ppn(v_page, T_good_frame)
 
 
     def append_process(self, process):
         self.processes_list.append(process)
-        self.process_count += 1

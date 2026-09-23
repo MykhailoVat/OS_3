@@ -8,23 +8,23 @@ class Process:
 
         self.name = name
         self.accesses = accesses
-        self._current_address = 0
+        self.current_address = 0
 
     def point_next(self):
-        self._current_address +=1
+        self.current_address +=1
 
     def get_current_address(self):
-        if self._current_address >= len(self.accesses):
+        if self.current_address >= len(self.accesses):
             return None
 
-        address = self.accesses[self._current_address]
+        address = self.accesses[self.current_address]
         return address
 
     def get_name(self):
         return self.name
 
-    def set_table_p(self, page, value):
-        self.table.pages[page]["P"] = value
+    def set_p(self, page, value):
+        self.table.set_p(page, value)
 
-    def set_table_ppn(self, page, value):
-        self.table.pages[page]["PPN"] = value
+    def set_ppn(self, page, value):
+        self.table.set_ppn(page, value)

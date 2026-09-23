@@ -4,8 +4,7 @@ from opt.singleton import Singleton
 
 class Frame:
     def __init__(self, size, base):
-        self.size = size # do i need this?
-        self.base = base # do i need this?
+        self.base = base
         self.data = [0 for _ in range(size)]
 
     def insert_data(self, data):
