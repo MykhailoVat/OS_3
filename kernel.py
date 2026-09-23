@@ -2,6 +2,7 @@
 
 import asyncio
 
+from mmu import MMU
 from opt.pageFault import PageFault
 from opt.singleton import Singleton
 
@@ -29,6 +30,7 @@ class Kernel(metaclass=Singleton):
                 continue
 
             self.current_process = self.processes_list[self.current_process_id]
+
             v_address = self.current_process.get_current_address()
 
             if v_address is None:
@@ -40,8 +42,10 @@ class Kernel(metaclass=Singleton):
                     v_address,
                     self.current_process.table.pages
                 )
+
+                self.current_process.point_next()
             except PageFault as fault:
-                self.handle_page_fault()
+                self.handle_page_fault(fault.v_page)
 
             # print
             print(f'process_name: {self.current_process.name}')
@@ -50,10 +54,18 @@ class Kernel(metaclass=Singleton):
             # value for slow stdout demonstration
             await asyncio.sleep(1)
 
+    def handle_page_fault(self, v_page):
+        page_size = self.mmu.get_page_size
+        name = self.current_process.get_name()
+
+        offset = page_size * v_page
+        data = self.fs.read_data(name, offset, page_size)
+
+        self.memory.fill_frame(data)
+
+        self.current_process.table.pages[v_page]["P"] = True
+
 
     def append_process(self, process):
         self.processes_list.append(process)
         self.process_count += 1
-
-    def handle_page_fault(self):
-        print("Page Fault")

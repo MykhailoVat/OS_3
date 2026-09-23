@@ -15,5 +15,10 @@ class Process:
             return None
 
         address = self.accesses[self._current_address]
-        self._current_address += 1
         return address
+
+    def get_name(self):
+        return self.name
+
+    def point_next(self):
+        self._current_address +=1

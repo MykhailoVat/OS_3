@@ -15,3 +15,7 @@ class MMU(metaclass=Singleton):
             raise PageFault(v_page)
 
         return [v_page, offset]
+
+    @property
+    def get_page_size(self):
+        return self.page_size

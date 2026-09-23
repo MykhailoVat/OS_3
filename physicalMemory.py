@@ -18,5 +18,9 @@ class PhysicalMemory(metaclass=Singleton):
             self.frame_list.append(frame)
             base += frame_size
 
+    def fill_frame(self, data):
+        print("fill frame:")
+        print(data)
+
     def get_frame_count(self):
         return self.frame_count
