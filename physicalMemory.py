@@ -4,8 +4,13 @@ from opt.singleton import Singleton
 
 class Frame:
     def __init__(self, size, base):
-        self.size = size
-        self.base = base
+        self.size = size # do i need this?
+        self.base = base # do i need this?
+        self.data = [0 for _ in range(size)]
+
+    def insert_data(self, data):
+        self.data = data
+
 
 class PhysicalMemory(metaclass=Singleton):
     def __init__(self, capacity, frame_size):
@@ -18,9 +23,10 @@ class PhysicalMemory(metaclass=Singleton):
             self.frame_list.append(frame)
             base += frame_size
 
-    def fill_frame(self, data):
-        print("fill frame:")
-        print(data)
+    def fill_frame(self, frame_id, data):
+        frame = self.frame_list[frame_id]
+        frame.insert_data(data)
+        print(frame.data)
 
     def get_frame_count(self):
         return self.frame_count

@@ -10,6 +10,9 @@ class Process:
         self.accesses = accesses
         self._current_address = 0
 
+    def point_next(self):
+        self._current_address +=1
+
     def get_current_address(self):
         if self._current_address >= len(self.accesses):
             return None
@@ -20,5 +23,8 @@ class Process:
     def get_name(self):
         return self.name
 
-    def point_next(self):
-        self._current_address +=1
+    def set_table_p(self, page, value):
+        self.table.pages[page]["P"] = value
+
+    def set_table_ppn(self, page, value):
+        self.table.pages[page]["PPN"] = value

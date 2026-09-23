@@ -61,9 +61,13 @@ class Kernel(metaclass=Singleton):
         offset = page_size * v_page
         data = self.fs.read_data(name, offset, page_size)
 
-        self.memory.fill_frame(data)
+        # find good frame
+        T_good_frame = 0
 
-        self.current_process.table.pages[v_page]["P"] = True
+        self.memory.fill_frame(T_good_frame, data)
+
+        self.current_process.set_table_p(v_page, True)
+        self.current_process.set_table_ppn(v_page, T_good_frame)
 
 
     def append_process(self, process):
