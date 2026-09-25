@@ -38,7 +38,7 @@ class Kernel(metaclass=Singleton):
             try:
                 p_address = self.mmu.map_address(
                     v_address,
-                    self.current_process.table.pages
+                    self.current_process.get_table()
                 )
 
                 self.current_process.point_next()
@@ -64,8 +64,8 @@ class Kernel(metaclass=Singleton):
 
         self.memory.fill_frame(T_good_frame, data)
 
-        self.current_process.set_p(v_page, True)
-        self.current_process.set_ppn(v_page, T_good_frame)
+        self.current_process.page_set_p(v_page, True)
+        self.current_process.page_set_ppn(v_page, T_good_frame)
 
 
     def append_process(self, process):

@@ -23,8 +23,11 @@ class Process:
     def get_name(self):
         return self.name
 
-    def set_p(self, page, value):
+    def get_table(self):
+        return self.table
+
+    def page_set_p(self, page, value):
         self.table.set_p(page, value)
 
-    def set_ppn(self, page, value):
+    def page_set_ppn(self, page, value):
         self.table.set_ppn(page, value)

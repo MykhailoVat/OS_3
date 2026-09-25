@@ -2,16 +2,19 @@
 
 class PageTable:
     def __init__(self, amount):
-        self.pages = [
+        self.content = [
             {"P": False, "R": False, "M": False, "PPN": None}
             for _ in range(amount)
         ]
 
+    def get_pages(self):
+        return self.content
+
     def set_p(self, page, value):
-        self.pages[page]["P"] = value
+        self.content[page]["P"] = value
 
     def set_ppn(self, page, value):
-        self.pages[page]["PPN"] = value
+        self.content[page]["PPN"] = value
 
     def get_p(self, page):
-        return self.pages[page]["P"]
+        return self.content[page]["P"]
