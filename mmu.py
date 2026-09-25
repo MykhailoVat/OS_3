@@ -14,7 +14,9 @@ class MMU(metaclass=Singleton):
         if not table.get_p(v_page):
             raise PageFault(v_page)
 
-        return [v_page, offset]
+        frame_id = table.get_ppn(v_page)
+
+        return [frame_id, offset]
 
     def get_page_size(self):
         return self.page_size

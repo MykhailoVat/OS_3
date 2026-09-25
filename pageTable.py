@@ -18,3 +18,6 @@ class PageTable:
 
     def get_p(self, page):
         return self.content[page]["P"]
+
+    def get_ppn(self, page):
+        return self.content[page]["PPN"]

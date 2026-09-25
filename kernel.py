@@ -36,18 +36,25 @@ class Kernel(metaclass=Singleton):
                 continue
 
             try:
-                p_address = self.mmu.map_address(
+                frame_id, offset = self.mmu.map_address(
                     v_address,
                     self.current_process.get_table()
                 )
 
-                self.current_process.point_next()
-            except PageFault as fault:
-                self.handle_page_fault(fault.v_page)
+                data = self.memory.read_data(frame_id, offset)
 
-            # print
-            print(f'process_name: {self.current_process.name}')
-            print(f'address: {v_address}')
+                # print
+                print(f'process_name: {self.current_process.name}')
+                print(f'v_address: {v_address}')
+                print(f'p_address: {frame_id} + {offset}')
+                print(data)
+                print(" ")
+
+                self.current_process.point_next()
+
+            except PageFault as fault:
+                # print
+                self.handle_page_fault(fault.v_page)
 
             # value for slow stdout demonstration
             await asyncio.sleep(1)
