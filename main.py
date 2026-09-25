@@ -13,7 +13,7 @@ from mmu import MMU
 from kernel import Kernel
 
 # CONSTANTS
-MEMORY_SIZE = 128
+MEMORY_SIZE = 64
 PAGE_SIZE = FRAME_SIZE = 4
 
 MIN_ACCESSES = 5

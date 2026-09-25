@@ -59,13 +59,16 @@ class Kernel(metaclass=Singleton):
         offset = page_size * v_page
         data = self.fs.read_data(name, offset, page_size)
 
-        # find good frame
-        T_good_frame = 0
+        frame_id = self.memory.find_free_frame()
 
-        self.memory.fill_frame(T_good_frame, data)
+        if frame_id is None:
+            print("No free memory")
+            return
+
+        self.memory.fill_frame(frame_id, data)
 
         self.current_process.page_set_p(v_page, True)
-        self.current_process.page_set_ppn(v_page, T_good_frame)
+        self.current_process.page_set_ppn(v_page, frame_id)
 
 
     def append_process(self, process):
