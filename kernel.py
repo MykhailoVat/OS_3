@@ -2,8 +2,8 @@
 
 import asyncio
 
-from opt.pageFault import PageFault
-from opt.singleton import Singleton
+from opt.obj.pageFault import PageFault
+from opt.obj.singleton import Singleton
 
 class Kernel(metaclass=Singleton):
 
@@ -29,11 +29,14 @@ class Kernel(metaclass=Singleton):
 
             self.current_process = self.processes_list[self.current_process_id]
 
-            v_address = self.current_process.get_current_address()
+            access = self.current_process.get_current_access()
 
-            if v_address is None:
+            if access is None:
                 self.processes_list.pop(self.current_process_id)
                 continue
+
+            v_address = access.address
+            operation = access.operation
 
             try:
                 frame_id, offset = self.mmu.map_address(
@@ -47,6 +50,7 @@ class Kernel(metaclass=Singleton):
                 print(f'process_name: {self.current_process.name}')
                 print(f'v_address: {v_address}')
                 print(f'p_address: {frame_id} + {offset}')
+                print(f'operation: {operation}')
                 print(data)
                 print(" ")
 
@@ -57,6 +61,7 @@ class Kernel(metaclass=Singleton):
                 self.handle_page_fault(fault.v_page)
 
             # value for slow stdout demonstration
+            # however, the function is necessary
             await asyncio.sleep(1)
 
     def handle_page_fault(self, v_page):

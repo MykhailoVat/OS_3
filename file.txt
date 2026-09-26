@@ -1,22 +1,50 @@
-[99, 248, 46, 112]
-process_name: p1.bin
+[161, 5, 211, 110]
+process_name: p2.bin
+v_address: 0
+p_address: 0 + 0
+operation: AccessType.WRITE
+161
+ 
+process_name: p2.bin
+v_address: 0
+p_address: 0 + 0
+operation: AccessType.READ
+161
+ 
+process_name: p2.bin
+v_address: 1
+p_address: 0 + 1
+operation: AccessType.READ
+5
+ 
+process_name: p2.bin
+v_address: 0
+p_address: 0 + 0
+operation: AccessType.READ
+161
+ 
+[103, 190, 82, 3]
+process_name: p2.bin
 v_address: 22
-frame_id: 0
-v_address: 2
-process_name: p1.bin
-v_address: 23
-frame_id: 0
-v_address: 3
-process_name: p1.bin
-v_address: 23
-frame_id: 0
-v_address: 3
-process_name: p1.bin
-v_address: 23
-frame_id: 0
-v_address: 3
-[241, 12, 133, 57]
-process_name: p1.bin
-v_address: 14
-frame_id: 1
-v_address: 2
+p_address: 1 + 2
+operation: AccessType.READ
+82
+ 
+process_name: p2.bin
+v_address: 21
+p_address: 1 + 1
+operation: AccessType.READ
+190
+ 
+process_name: p2.bin
+v_address: 22
+p_address: 1 + 2
+operation: AccessType.READ
+82
+ 
+process_name: p2.bin
+v_address: 22
+p_address: 1 + 2
+operation: AccessType.READ
+82
+ 

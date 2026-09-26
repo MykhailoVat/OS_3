@@ -8,17 +8,17 @@ class Process:
 
         self.name = name
         self.accesses = accesses
-        self.current_address = 0
+        self.current_access = 0
 
     def point_next(self):
-        self.current_address +=1
+        self.current_access +=1
 
-    def get_current_address(self):
-        if self.current_address >= len(self.accesses):
+    def get_current_access(self):
+        if self.current_access >= len(self.accesses):
             return None
 
-        address = self.accesses[self.current_address]
-        return address
+        access = self.accesses[self.current_access]
+        return access
 
     def get_name(self):
         return self.name

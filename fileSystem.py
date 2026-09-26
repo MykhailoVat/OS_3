@@ -1,6 +1,6 @@
 # fileSystem
 
-from opt.singleton import Singleton
+from opt.obj.singleton import Singleton
 
 class FileSystem(metaclass=Singleton):
     def __init__(self, data):

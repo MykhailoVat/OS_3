@@ -1,7 +1,7 @@
 # mmu
 
-from opt.singleton import Singleton
-from opt.pageFault import PageFault
+from opt.obj.singleton import Singleton
+from opt.obj.pageFault import PageFault
 
 class MMU(metaclass=Singleton):
     def __init__(self, page_size):

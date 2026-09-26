@@ -1,14 +1,12 @@
 #main
 
-import random
 import asyncio
 
-from opt.data import fs_data
-from opt.generate_access import generate_accesses
+from opt.obj.data import fs_data
+from opt.func.create_process import create_process
 
 from fileSystem import FileSystem
 from physicalMemory import PhysicalMemory
-from process import Process
 from mmu import MMU
 from kernel import Kernel
 
@@ -18,13 +16,6 @@ PAGE_SIZE = FRAME_SIZE = 4
 
 MIN_ACCESSES = 5
 MAX_ACCESSES = 15
-
-def create_process():
-    name = random.choice([*fs_data.keys()])
-    amount = random.randint(MIN_ACCESSES,MAX_ACCESSES)
-    accesses = generate_accesses(len(fs_data[name]),amount)
-
-    return Process(name, accesses, fs_data[name], PAGE_SIZE)
 
 async def run_system():
     mmu = MMU(PAGE_SIZE)
@@ -36,7 +27,8 @@ async def run_system():
     kernel.start()
 
     while True:
-        kernel.append_process(create_process())
+        proc = create_process(MIN_ACCESSES, MAX_ACCESSES, fs_data, PAGE_SIZE)
+        kernel.append_process(proc)
         await asyncio.sleep(0)
 
 
