@@ -4,6 +4,8 @@ import asyncio
 
 from opt.obj.pageFault import PageFault
 from opt.obj.singleton import Singleton
+from opt.func.create_process import create_process
+from opt.obj.pidAllocator import PIDAllocator
 
 class Kernel(metaclass=Singleton):
 
@@ -11,6 +13,8 @@ class Kernel(metaclass=Singleton):
         self.mmu = mmu
         self.fs = fs
         self.memory = memory
+
+        self.allocator = PIDAllocator()
 
         self.processes_list = []
         self.current_process = None
@@ -48,6 +52,7 @@ class Kernel(metaclass=Singleton):
 
                 # print
                 print(f'process_name: {self.current_process.name}')
+                print(f'PID: {self.current_process.pid}')
                 print(f'v_address: {v_address}')
                 print(f'p_address: {frame_id} + {offset}')
                 print(f'operation: {operation}')
@@ -83,5 +88,7 @@ class Kernel(metaclass=Singleton):
         self.current_process.page_set_ppn(v_page, frame_id)
 
 
-    def append_process(self, process):
+    def create_process(self, min_acc, max_acc, fs_data, p_size):
+        pid = self.allocator.allocate()
+        process = create_process(pid, min_acc, max_acc, fs_data, p_size)
         self.processes_list.append(process)

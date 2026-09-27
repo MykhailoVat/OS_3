@@ -1,6 +1,6 @@
 import random
 
-from memoryAccess import MemoryAccess
+from opt.obj.memoryAccess import MemoryAccess
 from opt.obj.accessType import AccessType
 
 def generate_accesses(data_size, amount):

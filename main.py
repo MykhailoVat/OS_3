@@ -27,8 +27,7 @@ async def run_system():
     kernel.start()
 
     while True:
-        proc = create_process(MIN_ACCESSES, MAX_ACCESSES, fs_data, PAGE_SIZE)
-        kernel.append_process(proc)
+        kernel.create_process(MIN_ACCESSES, MAX_ACCESSES, fs_data, PAGE_SIZE)
         await asyncio.sleep(0)
 
 

@@ -1,50 +1,225 @@
-[161, 5, 211, 110]
-process_name: p2.bin
-v_address: 0
-p_address: 0 + 0
-operation: AccessType.WRITE
-161
- 
-process_name: p2.bin
-v_address: 0
-p_address: 0 + 0
-operation: AccessType.READ
-161
- 
-process_name: p2.bin
-v_address: 1
+[69, 144, 28, 233]
+process_name: p3.bin
+PID: 0
+v_address: 29
 p_address: 0 + 1
 operation: AccessType.READ
-5
+144
  
-process_name: p2.bin
-v_address: 0
+process_name: p3.bin
+PID: 0
+v_address: 30
+p_address: 0 + 2
+operation: AccessType.WRITE
+28
+ 
+[113, 162, 56, 219]
+process_name: p3.bin
+PID: 0
+v_address: 26
+p_address: 1 + 2
+operation: AccessType.READ
+56
+ 
+process_name: p3.bin
+PID: 0
+v_address: 27
+p_address: 1 + 3
+operation: AccessType.READ
+219
+ 
+process_name: p3.bin
+PID: 0
+v_address: 28
+p_address: 0 + 0
+operation: AccessType.WRITE
+69
+ 
+process_name: p3.bin
+PID: 0
+v_address: 29
+p_address: 0 + 1
+operation: AccessType.READ
+144
+ 
+process_name: p3.bin
+PID: 0
+v_address: 28
 p_address: 0 + 0
 operation: AccessType.READ
-161
+69
+ 
+process_name: p3.bin
+PID: 0
+v_address: 29
+p_address: 0 + 1
+operation: AccessType.READ
+144
+ 
+process_name: p3.bin
+PID: 0
+v_address: 29
+p_address: 0 + 1
+operation: AccessType.READ
+144
+ 
+process_name: p3.bin
+PID: 0
+v_address: 30
+p_address: 0 + 2
+operation: AccessType.WRITE
+28
+ 
+process_name: p3.bin
+PID: 0
+v_address: 30
+p_address: 0 + 2
+operation: AccessType.READ
+28
+ 
+process_name: p3.bin
+PID: 0
+v_address: 30
+p_address: 0 + 2
+operation: AccessType.READ
+28
+ 
+process_name: p3.bin
+PID: 0
+v_address: 29
+p_address: 0 + 1
+operation: AccessType.WRITE
+144
+ 
+process_name: p3.bin
+PID: 0
+v_address: 30
+p_address: 0 + 2
+operation: AccessType.READ
+28
+ 
+[218, 47, 129, 204]
+process_name: p2.bin
+PID: 1
+v_address: 25
+p_address: 2 + 1
+operation: AccessType.WRITE
+47
+ 
+process_name: p2.bin
+PID: 1
+v_address: 24
+p_address: 2 + 0
+operation: AccessType.READ
+218
+ 
+[157, 70, 240, 24]
+process_name: p2.bin
+PID: 1
+v_address: 19
+p_address: 3 + 3
+operation: AccessType.READ
+24
+ 
+process_name: p2.bin
+PID: 1
+v_address: 18
+p_address: 3 + 2
+operation: AccessType.READ
+240
+ 
+process_name: p2.bin
+PID: 1
+v_address: 17
+p_address: 3 + 1
+operation: AccessType.WRITE
+70
+ 
+[39, 185, 64, 252]
+process_name: p2.bin
+PID: 2
+v_address: 6
+p_address: 4 + 2
+operation: AccessType.READ
+64
  
 [103, 190, 82, 3]
 process_name: p2.bin
-v_address: 22
-p_address: 1 + 2
-operation: AccessType.READ
-82
- 
-process_name: p2.bin
+PID: 2
 v_address: 21
-p_address: 1 + 1
-operation: AccessType.READ
+p_address: 5 + 1
+operation: AccessType.WRITE
 190
  
 process_name: p2.bin
+PID: 2
 v_address: 22
-p_address: 1 + 2
+p_address: 5 + 2
 operation: AccessType.READ
 82
  
 process_name: p2.bin
+PID: 2
+v_address: 23
+p_address: 5 + 3
+operation: AccessType.READ
+3
+ 
+process_name: p2.bin
+PID: 2
 v_address: 22
-p_address: 1 + 2
+p_address: 5 + 2
 operation: AccessType.READ
 82
+ 
+[49, 116, 10, 194]
+process_name: p2.bin
+PID: 3
+v_address: 13
+p_address: 6 + 1
+operation: AccessType.READ
+116
+ 
+process_name: p2.bin
+PID: 3
+v_address: 14
+p_address: 6 + 2
+operation: AccessType.WRITE
+10
+ 
+process_name: p2.bin
+PID: 3
+v_address: 15
+p_address: 6 + 3
+operation: AccessType.WRITE
+194
+ 
+[157, 70, 240, 24]
+process_name: p2.bin
+PID: 3
+v_address: 16
+p_address: 7 + 0
+operation: AccessType.READ
+157
+ 
+process_name: p2.bin
+PID: 3
+v_address: 15
+p_address: 6 + 3
+operation: AccessType.READ
+194
+ 
+process_name: p2.bin
+PID: 3
+v_address: 14
+p_address: 6 + 2
+operation: AccessType.WRITE
+10
+ 
+process_name: p2.bin
+PID: 3
+v_address: 13
+p_address: 6 + 1
+operation: AccessType.READ
+116
  

@@ -2,10 +2,11 @@
 from pageTable import PageTable
 
 class Process:
-    def __init__(self, name, accesses, data, page_size):
+    def __init__(self, pid, name, accesses, data, page_size):
         amount = (len(data) + page_size - 1) // page_size
         self.table = PageTable(amount)
 
+        self.pid = pid
         self.name = name
         self.accesses = accesses
         self.current_access = 0
