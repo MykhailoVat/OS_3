@@ -26,9 +26,12 @@ class Process:
 
     def get_table(self):
         return self.table
-
-    def page_set_p(self, page, value):
-        self.table.set_p(page, value)
+                             #not shadowing 'bool'
+    def page_set_p(self, page, bowl):
+        self.table.set_p(page, bowl)
 
     def page_set_ppn(self, page, value):
         self.table.set_ppn(page, value)
+
+    def page_set_m(self, page, bowl):
+        self.table.set_ppn(page, bowl)

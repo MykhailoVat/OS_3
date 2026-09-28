@@ -16,7 +16,7 @@ class MMU(metaclass=Singleton):
 
         frame_id = table.get_ppn(v_page)
 
-        return [frame_id, offset]
+        return [frame_id, offset, v_page]
 
     def get_page_size(self):
         return self.page_size

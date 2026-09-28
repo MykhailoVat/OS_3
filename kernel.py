@@ -44,7 +44,7 @@ class Kernel(metaclass=Singleton):
             operation = access.operation
 
             try:
-                frame_id, offset = self.mmu.map_address(
+                frame_id, offset, v_page = self.mmu.map_address(
                     v_address,
                     self.current_process.get_table()
                 )
@@ -54,6 +54,7 @@ class Kernel(metaclass=Singleton):
                     data = self.memory.read_data(frame_id, offset)
                 elif access.operation == AccessType.WRITE:
                     self.memory.write_data(frame_id, offset, access.value)
+                    self.current_process.page_set_m(v_page, True)
 
                 # print
                 print(f'process_name: {self.current_process.name}')
