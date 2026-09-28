@@ -13,11 +13,14 @@ class PageTable:
     def set_p(self, page, bowl):
         self.content[page]["P"] = bowl
 
-    def set_ppn(self, page, value):
-        self.content[page]["PPN"] = value
+    def set_r(self, page, bowl):
+        self.content[page]["R"] = bowl
 
     def set_m(self, page, bowl):
         self.content[page]["M"] = bowl
+
+    def set_ppn(self, page, value):
+        self.content[page]["PPN"] = value
 
     def get_p(self, page):
         return self.content[page]["P"]

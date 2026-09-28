@@ -52,8 +52,10 @@ class Kernel(metaclass=Singleton):
                 data = None
                 if access.operation == AccessType.READ:
                     data = self.memory.read_data(frame_id, offset)
+                    self.current_process.page_set_r(v_page, True)
                 elif access.operation == AccessType.WRITE:
                     self.memory.write_data(frame_id, offset, access.value)
+                    self.current_process.page_set_r(v_page, True)
                     self.current_process.page_set_m(v_page, True)
 
                 # print

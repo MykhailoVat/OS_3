@@ -30,8 +30,11 @@ class Process:
     def page_set_p(self, page, bowl):
         self.table.set_p(page, bowl)
 
-    def page_set_ppn(self, page, value):
-        self.table.set_ppn(page, value)
+    def page_set_r(self, page, bowl):
+        self.table.set_p(page, bowl)
 
     def page_set_m(self, page, bowl):
         self.table.set_ppn(page, bowl)
+
+    def page_set_ppn(self, page, value):
+        self.table.set_ppn(page, value)
