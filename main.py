@@ -3,7 +3,6 @@
 import asyncio
 
 from opt.obj.data import fs_data
-from opt.func.create_process import create_process
 
 from fileSystem import FileSystem
 from physicalMemory import PhysicalMemory

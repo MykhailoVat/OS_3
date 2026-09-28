@@ -2,6 +2,7 @@
 
 import asyncio
 
+from opt.obj.accessType import AccessType
 from opt.obj.pageFault import PageFault
 from opt.obj.singleton import Singleton
 from opt.func.create_process import create_process
@@ -48,7 +49,11 @@ class Kernel(metaclass=Singleton):
                     self.current_process.get_table()
                 )
 
-                data = self.memory.read_data(frame_id, offset)
+                data = None
+                if access.operation == AccessType.READ:
+                    data = self.memory.read_data(frame_id, offset)
+                elif access.operation == AccessType.WRITE:
+                    self.memory.write_data(frame_id, offset, access.value)
 
                 # print
                 print(f'process_name: {self.current_process.name}')

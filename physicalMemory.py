@@ -37,6 +37,9 @@ class PhysicalMemory(metaclass=Singleton):
     def read_data(self, frame_id, offset):
         return self.frame_list[frame_id].data[offset]
 
+    def write_data(self, frame_id, offset, data):
+        self.frame_list[frame_id].data[offset] = data
+
     def find_free_frame(self):
         for i in range(self.frame_count):
             if self.frame_list[i].is_free is True:
