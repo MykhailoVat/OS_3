@@ -16,15 +16,19 @@ PAGE_SIZE = FRAME_SIZE = 4
 MIN_ACCESSES = 5
 MAX_ACCESSES = 15
 
+QUANTUM_SIZE = 5
+SPAWN_INTERVAL = 8
+
 async def run_system():
     mmu = MMU(PAGE_SIZE)
     memory = PhysicalMemory(MEMORY_SIZE, FRAME_SIZE)
     fs = FileSystem(fs_data)
 
     kernel = Kernel(mmu, fs, memory)
-    kernel.set_proc_spawn_info(fs_data, MIN_ACCESSES, MAX_ACCESSES, PAGE_SIZE)
+    kernel.set_proc_gen_info(fs_data, MIN_ACCESSES, MAX_ACCESSES, PAGE_SIZE)
+    kernel.set_tick_info(QUANTUM_SIZE, SPAWN_INTERVAL)
 
-    kernel.start()
+    kernel.run()
 
 
 if __name__ == "__main__":
