@@ -22,12 +22,9 @@ async def run_system():
     fs = FileSystem(fs_data)
 
     kernel = Kernel(mmu, fs, memory)
+    kernel.set_proc_spawn_info(fs_data, MIN_ACCESSES, MAX_ACCESSES, PAGE_SIZE)
 
     kernel.start()
-
-    while True:
-        kernel.create_process(MIN_ACCESSES, MAX_ACCESSES, fs_data, PAGE_SIZE)
-        await asyncio.sleep(0)
 
 
 if __name__ == "__main__":

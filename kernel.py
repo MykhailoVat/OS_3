@@ -1,5 +1,6 @@
 # kernel
 
+from time import (sleep)
 import asyncio
 
 from opt.obj.accessType import AccessType
@@ -11,17 +12,31 @@ from opt.obj.pidAllocator import PIDAllocator
 class Kernel(metaclass=Singleton):
 
     def __init__(self, mmu, fs, memory):
+        # components
         self.mmu = mmu
         self.fs = fs
         self.memory = memory
 
+        # tools
         self.allocator = PIDAllocator()
 
+        # state
         self.processes_list = []
         self.current_process = None
         self.current_process_id = 0
-
         self.task_run = None
+
+        # process spawn info (add via special method)
+        self.fs_data = None
+        self.min_acc = None
+        self.max_acc = None
+        self.page_size = None
+
+    def set_proc_spawn_info(self, data, min_acc, max_acc, page_size):
+        self.fs_data = data
+        self.min_acc = min_acc
+        self.max_acc = max_acc
+        self.page_size = page_size
 
     def start(self):
         self.task_run = asyncio.create_task(self.run())
@@ -29,7 +44,10 @@ class Kernel(metaclass=Singleton):
     async def run(self):
         while True:
             if not self.processes_list:
-                await asyncio.sleep(0.1)
+                self.create_process(self.min_acc,
+                                    self.max_acc,
+                                    self.fs_data,
+                                    self.page_size)
                 continue
 
             self.current_process = self.processes_list[self.current_process_id]
@@ -70,12 +88,10 @@ class Kernel(metaclass=Singleton):
                 self.current_process.point_next()
 
             except PageFault as fault:
-                # print
                 self.handle_page_fault(fault.v_page)
 
             # value for slow stdout demonstration
-            # however, the function is necessary
-            await asyncio.sleep(1)
+            sleep(1)
 
     def handle_page_fault(self, v_page):
         page_size = self.mmu.get_page_size()
@@ -98,5 +114,5 @@ class Kernel(metaclass=Singleton):
 
     def create_process(self, min_acc, max_acc, fs_data, p_size):
         pid = self.allocator.allocate()
-        process = create_process(pid, min_acc, max_acc, fs_data, p_size)
+        process = create_process(pid, min_acc, max_acc,fs_data, p_size)
         self.processes_list.append(process)
