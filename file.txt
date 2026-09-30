@@ -1,214 +1,259 @@
+NO PROCESS TO DO
+NO PROCESS TO DO
+NO PROCESS TO DO
+NO PROCESS TO DO
+NO PROCESS TO DO
+NO PROCESS TO DO
+NO PROCESS TO DO
+NO PROCESS TO DO
+tick=8, quantum=0, queue=[0]
 [99, 248, 46, 112]
-write event!
-old content: [99, 248, 46, 112]
-new content: [None, 248, 46, 112]
-
+tick=9, quantum=1, queue=[0]
 process_name: p1.bin
 PID: 0
-v_address: 20
-p_address: 0 + 0
+v_address: 22
+p_address: 0 + 2
 operation: AccessType.WRITE
 None
  
-write event!
-old content: [None, 248, 46, 112]
-new content: [None, 248, 46, 112]
-
-process_name: p1.bin
-PID: 0
-v_address: 20
-p_address: 0 + 0
-operation: AccessType.WRITE
-None
- 
-process_name: p1.bin
-PID: 0
-v_address: 20
-p_address: 0 + 0
-operation: AccessType.READ
-None
- 
-write event!
-old content: [None, 248, 46, 112]
-new content: [None, 248, 46, 112]
-
-process_name: p1.bin
-PID: 0
-v_address: 20
-p_address: 0 + 0
-operation: AccessType.WRITE
-None
- 
-write event!
-old content: [None, 248, 46, 112]
-new content: [None, None, 46, 112]
-
-process_name: p1.bin
-PID: 0
-v_address: 21
-p_address: 0 + 1
-operation: AccessType.WRITE
-None
- 
+tick=10, quantum=2, queue=[0]
 [77, 184, 35, 106]
+tick=11, quantum=3, queue=[0]
 process_name: p1.bin
-PID: 1
-v_address: 10
-p_address: 1 + 2
-operation: AccessType.READ
-35
- 
-process_name: p1.bin
-PID: 1
-v_address: 9
-p_address: 1 + 1
-operation: AccessType.READ
-184
- 
-process_name: p1.bin
-PID: 1
-v_address: 10
-p_address: 1 + 2
-operation: AccessType.READ
-35
- 
-process_name: p1.bin
-PID: 1
+PID: 0
 v_address: 11
 p_address: 1 + 3
 operation: AccessType.READ
 106
  
+tick=12, quantum=0, queue=[0]
 process_name: p1.bin
-PID: 1
+PID: 0
+v_address: 11
+p_address: 1 + 3
+operation: AccessType.READ
+106
+ 
+tick=13, quantum=1, queue=[0]
+process_name: p1.bin
+PID: 0
+v_address: 10
+p_address: 1 + 2
+operation: AccessType.WRITE
+None
+ 
+tick=14, quantum=2, queue=[0]
+process_name: p1.bin
+PID: 0
+v_address: 9
+p_address: 1 + 1
+operation: AccessType.READ
+184
+ 
+tick=15, quantum=3, queue=[0]
+process_name: p1.bin
+PID: 0
 v_address: 10
 p_address: 1 + 2
 operation: AccessType.READ
-35
+None
  
-[215, 68, 171, 25]
+tick=16, quantum=0, queue=[0]
 process_name: p1.bin
-PID: 1
-v_address: 16
-p_address: 2 + 0
+PID: 0
+v_address: 10
+p_address: 1 + 2
 operation: AccessType.READ
-215
+None
  
+tick=17, quantum=1, queue=[0]
 process_name: p1.bin
-PID: 1
-v_address: 16
-p_address: 2 + 0
+PID: 0
+v_address: 10
+p_address: 1 + 2
 operation: AccessType.READ
-215
+None
  
-process_name: p1.bin
+tick=18, quantum=2, queue=[0]
+NO PROCESS TO DO
+NO PROCESS TO DO
+NO PROCESS TO DO
+NO PROCESS TO DO
+NO PROCESS TO DO
+NO PROCESS TO DO
+tick=24, quantum=0, queue=[1]
+[14, 209, 75, 96]
+tick=25, quantum=1, queue=[1]
+process_name: p3.bin
 PID: 1
-v_address: 16
+v_address: 12
 p_address: 2 + 0
-operation: AccessType.READ
-215
+operation: AccessType.WRITE
+None
  
-[241, 12, 133, 57]
-process_name: p1.bin
+tick=26, quantum=2, queue=[1]
+process_name: p3.bin
 PID: 1
 v_address: 13
-p_address: 3 + 1
+p_address: 2 + 1
 operation: AccessType.READ
-12
+209
  
-process_name: p1.bin
+tick=27, quantum=3, queue=[1]
+process_name: p3.bin
 PID: 1
 v_address: 14
+p_address: 2 + 2
+operation: AccessType.READ
+75
+ 
+tick=28, quantum=0, queue=[1]
+process_name: p3.bin
+PID: 1
+v_address: 13
+p_address: 2 + 1
+operation: AccessType.READ
+209
+ 
+tick=29, quantum=1, queue=[1]
+process_name: p3.bin
+PID: 1
+v_address: 12
+p_address: 2 + 0
+operation: AccessType.READ
+None
+ 
+tick=30, quantum=2, queue=[1]
+[253, 37, 115, 168]
+tick=31, quantum=3, queue=[1]
+process_name: p3.bin
+PID: 1
+v_address: 11
+p_address: 3 + 3
+operation: AccessType.READ
+168
+ 
+tick=32, quantum=0, queue=[1, 2]
+process_name: p3.bin
+PID: 1
+v_address: 10
 p_address: 3 + 2
 operation: AccessType.READ
-133
+115
  
-[8, 145, 86, 226]
-process_name: p1.bin
+tick=33, quantum=1, queue=[1, 2]
+process_name: p3.bin
 PID: 1
-v_address: 4
+v_address: 11
+p_address: 3 + 3
+operation: AccessType.WRITE
+None
+ 
+tick=34, quantum=2, queue=[1, 2]
+process_name: p3.bin
+PID: 1
+v_address: 12
+p_address: 2 + 0
+operation: AccessType.READ
+None
+ 
+tick=35, quantum=3, queue=[1, 2]
+process_name: p3.bin
+PID: 1
+v_address: 13
+p_address: 2 + 1
+operation: AccessType.READ
+209
+ 
+tick=36, quantum=0, queue=[2, 1]
+[218, 47, 129, 204]
+tick=37, quantum=1, queue=[2, 1]
+process_name: p2.bin
+PID: 2
+v_address: 25
+p_address: 4 + 1
+operation: AccessType.WRITE
+None
+ 
+tick=38, quantum=2, queue=[2, 1]
+process_name: p2.bin
+PID: 2
+v_address: 24
+p_address: 4 + 0
+operation: AccessType.WRITE
+None
+ 
+tick=39, quantum=3, queue=[2, 1]
+[103, 190, 82, 3]
+tick=40, quantum=0, queue=[1, 2]
+process_name: p3.bin
+PID: 1
+v_address: 12
+p_address: 2 + 0
+operation: AccessType.WRITE
+None
+ 
+tick=41, quantum=1, queue=[1, 2]
+process_name: p3.bin
+PID: 1
+v_address: 12
+p_address: 2 + 0
+operation: AccessType.READ
+None
+ 
+tick=42, quantum=2, queue=[1, 2]
+process_name: p3.bin
+PID: 1
+v_address: 11
+p_address: 3 + 3
+operation: AccessType.READ
+None
+ 
+tick=43, quantum=3, queue=[1, 2]
+process_name: p3.bin
+PID: 1
+v_address: 11
+p_address: 3 + 3
+operation: AccessType.READ
+None
+ 
+tick=44, quantum=0, queue=[2, 1]
+process_name: p2.bin
+PID: 2
+v_address: 23
+p_address: 5 + 3
+operation: AccessType.WRITE
+None
+ 
+tick=45, quantum=1, queue=[2, 1]
+process_name: p2.bin
+PID: 2
+v_address: 24
 p_address: 4 + 0
 operation: AccessType.READ
-8
- 
-process_name: p1.bin
-PID: 1
-v_address: 5
-p_address: 4 + 1
-operation: AccessType.READ
-145
- 
-write event!
-old content: [8, 145, 86, 226]
-new content: [8, None, 86, 226]
-
-process_name: p1.bin
-PID: 1
-v_address: 5
-p_address: 4 + 1
-operation: AccessType.WRITE
 None
  
-process_name: p1.bin
-PID: 1
-v_address: 6
-p_address: 4 + 2
-operation: AccessType.READ
-86
- 
-process_name: p1.bin
-PID: 1
-v_address: 7
-p_address: 4 + 3
-operation: AccessType.READ
-226
- 
-[8, 145, 86, 226]
-write event!
-old content: [8, 145, 86, 226]
-new content: [None, 145, 86, 226]
-
-process_name: p1.bin
+tick=46, quantum=2, queue=[2, 1]
+process_name: p2.bin
 PID: 2
-v_address: 4
-p_address: 5 + 0
-operation: AccessType.WRITE
+v_address: 25
+p_address: 4 + 1
+operation: AccessType.READ
 None
  
-[241, 12, 133, 57]
-process_name: p1.bin
+tick=47, quantum=3, queue=[2, 1]
+process_name: p2.bin
 PID: 2
+v_address: 25
+p_address: 4 + 1
+operation: AccessType.READ
+None
+ 
+tick=48, quantum=0, queue=[1, 2, 3]
+process_name: p3.bin
+PID: 1
 v_address: 12
-p_address: 6 + 0
-operation: AccessType.READ
-241
- 
-write event!
-old content: [241, 12, 133, 57]
-new content: [241, None, 133, 57]
-
-process_name: p1.bin
-PID: 2
-v_address: 13
-p_address: 6 + 1
-operation: AccessType.WRITE
-None
- 
-process_name: p1.bin
-PID: 2
-v_address: 13
-p_address: 6 + 1
-operation: AccessType.READ
-None
- 
-write event!
-old content: [None, 145, 86, 226]
-new content: [None, 145, 86, None]
-
-process_name: p1.bin
-PID: 2
-v_address: 7
-p_address: 5 + 3
+p_address: 2 + 0
 operation: AccessType.WRITE
 None
  

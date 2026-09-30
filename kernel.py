@@ -1,6 +1,7 @@
 # kernel
 import random
 from time import (sleep)
+from collections import deque
 
 from opt.obj.accessType import AccessType
 from opt.obj.pageFault import PageFault
@@ -23,10 +24,9 @@ class Kernel(metaclass=Singleton):
         self.allocator = PIDAllocator()
 
         # state
-        self.processes_list = []
+        self.queue = deque()
         self.process_count = 0
         self.current_process = None
-        self.current_process_id = 0
 
         # ticks
         self.tick = 0
@@ -34,8 +34,10 @@ class Kernel(metaclass=Singleton):
 
         # CONSTS TO SET
 
-        self.quantum_size = 0
-        self.spawn_interval = 0
+        self.spawn_interval = None
+        self.quantum_size = None
+
+        self.spawn_chance = None
 
         self.process_limit = None
 
@@ -44,23 +46,24 @@ class Kernel(metaclass=Singleton):
         self.max_acc = None
         self.page_size = None
 
-
     def set_consts(
             self,
             data,
             min_acc,
             max_acc,
             page_size,
-            quantum_size,
             spawn_interval,
+            quantum_size,
+            spawn_chance,
             process_limit
     ):
         self.fs_data = data
         self.min_acc = min_acc
         self.max_acc = max_acc
         self.page_size = page_size
-        self.quantum_size = quantum_size
         self.spawn_interval = spawn_interval
+        self.quantum_size = quantum_size
+        self.spawn_chance = spawn_chance
         self.process_limit = process_limit
 
     def run(self):
@@ -77,25 +80,36 @@ class Kernel(metaclass=Singleton):
                     self.page_size
                 )
 
-            if not self.processes_list:
+            if not self.queue:
                 print("NO PROCESS TO DO")
+                self.tick += 1
                 continue
+
+            print(
+                f"tick={self.tick}, "
+                f"quantum={self.quantum_tick}, "
+                f"queue={[p.pid for p in self.queue]}"
+            )
 
             access_res = self.access_sequence()
 
             if access_res == SequenceResult.PROCESS_FINISHED:
-                self.processes_list.pop(self.current_process_id)
+                self.queue.popleft()
                 self.process_count -= 1
+                self.quantum_tick = 0
                 continue
 
             self.tick += 1
             self.quantum_tick += 1
 
+            if self.quantum_tick >= self.quantum_size:
+                self.s_switch_process()
+                self.quantum_tick = 0
+
             sleep(1)
 
     def access_sequence(self):
-
-        self.current_process = self.processes_list[self.current_process_id]
+        self.current_process = self.queue[0]
 
         access = self.current_process.get_current_access()
 
@@ -153,8 +167,7 @@ class Kernel(metaclass=Singleton):
         self.current_process.page_set_ppn(v_page, frame_id)
 
     def s_create_process(self, min_acc, max_acc, fs_data, p_size):
-        # MAGIC NUMBER
-        if random.random() < 0.5:
+        if random.random() < self.spawn_chance:
             pid = self.allocator.allocate()
             process = create_process(pid,
                                      min_acc,
@@ -162,10 +175,10 @@ class Kernel(metaclass=Singleton):
                                      fs_data,
                                      p_size)
 
-            self.processes_list.append(process)
+            self.queue.append(process)
             self.process_count += 1
 
-    def create_process(self, min_acc, max_acc, fs_data, p_size):
-        pid = self.allocator.allocate()
-        process = create_process(pid, min_acc, max_acc, fs_data, p_size)
-        self.processes_list.append(process)
+    def s_switch_process(self):
+        process = self.queue.popleft()
+        self.queue.append(process)
+

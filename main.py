@@ -16,8 +16,10 @@ PAGE_SIZE = FRAME_SIZE = 4
 MIN_ACCESSES = 5
 MAX_ACCESSES = 15
 
-QUANTUM_SIZE = 5
 SPAWN_INTERVAL = 8
+QUANTUM_SIZE = 4
+
+SPAWN_CHANCE = 0.9
 
 MAX_PROCS = 4
 
@@ -33,8 +35,9 @@ async def run_system():
         MIN_ACCESSES,
         MAX_ACCESSES,
         PAGE_SIZE,
-        QUANTUM_SIZE,
         SPAWN_INTERVAL,
+        QUANTUM_SIZE,
+        SPAWN_CHANCE,
         MAX_PROCS
     )
 
