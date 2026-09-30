@@ -26,10 +26,14 @@ class Kernel(metaclass=Singleton):
 
         # state
         self.processes_list = []
+        self.process_count = 0
         self.current_process = None
         self.current_process_id = 0
 
-        # ticks and timings
+        # limits
+        self.process_limit = None
+
+        # ticks, timings
         self.tick = 0
         self.quantum_tick = 0
         self.quantum_size = 0
@@ -51,13 +55,22 @@ class Kernel(metaclass=Singleton):
         self.quantum_size = quantum_size
         self.spawn_interval = spawn_interval
 
+    def set_limit_rules(self, process_limit):
+        self.process_limit = process_limit
+
     def run(self):
         while True:
             if self.tick % self.spawn_interval == 0:
+                if self.process_count >= self.process_limit:
+                    print("PROCESS COUNT LIMIT REACHED")
+                    continue
                 self.create_process(self.min_acc,
                                     self.max_acc,
                                     self.fs_data,
                                     self.page_size)
+
+                self.process_count += 1
+
 
             if not self.processes_list:
                 print("NO PROCESS TO DO")
@@ -67,6 +80,7 @@ class Kernel(metaclass=Singleton):
 
             if access_res == AccessResult.PROCESS_FINISHED:
                 self.processes_list.pop(self.current_process_id)
+                self.process_count -= 1
                 continue
 
             self.tick += 1
