@@ -1,4 +1,4 @@
-#main
+# main
 
 import asyncio
 
@@ -21,15 +21,22 @@ SPAWN_INTERVAL = 8
 
 MAX_PROCS = 4
 
+
 async def run_system():
     mmu = MMU(PAGE_SIZE)
     memory = PhysicalMemory(MEMORY_SIZE, FRAME_SIZE)
     fs = FileSystem(fs_data)
 
     kernel = Kernel(mmu, fs, memory)
-    kernel.set_proc_gen_info(fs_data, MIN_ACCESSES, MAX_ACCESSES, PAGE_SIZE)
-    kernel.set_tick_info(QUANTUM_SIZE, SPAWN_INTERVAL)
-    kernel.set_limit_rules(MAX_PROCS)
+    kernel.set_consts(
+        fs_data,
+        MIN_ACCESSES,
+        MAX_ACCESSES,
+        PAGE_SIZE,
+        QUANTUM_SIZE,
+        SPAWN_INTERVAL,
+        MAX_PROCS
+    )
 
     kernel.run()
 

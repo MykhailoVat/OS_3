@@ -28,32 +28,39 @@ class Kernel(metaclass=Singleton):
         self.current_process = None
         self.current_process_id = 0
 
-        # limits
-        self.process_limit = None
-
-        # ticks, timings
+        # ticks
         self.tick = 0
         self.quantum_tick = 0
+
+        # CONSTS TO SET
+
         self.quantum_size = 0
         self.spawn_interval = 0
 
-        # process spawn info (add via special method)
+        self.process_limit = None
+
         self.fs_data = None
         self.min_acc = None
         self.max_acc = None
         self.page_size = None
 
-    def set_proc_gen_info(self, data, min_acc, max_acc, page_size):
+
+    def set_consts(
+            self,
+            data,
+            min_acc,
+            max_acc,
+            page_size,
+            quantum_size,
+            spawn_interval,
+            process_limit
+    ):
         self.fs_data = data
         self.min_acc = min_acc
         self.max_acc = max_acc
         self.page_size = page_size
-
-    def set_tick_info(self, quantum_size, spawn_interval):
         self.quantum_size = quantum_size
         self.spawn_interval = spawn_interval
-
-    def set_limit_rules(self, process_limit):
         self.process_limit = process_limit
 
     def run(self):
@@ -63,14 +70,12 @@ class Kernel(metaclass=Singleton):
                     print("PROCESS COUNT LIMIT REACHED")
                     continue
 
-                if random.random() < 0.5:
-                    self.create_process(self.min_acc,
-                                        self.max_acc,
-                                        self.fs_data,
-                                        self.page_size)
-
-                    self.process_count += 1
-
+                self.s_create_process(
+                    self.min_acc,
+                    self.max_acc,
+                    self.fs_data,
+                    self.page_size
+                )
 
             if not self.processes_list:
                 print("NO PROCESS TO DO")
@@ -114,7 +119,6 @@ class Kernel(metaclass=Singleton):
                 self.current_process.page_set_r(v_page, True)
                 self.current_process.page_set_m(v_page, True)
 
-
             print(f'process_name: {self.current_process.name}')
             print(f'PID: {self.current_process.pid}')
             print(f'v_address: {v_address}')
@@ -148,8 +152,20 @@ class Kernel(metaclass=Singleton):
         self.current_process.page_set_p(v_page, True)
         self.current_process.page_set_ppn(v_page, frame_id)
 
+    def s_create_process(self, min_acc, max_acc, fs_data, p_size):
+        # MAGIC NUMBER
+        if random.random() < 0.5:
+            pid = self.allocator.allocate()
+            process = create_process(pid,
+                                     min_acc,
+                                     max_acc,
+                                     fs_data,
+                                     p_size)
+
+            self.processes_list.append(process)
+            self.process_count += 1
 
     def create_process(self, min_acc, max_acc, fs_data, p_size):
         pid = self.allocator.allocate()
-        process = create_process(pid, min_acc, max_acc,fs_data, p_size)
+        process = create_process(pid, min_acc, max_acc, fs_data, p_size)
         self.processes_list.append(process)
