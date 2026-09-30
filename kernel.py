@@ -1,17 +1,15 @@
 # kernel
-
+import random
 from time import (sleep)
-from enum import Enum
 
 from opt.obj.accessType import AccessType
 from opt.obj.pageFault import PageFault
 from opt.obj.singleton import Singleton
-from opt.func.create_process import create_process
 from opt.obj.pidAllocator import PIDAllocator
+from opt.obj.sequenceResult import SequenceResult
 
-class AccessResult(Enum):
-    ACCESS_DONE = 0
-    PROCESS_FINISHED = 1
+from opt.func.create_process import create_process
+
 
 class Kernel(metaclass=Singleton):
 
@@ -64,12 +62,14 @@ class Kernel(metaclass=Singleton):
                 if self.process_count >= self.process_limit:
                     print("PROCESS COUNT LIMIT REACHED")
                     continue
-                self.create_process(self.min_acc,
-                                    self.max_acc,
-                                    self.fs_data,
-                                    self.page_size)
 
-                self.process_count += 1
+                if random.random() < 0.5:
+                    self.create_process(self.min_acc,
+                                        self.max_acc,
+                                        self.fs_data,
+                                        self.page_size)
+
+                    self.process_count += 1
 
 
             if not self.processes_list:
@@ -78,7 +78,7 @@ class Kernel(metaclass=Singleton):
 
             access_res = self.access_sequence()
 
-            if access_res == AccessResult.PROCESS_FINISHED:
+            if access_res == SequenceResult.PROCESS_FINISHED:
                 self.processes_list.pop(self.current_process_id)
                 self.process_count -= 1
                 continue
@@ -95,7 +95,7 @@ class Kernel(metaclass=Singleton):
         access = self.current_process.get_current_access()
 
         if access is None:
-            return AccessResult.PROCESS_FINISHED
+            return SequenceResult.PROCESS_FINISHED
 
         v_address = access.address
 
