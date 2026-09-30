@@ -1,12 +1,17 @@
 # kernel
 
 from time import (sleep)
+from enum import Enum
 
 from opt.obj.accessType import AccessType
 from opt.obj.pageFault import PageFault
 from opt.obj.singleton import Singleton
 from opt.func.create_process import create_process
 from opt.obj.pidAllocator import PIDAllocator
+
+class AccessResult(Enum):
+    ACCESS_DONE = 0
+    PROCESS_FINISHED = 1
 
 class Kernel(metaclass=Singleton):
 
@@ -54,9 +59,14 @@ class Kernel(metaclass=Singleton):
                                     self.fs_data,
                                     self.page_size)
 
-            access_completed = self.access_sequence()
+            if not self.processes_list:
+                print("NO PROCESS TO DO")
+                continue
 
-            if not access_completed:
+            access_res = self.access_sequence()
+
+            if access_res == AccessResult.PROCESS_FINISHED:
+                self.processes_list.pop(self.current_process_id)
                 continue
 
             self.tick += 1
@@ -65,17 +75,13 @@ class Kernel(metaclass=Singleton):
             sleep(1)
 
     def access_sequence(self):
-        if not self.processes_list:
-            print("NO PROCESS TO DO")
-            return False
 
         self.current_process = self.processes_list[self.current_process_id]
 
         access = self.current_process.get_current_access()
 
         if access is None:
-            self.processes_list.pop(self.current_process_id)
-            return False
+            return AccessResult.PROCESS_FINISHED
 
         v_address = access.address
 
