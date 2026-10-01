@@ -13,6 +13,7 @@ class Process:
         self.table = PageTable(self.pages_number)
         # MAGIC
         self.working_set = WorkingSet(3,self.pages_number)
+        self.working_set_interval = 4
 
         self.pid = pid
         self.name = name
@@ -31,11 +32,16 @@ class Process:
                 self.page_size
             )
 
+            print(f"PID={self.pid}: working set -> {self.working_set.get_entries()}")
+
         return self.current_access
 
     def point_next(self):
         self.current_access = None
         self.access_count += 1
+
+        if self.access_count % self.working_set_interval == 0:
+            self.working_set.update()
 
     def get_name(self):
         return self.name

@@ -107,7 +107,7 @@ class Kernel(metaclass=Singleton):
                 self.s_switch_process()
                 self.quantum_tick = 0
 
-            sleep(1)
+            sleep(0.1)
 
     def access_sequence(self):
         self.current_process = self.queue[0]
@@ -144,10 +144,11 @@ class Kernel(metaclass=Singleton):
 
             self.current_process.point_next()
 
+            return SequenceResult.ACCESS_DONE
+
         except PageFault as fault:
             self.handle_page_fault(fault.v_page)
-
-        return True
+            return SequenceResult.PAGE_FAULT
 
     def handle_page_fault(self, v_page):
         page_size = self.mmu.get_page_size()
