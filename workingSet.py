@@ -1,9 +1,7 @@
 # workingSet
 import random
 
-from opt.obj.singleton import Singleton
-
-class WorkingSet(metaclass=Singleton):
+class WorkingSet:
     def __init__(self, entries_number, pages_number):
         self.entries_number = entries_number
         self.pages_number = pages_number
