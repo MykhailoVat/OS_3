@@ -1,10 +1,14 @@
 # process
 from pageTable import PageTable
+from workingSet import WorkingSet
+
 
 class Process:
     def __init__(self, pid, name, accesses, data, page_size):
-        amount = (len(data) + page_size - 1) // page_size
-        self.table = PageTable(amount)
+        pages_number = (len(data) + page_size - 1) // page_size
+        self.table = PageTable(pages_number)
+        # MAGIC
+        self.working_set = WorkingSet(3,pages_number)
 
         self.pid = pid
         self.name = name
