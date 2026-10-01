@@ -111,7 +111,7 @@ class Kernel(metaclass=Singleton):
     def access_sequence(self):
         self.current_process = self.queue[0]
 
-        access = self.current_process.get_current_access()
+        access = self.current_process.get_access()
 
         if access is None:
             return SequenceResult.PROCESS_FINISHED
