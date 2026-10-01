@@ -8,11 +8,11 @@ from workingSet import WorkingSet
 
 class Process:
     def __init__(self, pid, name, data, page_size, amount):
-        pages_number = (len(data) + page_size - 1) // page_size
-        self.data_size = len(data)
-        self.table = PageTable(pages_number)
+        self.page_size = page_size
+        self.pages_number = (len(data) + page_size - 1) // page_size
+        self.table = PageTable(self.pages_number)
         # MAGIC
-        self.working_set = WorkingSet(3,pages_number)
+        self.working_set = WorkingSet(3,self.pages_number)
 
         self.pid = pid
         self.name = name
@@ -25,7 +25,11 @@ class Process:
             if self.access_count >= self.access_number:
                 return None
 
-            self.current_access = generate_access(self.data_size)
+            self.current_access = generate_access(
+                self.working_set.get_entries(),
+                self.pages_number,
+                self.page_size
+            )
 
         return self.current_access
 

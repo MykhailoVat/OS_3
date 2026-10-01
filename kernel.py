@@ -71,6 +71,7 @@ class Kernel(metaclass=Singleton):
             if self.tick % self.spawn_interval == 0:
                 if self.process_count >= self.process_limit:
                     print("PROCESS COUNT LIMIT REACHED")
+                    sleep(1)
                     continue
 
                 self.s_create_process(
