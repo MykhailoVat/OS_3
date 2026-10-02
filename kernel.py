@@ -42,15 +42,12 @@ class Kernel(metaclass=Singleton):
     def run(self):
         while True:
             if self.tick % opt.consts.SPAWN_INTERVAL == 0:
-                if self.process_count >= opt.consts.MAX_PROCS:
-                    print("PROCESS COUNT LIMIT REACHED")
-                else:
-                    self.s_create_process(
-                        opt.consts.MIN_ACCESSES,
-                        opt.consts.MAX_ACCESSES,
-                        self.fs_data,
-                        self.page_size
-                    )
+                self.s_attempt_spawn(
+                    opt.consts.MIN_ACCESSES,
+                    opt.consts.MAX_ACCESSES,
+                    self.fs_data,
+                    self.page_size
+                )
 
             if not self.queue:
                 print("NO PROCESS TO DO")
@@ -66,14 +63,9 @@ class Kernel(metaclass=Singleton):
             access_res = self.access_sequence()
 
             if access_res == SequenceResult.PROCESS_FINISHED:
-                self.fs.delete_pages(
-                    self.current_process.get_pid()
-                )
+                self.s_finish_process()
 
-                self.queue.popleft()
-                self.process_count -= 1
                 self.quantum_tick = 0
-
                 self.tick += 1
                 continue
 
@@ -83,6 +75,9 @@ class Kernel(metaclass=Singleton):
             if self.quantum_tick >= opt.consts.QUANTUM_SIZE:
                 self.s_switch_process()
                 self.quantum_tick = 0
+
+            if self.tick % opt.consts.REPLACE_INTERVAL:
+                self.s_replace()
 
             sleep(1)
 
@@ -153,19 +148,46 @@ class Kernel(metaclass=Singleton):
         self.current_process.page_set_p(v_page, True)
         self.current_process.page_set_ppn(v_page, frame_id)
 
-    def s_create_process(self, min_acc, max_acc, fs_data, p_size):
-        if random.random() < opt.consts.SPAWN_CHANCE:
-            pid = self.allocator.allocate()
-            process = create_process(pid,
-                                     min_acc,
-                                     max_acc,
-                                     fs_data,
-                                     p_size)
+    def s_attempt_spawn(self, min_acc, max_acc, fs_data, p_size):
+        if self.process_count >= opt.consts.MAX_PROCS:
+            print("PROCESS COUNT LIMIT REACHED")
+        else:
+            if random.random() < opt.consts.SPAWN_CHANCE:
+                pid = self.allocator.allocate()
+                process = create_process(
+                    pid,
+                    min_acc,
+                    max_acc,
+                    fs_data,
+                    p_size
+                )
 
-            self.queue.append(process)
-            self.process_count += 1
+                self.queue.append(process)
+                self.process_count += 1
+
+    def s_finish_process(self):
+        self.fs.delete_pages(
+            self.current_process.get_pid()
+        )
+
+        self.queue.popleft()
+        self.process_count -= 1
 
     def s_switch_process(self):
         process = self.queue.popleft()
         self.queue.append(process)
 
+    def s_replace(self):
+        table = self.current_process.get_table()
+        pid = self.current_process.get_pid()
+
+        # wanted = function(table)
+
+        for page_id, page in enumerate(wanted):
+            frame_id = page["PPN"]
+
+            if page["M"] == 1:
+                data = self.memory.get_frame_data(frame_id)
+                self.fs.write_page(pid, page_id, data)
+
+            self.memory.free_frame(frame_id)

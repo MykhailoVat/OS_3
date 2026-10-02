@@ -4,6 +4,7 @@ from opt.obj.singleton import Singleton
 
 class Frame:
     def __init__(self, size, base):
+        self.size = size
         self.base = base
         self.is_free = True
         self.data = [0 for _ in range(size)]
@@ -13,6 +14,9 @@ class Frame:
 
     def set_free(self, status):
         self.is_free = status
+
+    def free(self):
+        self.data = [0 for _ in range(self.size)]
 
 
 class PhysicalMemory(metaclass=Singleton):
@@ -37,6 +41,9 @@ class PhysicalMemory(metaclass=Singleton):
     def read_data(self, frame_id, offset):
         return self.frame_list[frame_id].data[offset]
 
+    def read_frame_data(self, frame_id):
+        return self.frame_list[frame_id].data
+
     def write_data(self, frame_id, offset, data):
         self.frame_list[frame_id].data[offset] = data
 
@@ -46,6 +53,10 @@ class PhysicalMemory(metaclass=Singleton):
                 return i
 
         return None
+
+    def free_frame(self, frame_id):
+        self.frame_list[frame_id].free()
+        self.frame_list[frame_id].set_free(True)
 
     def get_frame_count(self):
         return self.frame_count
