@@ -3,6 +3,8 @@ import random
 from time import (sleep)
 from collections import deque
 
+import opt.consts
+
 from opt.obj.accessType import AccessType
 from opt.obj.pageFault import PageFault
 from opt.obj.singleton import Singleton
@@ -32,54 +34,23 @@ class Kernel(metaclass=Singleton):
         self.tick = 0
         self.quantum_tick = 0
 
-        # CONSTS TO SET
+        # other important data
+        self.fs_data = self.fs.data
+        self.page_size = self.mmu.page_size
 
-        self.spawn_interval = None
-        self.quantum_size = None
-
-        self.spawn_chance = None
-
-        self.process_limit = None
-
-        self.fs_data = None
-        self.min_acc = None
-        self.max_acc = None
-        self.page_size = None
-
-    def set_consts(
-            self,
-            data,
-            min_acc,
-            max_acc,
-            page_size,
-            spawn_interval,
-            quantum_size,
-            spawn_chance,
-            process_limit
-    ):
-        self.fs_data = data
-        self.min_acc = min_acc
-        self.max_acc = max_acc
-        self.page_size = page_size
-        self.spawn_interval = spawn_interval
-        self.quantum_size = quantum_size
-        self.spawn_chance = spawn_chance
-        self.process_limit = process_limit
 
     def run(self):
         while True:
-            if self.tick % self.spawn_interval == 0:
-                if self.process_count >= self.process_limit:
+            if self.tick % opt.consts.SPAWN_INTERVAL == 0:
+                if self.process_count >= opt.consts.MAX_PROCS:
                     print("PROCESS COUNT LIMIT REACHED")
-                    sleep(1)
-                    continue
-
-                self.s_create_process(
-                    self.min_acc,
-                    self.max_acc,
-                    self.fs_data,
-                    self.page_size
-                )
+                else:
+                    self.s_create_process(
+                        opt.consts.MIN_ACCESSES,
+                        opt.consts.MAX_ACCESSES,
+                        self.fs_data,
+                        self.page_size
+                    )
 
             if not self.queue:
                 print("NO PROCESS TO DO")
@@ -103,11 +74,11 @@ class Kernel(metaclass=Singleton):
             self.tick += 1
             self.quantum_tick += 1
 
-            if self.quantum_tick >= self.quantum_size:
+            if self.quantum_tick >= opt.consts.QUANTUM_SIZE:
                 self.s_switch_process()
                 self.quantum_tick = 0
 
-            sleep(0.1)
+            sleep(1)
 
     def access_sequence(self):
         self.current_process = self.queue[0]
@@ -169,7 +140,7 @@ class Kernel(metaclass=Singleton):
         self.current_process.page_set_ppn(v_page, frame_id)
 
     def s_create_process(self, min_acc, max_acc, fs_data, p_size):
-        if random.random() < self.spawn_chance:
+        if random.random() < opt.consts.SPAWN_CHANCE:
             pid = self.allocator.allocate()
             process = create_process(pid,
                                      min_acc,

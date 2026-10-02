@@ -1,5 +1,5 @@
 # process
-import random
+import opt.consts
 
 from opt.func.generate_access import generate_access
 from pageTable import PageTable
@@ -11,9 +11,9 @@ class Process:
         self.page_size = page_size
         self.pages_number = (len(data) + page_size - 1) // page_size
         self.table = PageTable(self.pages_number)
-        # MAGIC
-        self.working_set = WorkingSet(3,self.pages_number)
-        self.working_set_interval = 4
+
+        self.working_set = WorkingSet(opt.consts.WS_ENTRIES, self.pages_number)
+        self.ws_upd_interval = opt.consts.WS_UPD_INTERVAL
 
         self.pid = pid
         self.name = name
@@ -40,7 +40,7 @@ class Process:
         self.current_access = None
         self.access_count += 1
 
-        if self.access_count % self.working_set_interval == 0:
+        if self.access_count % self.ws_upd_interval == 0:
             self.working_set.update()
 
     def get_name(self):

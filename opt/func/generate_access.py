@@ -1,11 +1,12 @@
 import random
 
+import opt.consts
+
 from opt.obj.memoryAccess import MemoryAccess
 from opt.obj.accessType import AccessType
 
 def generate_access(ws_entries, pages_number, page_size):
-    # MAGIC
-    if random.random() < 0.9:
+    if random.random() < opt.consts.CHANCE_LOCAL:
         page = random.choice(ws_entries)
     else:
         page = random.randrange(pages_number)
@@ -13,10 +14,9 @@ def generate_access(ws_entries, pages_number, page_size):
     offset = random.randrange(page_size)
     address = page * page_size + offset
 
-    # MAGIC
     access_type = random.choices(
         [AccessType.READ, AccessType.WRITE],
-        weights=[0.7, 0.3]
+        weights=[opt.consts.READ_WEIGHT, opt.consts.WRITE_WEIGHT]
     )[0]
 
     return MemoryAccess(address, access_type)
