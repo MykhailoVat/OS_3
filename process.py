@@ -46,6 +46,9 @@ class Process:
     def get_name(self):
         return self.name
 
+    def get_pid(self):
+        return self.pid
+
     def get_table(self):
         return self.table
                              #not shadowing 'bool'

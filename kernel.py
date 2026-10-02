@@ -66,9 +66,15 @@ class Kernel(metaclass=Singleton):
             access_res = self.access_sequence()
 
             if access_res == SequenceResult.PROCESS_FINISHED:
+                self.fs.delete_pages(
+                    self.current_process.get_pid()
+                )
+
                 self.queue.popleft()
                 self.process_count -= 1
                 self.quantum_tick = 0
+
+                self.tick += 1
                 continue
 
             self.tick += 1
@@ -105,13 +111,13 @@ class Kernel(metaclass=Singleton):
                 self.current_process.page_set_r(v_page, True)
                 self.current_process.page_set_m(v_page, True)
 
-            print(f'process_name: {self.current_process.name}')
-            print(f'PID: {self.current_process.pid}')
-            print(f'v_address: {v_address}')
-            print(f'p_address: {frame_id} + {offset}')
-            print(f'operation: {access.operation}')
-            print(data)
-            print(" ")
+            # print(f'process_name: {self.current_process.name}')
+            # print(f'PID: {self.current_process.pid}')
+            # print(f'v_address: {v_address}')
+            # print(f'p_address: {frame_id} + {offset}')
+            # print(f'operation: {access.operation}')
+            # print(data)
+            # print(" ")
 
             self.current_process.point_next()
 
@@ -126,7 +132,15 @@ class Kernel(metaclass=Singleton):
         name = self.current_process.get_name()
 
         offset = page_size * v_page
-        data = self.fs.read_data(name, offset, page_size)
+
+        data = self.fs.read_page(
+            self.current_process.get_pid(),
+            v_page
+        )
+
+        if data is None:
+            data = self.fs.read_data(name, offset, page_size)
+            print("read from file")
 
         frame_id = self.memory.find_free_frame()
 
