@@ -6,14 +6,10 @@ class Frame:
     def __init__(self, size, base):
         self.size = size
         self.base = base
-        self.is_free = True
         self.data = [0 for _ in range(size)]
 
     def insert_data(self, data):
         self.data = data
-
-    def set_free(self, status):
-        self.is_free = status
 
     def free(self):
         self.data = [0 for _ in range(self.size)]
@@ -51,21 +47,24 @@ class PhysicalMemory(metaclass=Singleton):
 
         frame = self.frame_list[frame_id]
         frame.insert_data(data)
-        frame.set_free(False)
 
         #print
         print(frame.data)
 
     def find_free_frame(self):
         for i in range(self.frame_count):
-            if self.frame_list[i].is_free is True:
+            if self.metadata[i] is None:
                 return i
 
         return None
 
     def free_frame(self, frame_id):
         self.frame_list[frame_id].free()
-        self.frame_list[frame_id].set_free(True)
+
+        self.metadata[frame_id]["ptr_pte"]["P"] = False
+        self.metadata[frame_id]["ptr_pte"]["R"] = False
+        self.metadata[frame_id]["ptr_pte"]["M"] = False
+        self.metadata[frame_id]["ptr_pte"]["PPN"] = None
 
         self.metadata[frame_id] = None
 
@@ -96,9 +95,14 @@ class PhysicalMemory(metaclass=Singleton):
 
         return active
 
+    def m_get_process_frames(self, pid):
+        frames = []
+
+        for frame_id, metadata in self.metadata.items():
+            if metadata is not None and metadata["pid"] == pid:
+                frames.append(frame_id)
+
+        return frames
+
     def m_set_bit(self, frame_id, bit, value):
         self.metadata[frame_id]["ptr_pte"][bit] = value
-
-
-    def m_delete(self, frame_id):
-        self.metadata[frame_id] = None

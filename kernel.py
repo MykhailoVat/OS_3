@@ -67,16 +67,25 @@ class Kernel(metaclass=Singleton):
 
             if access_res == SequenceResult.PROCESS_FINISHED:
                 self.s_finish_process()
-
                 self.quantum_tick = 0
                 self.tick += 1
-                continue
 
-            self.tick += 1
-            self.quantum_tick += 1
+            elif access_res == SequenceResult.PAGE_FAULT:
+                self.tick += 1
+                self.quantum_tick += 1
+
+            elif access_res == SequenceResult.ACCESS_DONE:
+                self.tick += 1
+                self.quantum_tick += 1
+
+            elif access_res == SequenceResult.NO_MEMORY:
+                self.s_replace()
+                self.tick += 1
+                self.quantum_tick += 1
 
             if self.quantum_tick >= opt.consts.QUANTUM_SIZE:
-                self.s_switch_process()
+                if len(self.queue) >= 2:
+                    self.s_switch_process()
                 self.quantum_tick = 0
 
             if self.tick % opt.consts.RESET_INTERVAL == 0:
@@ -120,9 +129,10 @@ class Kernel(metaclass=Singleton):
             # print(data)
             # print(" ")
 
-            self.current_process.point_next()
-
-            return SequenceResult.ACCESS_DONE
+            if self.current_process.point_next():
+                return SequenceResult.ACCESS_DONE
+            else:
+                return SequenceResult.NO_MEMORY
 
         except PageFault as fault:
             self.handle_page_fault(fault.v_page)
@@ -149,15 +159,20 @@ class Kernel(metaclass=Singleton):
 
         if frame_id is None:
             print("No free memory")
-            return
+            return False
 
         ptr_pte = self.current_process.get_pte(v_page)
         pid = self.current_process.get_pid()
 
-        self.memory.write_frame(frame_id, data, ptr_pte, pid, v_page, self.tick)
+        self.memory.write_frame(
+            frame_id, data, ptr_pte,
+            pid, v_page, self.tick
+        )
 
         self.current_process.page_set_p(v_page, True)
         self.current_process.page_set_ppn(v_page, frame_id)
+
+        return True
 
     def s_attempt_spawn(self, min_acc, max_acc, fs_data, p_size):
         if self.process_count >= opt.consts.MAX_PROCS:
@@ -181,6 +196,13 @@ class Kernel(metaclass=Singleton):
             self.current_process.get_pid()
         )
 
+        frames = self.memory.m_get_process_frames(
+            self.current_process.get_pid()
+        )
+
+        for frame_id in frames:
+            self.memory.free_frame(frame_id)
+
         self.queue.popleft()
         self.process_count -= 1
 
@@ -189,11 +211,6 @@ class Kernel(metaclass=Singleton):
         self.queue.append(process)
 
     def s_reset_references(self):
-        # metadata = self.memory.get_metadata()
-        #
-        # for ptr_pte in pte_dict.values():
-        #     if ptr_pte is not None:
-        #         ptr_pte["R"] = 0
         active = self.memory.m_get_active_frames()
 
         for frame_id in active:
@@ -207,7 +224,7 @@ class Kernel(metaclass=Singleton):
             active = self.memory.m_get_active_frames()
             victim_id = random.choice(active)
 
-        if not self.memory.m_get_bit(victim_id, "M"):
+        if self.memory.m_get_bit(victim_id, "M"):
             data = self.memory.get_frame_content(victim_id)
             self.fs.write_page(
                 self.memory.m_get_pid(victim_id),
@@ -216,9 +233,6 @@ class Kernel(metaclass=Singleton):
             )
 
         self.memory.free_frame(victim_id)
-
-        self.memory.m_delete(victim_id)
-
 
     def s_wsclock(self):
         metadata = self.memory.get_metadata()
