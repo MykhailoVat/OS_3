@@ -5,4 +5,4 @@ from opt.obj.accessType import AccessType
 class MemoryAccess:
     address: int
     operation: AccessType
-    value: bytes | None = None
+    value: int | None

@@ -19,4 +19,8 @@ def generate_access(ws_entries, pages_number, page_size):
         weights=[opt.consts.READ_WEIGHT, opt.consts.WRITE_WEIGHT]
     )[0]
 
-    return MemoryAccess(address, access_type)
+    value = None
+    if access_type == AccessType.WRITE:
+        value = random.randint(0, 10)
+
+    return MemoryAccess(address, access_type, value)

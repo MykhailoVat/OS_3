@@ -42,6 +42,9 @@ class Process:
         if self.access_count % opt.consts.WS_UPD_INTERVAL == 0:
             self.working_set.update()
 
+    def end(self):
+
+
     def get_name(self):
         return self.name
 

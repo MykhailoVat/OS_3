@@ -77,3 +77,28 @@ class PhysicalMemory(metaclass=Singleton):
 
     def get_metadata(self):
         return self.metadata
+
+    def m_get_bit(self, frame_id, bit):
+        return self.metadata[frame_id]["ptr_pte"][bit]
+
+    def m_get_pid(self, frame_id):
+        return self.metadata[frame_id]["pid"]
+
+    def m_get_page_id(self, frame_id):
+        return self.metadata[frame_id]["v_page"]
+
+    def m_get_active_frames(self):
+        active = []
+
+        for frame_id in self.metadata:
+            if self.metadata[frame_id] is not None:
+                active.append(frame_id)
+
+        return active
+
+    def m_set_bit(self, frame_id, bit, value):
+        self.metadata[frame_id]["ptr_pte"][bit] = value
+
+
+    def m_delete(self, frame_id):
+        self.metadata[frame_id] = None

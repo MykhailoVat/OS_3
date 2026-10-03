@@ -79,10 +79,10 @@ class Kernel(metaclass=Singleton):
                 self.s_switch_process()
                 self.quantum_tick = 0
 
-            if self.tick % opt.consts.RESET_INTERVAL:
+            if self.tick % opt.consts.RESET_INTERVAL == 0:
                 self.s_reset_references()
 
-            if self.tick % opt.consts.REPLACE_INTERVAL:
+            if self.tick % opt.consts.REPLACE_INTERVAL == 0:
                 self.s_replace()
 
             sleep(1)
@@ -142,6 +142,8 @@ class Kernel(metaclass=Singleton):
         if data is None:
             data = self.fs.read_data(name, offset, page_size)
             print("read from file")
+        else:
+            print("read saved")
 
         frame_id = self.memory.find_free_frame()
 
@@ -187,30 +189,35 @@ class Kernel(metaclass=Singleton):
         self.queue.append(process)
 
     def s_reset_references(self):
-        metadata = self.memory.get_metadata()
+        # metadata = self.memory.get_metadata()
+        #
+        # for ptr_pte in pte_dict.values():
+        #     if ptr_pte is not None:
+        #         ptr_pte["R"] = 0
+        active = self.memory.m_get_active_frames()
 
-        for ptr_pte in pte_dict.values():
-            if ptr_pte is not None:
-                ptr_pte["R"] = 0
+        for frame_id in active:
+            self.memory.m_set_bit(frame_id, "R", False)
+
 
     def s_replace(self):
-        metadata = self.memory.get_metadata()
         victim_id = self.s_wsclock()
 
         if victim_id is None:
-            victim_id = random.randint(0, self.memory.get_frame_count() - 1)
+            active = self.memory.m_get_active_frames()
+            victim_id = random.choice(active)
 
-        if metadata[victim_id]["ptr_pte"]["M"] == 1:
+        if not self.memory.m_get_bit(victim_id, "M"):
             data = self.memory.get_frame_content(victim_id)
             self.fs.write_page(
-                metadata[victim_id]["pid"],
-                metadata[victim_id]["v_page"],
+                self.memory.m_get_pid(victim_id),
+                self.memory.m_get_page_id(victim_id),
                 data
             )
 
         self.memory.free_frame(victim_id)
 
-        metadata[victim_id] = None
+        self.memory.m_delete(victim_id)
 
 
     def s_wsclock(self):
@@ -222,7 +229,7 @@ class Kernel(metaclass=Singleton):
         for _ in range(frame_count):
             if metadata[frame_id] is not None:
                 if metadata[frame_id]["ptr_pte"] is not None:
-                    if metadata[frame_id]["ptr_pte"]["R"] == 0:
+                    if not metadata[frame_id]["ptr_pte"]["R"]:
                         r_time = metadata[frame_id]["last_ref"]
                         active_time = self.tick - r_time
                         if active_time > opt.consts.DELTA:
