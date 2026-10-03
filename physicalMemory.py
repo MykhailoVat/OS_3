@@ -23,6 +23,8 @@ class PhysicalMemory(metaclass=Singleton):
     def __init__(self, capacity, frame_size):
         self.frame_list = []
         self.frame_count = capacity // frame_size
+        self.pte_dict = {}
+
 
         base = 0x0000
         for i in range(self.frame_count):
@@ -30,21 +32,25 @@ class PhysicalMemory(metaclass=Singleton):
             self.frame_list.append(frame)
             base += frame_size
 
-    def fill_frame(self, frame_id, data):
+            self.pte_dict[i] = None
+
+    def fill_frame(self, frame_id, data, ptr_pte):
         frame = self.frame_list[frame_id]
         frame.insert_data(data)
         frame.set_free(False)
 
+        self.pte_dict[frame_id] = ptr_pte
+
         #print
         print(frame.data)
 
-    def read_data(self, frame_id, offset):
+    def read(self, frame_id, offset):
         return self.frame_list[frame_id].data[offset]
 
-    def read_frame_data(self, frame_id):
+    def read_frame(self, frame_id):
         return self.frame_list[frame_id].data
 
-    def write_data(self, frame_id, offset, data):
+    def write(self, frame_id, offset, data):
         self.frame_list[frame_id].data[offset] = data
 
     def find_free_frame(self):
@@ -57,6 +63,8 @@ class PhysicalMemory(metaclass=Singleton):
     def free_frame(self, frame_id):
         self.frame_list[frame_id].free()
         self.frame_list[frame_id].set_free(True)
+
+        self.pte_dict[frame_id] = None
 
     def get_frame_count(self):
         return self.frame_count

@@ -10,6 +10,9 @@ class PageTable:
     def get_pages(self):
         return self.content
 
+    def get_pte(self, page):
+        return self.content[page]
+
     def set_p(self, page, bowl):
         self.content[page]["P"] = bowl
 

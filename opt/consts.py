@@ -16,7 +16,13 @@ MAX_ACCESSES = 15
 MAX_PROCS = 4
 
 # replacement interval
-REPLACE_INTERVAL = 5
+REPLACE_INTERVAL = 6
+# reset "R" interval
+RESET_INTERVAL = 3
+
+# DELTA for WSClock algorithm
+DELTA = 5
+
 # interval of spawning new process attempt
 SPAWN_INTERVAL = 8
 # chance to spawn new process

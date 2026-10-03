@@ -50,6 +50,9 @@ class Process:
 
     def get_table(self):
         return self.table
+
+    def get_pte(self, page):
+        return self.table.get_pte(page)
                              #not shadowing 'bool'
     def page_set_p(self, page, bowl):
         self.table.set_p(page, bowl)

@@ -34,6 +34,9 @@ class Kernel(metaclass=Singleton):
         self.tick = 0
         self.quantum_tick = 0
 
+        # WSClock algorithm
+        self.clock_pointer = 0
+
         # other important data
         self.fs_data = self.fs.data
         self.page_size = self.mmu.page_size
@@ -76,8 +79,11 @@ class Kernel(metaclass=Singleton):
                 self.s_switch_process()
                 self.quantum_tick = 0
 
+            if self.tick % opt.consts.RESET_INTERVAL:
+                self.s_reset_references()
+
             if self.tick % opt.consts.REPLACE_INTERVAL:
-                self.s_replace()
+                # self.s_replace()
 
             sleep(1)
 
@@ -99,10 +105,10 @@ class Kernel(metaclass=Singleton):
 
             data = None
             if access.operation == AccessType.READ:
-                data = self.memory.read_data(frame_id, offset)
+                data = self.memory.read(frame_id, offset)
                 self.current_process.page_set_r(v_page, True)
             elif access.operation == AccessType.WRITE:
-                self.memory.write_data(frame_id, offset, access.value)
+                self.memory.write(frame_id, offset, access.value)
                 self.current_process.page_set_r(v_page, True)
                 self.current_process.page_set_m(v_page, True)
 
@@ -134,7 +140,7 @@ class Kernel(metaclass=Singleton):
         )
 
         if data is None:
-            data = self.fs.read_data(name, offset, page_size)
+            data = self.fs.read(name, offset, page_size)
             print("read from file")
 
         frame_id = self.memory.find_free_frame()
@@ -143,7 +149,9 @@ class Kernel(metaclass=Singleton):
             print("No free memory")
             return
 
-        self.memory.fill_frame(frame_id, data)
+        ptr_pte = self.current_process.get_pte(v_page)
+
+        self.memory.fill_frame(frame_id, data, ptr_pte)
 
         self.current_process.page_set_p(v_page, True)
         self.current_process.page_set_ppn(v_page, frame_id)
@@ -177,17 +185,50 @@ class Kernel(metaclass=Singleton):
         process = self.queue.popleft()
         self.queue.append(process)
 
-    def s_replace(self):
-        table = self.current_process.get_table()
-        pid = self.current_process.get_pid()
+    def s_reset_references(self):
+        pte_dict = self.memory.get_pte_dict()
 
-        # wanted = function(table)
+        for ptr_pte in pte_dict.values():
+            if ptr_pte is not None:
+                ptr_pte["R"] = 0
 
-        for page_id, page in enumerate(wanted):
-            frame_id = page["PPN"]
+    # def s_replace(self):
+    #     table = self.current_process.get_table()
+    #     pid = self.current_process.get_pid()
+    #
+    #     # wanted = function(table)
+    #
+    #     for page_id, page in enumerate(wanted):
+    #         frame_id = page["PPN"]
+    #
+    #         if page["M"] == 1:
+    #             data = self.memory.get_frame_data(frame_id)
+    #             self.fs.write_page(pid, page_id, data)
+    #
+    #         self.memory.free_frame(frame_id)
 
-            if page["M"] == 1:
-                data = self.memory.get_frame_data(frame_id)
-                self.fs.write_page(pid, page_id, data)
+    def s_wsclock(self):
+        pte_dict = self.memory.get_pte_dict()
+        r_time_dict = self.memory.get_time_dict()
 
-            self.memory.free_frame(frame_id)
+        frame_id = self.clock_pointer
+
+        frame_count = self.memory.get_frame_count()
+        for _ in range(frame_count):
+            if pte_dict[frame_id] is not None:
+                if pte_dict[frame_id]["R"] == 0:
+                    r_time = r_time_dict[frame_id]
+                    active_time = self.tick - r_time
+                    if active_time > opt.consts.DELTA:
+                        self.clock_pointer = (frame_id + 1) % frame_count
+                        return frame_id
+
+            self.clock_pointer = (frame_id + 1) % frame_count
+        return None
+
+
+
+
+
+
+
