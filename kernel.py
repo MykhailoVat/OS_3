@@ -219,9 +219,15 @@ class Kernel(metaclass=Singleton):
 
     def s_replace(self):
         victim_id = self.s_wsclock()
+        # for random:
+        # victim_id = None
 
         if victim_id is None:
             active = self.memory.m_get_active_frames()
+
+            if not active:
+                return
+
             victim_id = random.choice(active)
 
         if self.memory.m_get_bit(victim_id, "M"):
@@ -250,7 +256,7 @@ class Kernel(metaclass=Singleton):
                             self.clock_pointer = (frame_id + 1) % frame_count
                             return frame_id
 
-                self.clock_pointer = (frame_id + 1) % frame_count
+            self.clock_pointer = (frame_id + 1) % frame_count
         return None
 
 
