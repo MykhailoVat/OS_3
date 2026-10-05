@@ -10,7 +10,7 @@ WORK_TIME = 1000
 # USED IN KERNEL.PY
 # -----------------
 # if random algorithm
-RAND = True
+RAND = False
 # run delay
 DELAY = 0
 

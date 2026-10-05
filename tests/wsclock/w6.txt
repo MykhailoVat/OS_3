@@ -1,0 +1,6267 @@
+ 
+tick=0, quantum=0, queue=[0]
+memory: [0]
+Current process info:
+pid=0, access=0/13
+ACCESS RES: PAGE FAULT
+ 
+tick=1, quantum=1, queue=[0]
+memory: [0]
+Current process info:
+pid=0, access=1/13
+ACCESS RES: ACCESS DONE
+ 
+tick=2, quantum=2, queue=[0]
+memory: [0, 1]
+Current process info:
+pid=0, access=1/13
+ACCESS RES: PAGE FAULT
+ 
+tick=3, quantum=3, queue=[0]
+memory: [0, 1]
+Current process info:
+pid=0, access=2/13
+ACCESS RES: ACCESS DONE
+ 
+tick=4, quantum=0, queue=[0]
+memory: [0, 1, 2]
+Current process info:
+pid=0, access=2/13
+ACCESS RES: PAGE FAULT
+ 
+tick=5, quantum=1, queue=[0]
+memory: [0, 1, 2]
+Current process info:
+pid=0, access=3/13
+ACCESS RES: ACCESS DONE
+ 
+tick=6, quantum=2, queue=[0]
+memory: [0, 1, 2]
+Current process info:
+pid=0, access=4/13
+ACCESS RES: ACCESS DONE
+ 
+tick=7, quantum=3, queue=[0]
+memory: [0, 1, 2]
+Current process info:
+pid=0, access=5/13
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=8, quantum=0, queue=[0, 1]
+memory: [0, 1, 2]
+Current process info:
+pid=0, access=6/13
+ACCESS RES: ACCESS DONE
+ 
+tick=9, quantum=1, queue=[0, 1]
+memory: [0, 1, 2]
+Current process info:
+pid=0, access=7/13
+ACCESS RES: ACCESS DONE
+ 
+tick=10, quantum=2, queue=[0, 1]
+memory: [0, 1, 2]
+Current process info:
+pid=0, access=8/13
+ACCESS RES: ACCESS DONE
+ 
+tick=11, quantum=3, queue=[0, 1]
+memory: [0, 1, 2]
+Current process info:
+pid=0, access=9/13
+ACCESS RES: ACCESS DONE
+ 
+tick=12, quantum=0, queue=[1, 0]
+memory: [0, 1, 2, 3]
+Current process info:
+pid=1, access=0/10
+ACCESS RES: PAGE FAULT
+ 
+tick=13, quantum=1, queue=[1, 0]
+memory: [0, 1, 2, 3]
+Current process info:
+pid=1, access=1/10
+ACCESS RES: ACCESS DONE
+ 
+tick=14, quantum=2, queue=[1, 0]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=1, access=1/10
+ACCESS RES: PAGE FAULT
+ 
+tick=15, quantum=3, queue=[1, 0]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=1, access=2/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=16, quantum=0, queue=[0, 1, 2]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=0, access=10/13
+ACCESS RES: ACCESS DONE
+ 
+tick=17, quantum=1, queue=[0, 1, 2]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=0, access=11/13
+ACCESS RES: ACCESS DONE
+ 
+tick=18, quantum=2, queue=[0, 1, 2]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=0, access=12/13
+ACCESS RES: ACCESS DONE
+ 
+tick=19, quantum=3, queue=[0, 1, 2]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=0, access=13/13
+ACCESS RES: ACCESS DONE
+ 
+tick=20, quantum=0, queue=[1, 2, 0]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=1, access=3/10
+ACCESS RES: ACCESS DONE
+ 
+tick=21, quantum=1, queue=[1, 2, 0]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=1, access=4/10
+ACCESS RES: ACCESS DONE
+ 
+tick=22, quantum=2, queue=[1, 2, 0]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=1, access=5/10
+ACCESS RES: ACCESS DONE
+ 
+tick=23, quantum=3, queue=[1, 2, 0]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=1, access=5/10
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=24, quantum=0, queue=[2, 0, 1]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=2, access=0/10
+ACCESS RES: PAGE FAULT
+ 
+tick=25, quantum=1, queue=[2, 0, 1]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=2, access=1/10
+ACCESS RES: ACCESS DONE
+ 
+tick=26, quantum=2, queue=[2, 0, 1]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=2, access=2/10
+ACCESS RES: ACCESS DONE
+ 
+tick=27, quantum=3, queue=[2, 0, 1]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=2, access=3/10
+ACCESS RES: ACCESS DONE
+ 
+tick=28, quantum=0, queue=[1, 2]
+memory: [3, 4, 5, 6]
+Current process info:
+pid=0, access=13/13
+ 
+tick=29, quantum=0, queue=[1, 2]
+memory: [3, 4, 5, 6]
+Current process info:
+pid=1, access=6/10
+ACCESS RES: ACCESS DONE
+ 
+tick=30, quantum=1, queue=[1, 2]
+memory: [3, 4, 5, 6]
+Current process info:
+pid=1, access=7/10
+ACCESS RES: ACCESS DONE
+ 
+tick=31, quantum=2, queue=[1, 2]
+memory: [3, 4, 5, 6]
+Current process info:
+pid=1, access=8/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=32, quantum=3, queue=[1, 2, 3]
+memory: [3, 4, 5, 6]
+Current process info:
+pid=1, access=9/10
+ACCESS RES: ACCESS DONE
+ 
+tick=33, quantum=0, queue=[2, 3, 1]
+memory: [0, 3, 4, 5, 6]
+Current process info:
+pid=2, access=3/10
+ACCESS RES: PAGE FAULT
+ 
+tick=34, quantum=1, queue=[2, 3, 1]
+memory: [0, 3, 4, 5, 6]
+Current process info:
+pid=2, access=4/10
+ACCESS RES: ACCESS DONE
+ 
+tick=35, quantum=2, queue=[2, 3, 1]
+memory: [0, 3, 4, 5, 6]
+Current process info:
+pid=2, access=5/10
+ACCESS RES: ACCESS DONE
+ 
+tick=36, quantum=3, queue=[2, 3, 1]
+memory: [0, 3, 4, 5, 6]
+Current process info:
+pid=2, access=6/10
+ACCESS RES: ACCESS DONE
+ 
+tick=37, quantum=0, queue=[3, 1, 2]
+memory: [0, 1, 3, 4, 5, 6]
+Current process info:
+pid=3, access=0/16
+ACCESS RES: PAGE FAULT
+ 
+tick=38, quantum=1, queue=[3, 1, 2]
+memory: [0, 1, 3, 4, 5, 6]
+Current process info:
+pid=3, access=1/16
+ACCESS RES: ACCESS DONE
+ 
+tick=39, quantum=2, queue=[3, 1, 2]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=3, access=1/16
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=40, quantum=3, queue=[3, 1, 2, 4]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=3, access=2/16
+ACCESS RES: ACCESS DONE
+ 
+tick=41, quantum=0, queue=[1, 2, 4, 3]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=1, access=10/10
+ACCESS RES: ACCESS DONE
+ 
+tick=42, quantum=1, queue=[2, 4, 3]
+memory: [0, 1, 2, 6]
+Current process info:
+pid=1, access=10/10
+ 
+tick=43, quantum=0, queue=[2, 4, 3]
+memory: [0, 1, 2, 6]
+Current process info:
+pid=2, access=7/10
+ACCESS RES: ACCESS DONE
+ 
+tick=44, quantum=1, queue=[2, 4, 3]
+memory: [0, 1, 2, 6]
+Current process info:
+pid=2, access=8/10
+ACCESS RES: ACCESS DONE
+ 
+tick=45, quantum=2, queue=[2, 4, 3]
+memory: [0, 1, 2, 6]
+Current process info:
+pid=2, access=9/10
+ACCESS RES: ACCESS DONE
+ 
+tick=46, quantum=3, queue=[2, 4, 3]
+memory: [0, 1, 2, 6]
+Current process info:
+pid=2, access=10/10
+ACCESS RES: ACCESS DONE
+ 
+tick=47, quantum=0, queue=[4, 3, 2]
+memory: [0, 1, 2, 3, 6]
+Current process info:
+pid=4, access=0/20
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=48, quantum=1, queue=[4, 3, 2]
+memory: [0, 1, 2, 3, 6]
+Current process info:
+pid=4, access=1/20
+ACCESS RES: ACCESS DONE
+ 
+tick=49, quantum=2, queue=[4, 3, 2]
+memory: [0, 1, 2, 3, 4, 6]
+Current process info:
+pid=4, access=1/20
+ACCESS RES: PAGE FAULT
+ 
+tick=50, quantum=3, queue=[4, 3, 2]
+memory: [0, 1, 2, 3, 4, 6]
+Current process info:
+pid=4, access=2/20
+ACCESS RES: ACCESS DONE
+ 
+tick=51, quantum=0, queue=[3, 2, 4]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=3, access=2/16
+ACCESS RES: PAGE FAULT
+ 
+tick=52, quantum=1, queue=[3, 2, 4]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=3, access=3/16
+ACCESS RES: ACCESS DONE
+ 
+tick=53, quantum=2, queue=[3, 2, 4]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=3, access=4/16
+ACCESS RES: ACCESS DONE
+ 
+tick=54, quantum=3, queue=[3, 2, 4]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=3, access=5/16
+ACCESS RES: ACCESS DONE
+ 
+tick=55, quantum=0, queue=[4, 3]
+memory: [1, 2, 3, 4, 5]
+Current process info:
+pid=2, access=10/10
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=56, quantum=0, queue=[4, 3, 5]
+memory: [1, 2, 3, 4, 5]
+Current process info:
+pid=4, access=3/20
+ACCESS RES: ACCESS DONE
+ 
+tick=57, quantum=1, queue=[4, 3, 5]
+memory: [1, 2, 3, 4, 5]
+Current process info:
+pid=4, access=4/20
+ACCESS RES: ACCESS DONE
+ 
+tick=58, quantum=2, queue=[4, 3, 5]
+memory: [1, 2, 3, 4, 5]
+Current process info:
+pid=4, access=5/20
+ACCESS RES: ACCESS DONE
+ 
+tick=59, quantum=3, queue=[4, 3, 5]
+memory: [1, 2, 3, 4, 5]
+Current process info:
+pid=4, access=6/20
+ACCESS RES: ACCESS DONE
+ 
+tick=60, quantum=0, queue=[3, 5, 4]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=3, access=5/16
+ACCESS RES: PAGE FAULT
+ 
+tick=61, quantum=1, queue=[3, 5, 4]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=3, access=6/16
+ACCESS RES: ACCESS DONE
+ 
+tick=62, quantum=2, queue=[3, 5, 4]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=3, access=7/16
+ACCESS RES: ACCESS DONE
+ 
+tick=63, quantum=3, queue=[3, 5, 4]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=3, access=8/16
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=64, quantum=0, queue=[5, 4, 3, 6]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=5, access=0/19
+ACCESS RES: PAGE FAULT
+ 
+tick=65, quantum=1, queue=[5, 4, 3, 6]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=5, access=1/19
+ACCESS RES: ACCESS DONE
+ 
+tick=66, quantum=2, queue=[5, 4, 3, 6]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=5, access=1/19
+ACCESS RES: PAGE FAULT
+ 
+tick=67, quantum=3, queue=[5, 4, 3, 6]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=5, access=2/19
+ACCESS RES: ACCESS DONE
+ 
+tick=68, quantum=0, queue=[4, 3, 6, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=4, access=7/20
+ACCESS RES: ACCESS DONE
+ 
+tick=69, quantum=1, queue=[4, 3, 6, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=4, access=7/20
+ACCESS RES: PAGE FAULT
+ 
+tick=70, quantum=2, queue=[4, 3, 6, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=4, access=8/20
+ACCESS RES: ACCESS DONE
+ 
+tick=71, quantum=3, queue=[4, 3, 6, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=4, access=9/20
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+PROCESS COUNT LIMIT REACHED
+ 
+tick=72, quantum=0, queue=[3, 6, 5, 4]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=3, access=9/16
+ACCESS RES: ACCESS DONE
+ 
+tick=73, quantum=1, queue=[3, 6, 5, 4]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=3, access=10/16
+ACCESS RES: ACCESS DONE
+ 
+tick=74, quantum=2, queue=[3, 6, 5, 4]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=3, access=11/16
+ACCESS RES: ACCESS DONE
+ 
+tick=75, quantum=3, queue=[3, 6, 5, 4]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=3, access=11/16
+ACCESS RES: PAGE FAULT
+ 
+tick=76, quantum=0, queue=[6, 5, 4, 3]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=6, access=0/17
+ACCESS RES: PAGE FAULT
+ 
+tick=77, quantum=1, queue=[6, 5, 4, 3]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=6, access=1/17
+ACCESS RES: ACCESS DONE
+ 
+tick=78, quantum=2, queue=[6, 5, 4, 3]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=6, access=1/17
+ACCESS RES: PAGE FAULT
+ 
+tick=79, quantum=3, queue=[6, 5, 4, 3]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=6, access=2/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 1
+PROCESS COUNT LIMIT REACHED
+ 
+tick=80, quantum=0, queue=[5, 4, 3, 6]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=5, access=2/19
+ACCESS RES: PAGE FAULT
+ 
+tick=81, quantum=1, queue=[5, 4, 3, 6]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=5, access=3/19
+ACCESS RES: ACCESS DONE
+ 
+tick=82, quantum=2, queue=[5, 4, 3, 6]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=5, access=4/19
+ACCESS RES: ACCESS DONE
+ 
+tick=83, quantum=3, queue=[5, 4, 3, 6]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=5, access=4/19
+ACCESS RES: PAGE FAULT
+ 
+tick=84, quantum=0, queue=[4, 3, 6, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=4, access=10/20
+ACCESS RES: ACCESS DONE
+ 
+tick=85, quantum=1, queue=[4, 3, 6, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=4, access=10/20
+ACCESS RES: PAGE FAULT
+ 
+tick=86, quantum=2, queue=[4, 3, 6, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=4, access=11/20
+ACCESS RES: ACCESS DONE
+ 
+tick=87, quantum=3, queue=[4, 3, 6, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=4, access=12/20
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 2
+PROCESS COUNT LIMIT REACHED
+ 
+tick=88, quantum=0, queue=[3, 6, 5, 4]
+memory: [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=3, access=12/16
+ACCESS RES: ACCESS DONE
+ 
+tick=89, quantum=1, queue=[3, 6, 5, 4]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=3, access=12/16
+ACCESS RES: PAGE FAULT
+ 
+tick=90, quantum=2, queue=[3, 6, 5, 4]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=3, access=13/16
+ACCESS RES: ACCESS DONE
+ 
+tick=91, quantum=3, queue=[3, 6, 5, 4]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=3, access=14/16
+ACCESS RES: ACCESS DONE
+ 
+tick=92, quantum=0, queue=[6, 5, 4, 3]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=6, access=2/17
+ACCESS RES: PAGE FAULT
+ 
+tick=93, quantum=1, queue=[6, 5, 4, 3]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=6, access=3/17
+ACCESS RES: ACCESS DONE
+ 
+tick=94, quantum=2, queue=[6, 5, 4, 3]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=6, access=4/17
+ACCESS RES: ACCESS DONE
+ 
+tick=95, quantum=3, queue=[6, 5, 4, 3]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=6, access=5/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 5
+PROCESS COUNT LIMIT REACHED
+ 
+tick=96, quantum=0, queue=[5, 4, 3, 6]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=5, access=5/19
+ACCESS RES: ACCESS DONE
+ 
+tick=97, quantum=1, queue=[5, 4, 3, 6]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=5, access=6/19
+ACCESS RES: ACCESS DONE
+ 
+tick=98, quantum=2, queue=[5, 4, 3, 6]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=5, access=7/19
+ACCESS RES: ACCESS DONE
+ 
+tick=99, quantum=3, queue=[5, 4, 3, 6]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=5, access=7/19
+ACCESS RES: PAGE FAULT
+ 
+tick=100, quantum=0, queue=[4, 3, 6, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=4, access=12/20
+ACCESS RES: PAGE FAULT
+ 
+tick=101, quantum=1, queue=[4, 3, 6, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=4, access=13/20
+ACCESS RES: ACCESS DONE
+ 
+tick=102, quantum=2, queue=[4, 3, 6, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=4, access=14/20
+ACCESS RES: ACCESS DONE
+ 
+tick=103, quantum=3, queue=[4, 3, 6, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=4, access=15/20
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 7
+PROCESS COUNT LIMIT REACHED
+ 
+tick=104, quantum=0, queue=[3, 6, 5, 4]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=3, access=15/16
+ACCESS RES: ACCESS DONE
+ 
+tick=105, quantum=1, queue=[3, 6, 5, 4]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=3, access=16/16
+ACCESS RES: ACCESS DONE
+ 
+tick=106, quantum=2, queue=[6, 5, 4]
+memory: [1, 3, 4, 5, 6, 8, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=3, access=16/16
+ 
+tick=107, quantum=0, queue=[6, 5, 4]
+memory: [1, 3, 4, 5, 6, 8, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=6, access=6/17
+ACCESS RES: ACCESS DONE
+ 
+tick=108, quantum=1, queue=[6, 5, 4]
+memory: [1, 3, 4, 5, 6, 8, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=6, access=7/17
+ACCESS RES: ACCESS DONE
+ 
+tick=109, quantum=2, queue=[6, 5, 4]
+memory: [1, 3, 4, 5, 6, 8, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=6, access=8/17
+ACCESS RES: ACCESS DONE
+ 
+tick=110, quantum=3, queue=[6, 5, 4]
+memory: [1, 3, 4, 5, 6, 8, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=6, access=9/17
+ACCESS RES: ACCESS DONE
+ 
+tick=111, quantum=0, queue=[5, 4, 6]
+memory: [1, 3, 4, 5, 6, 8, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=5, access=8/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 13
+ 
+tick=112, quantum=1, queue=[5, 4, 6, 7]
+memory: [1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=5, access=9/19
+ACCESS RES: ACCESS DONE
+ 
+tick=113, quantum=2, queue=[5, 4, 6, 7]
+memory: [1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=5, access=10/19
+ACCESS RES: ACCESS DONE
+ 
+tick=114, quantum=3, queue=[5, 4, 6, 7]
+memory: [0, 1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=5, access=10/19
+ACCESS RES: PAGE FAULT
+ 
+tick=115, quantum=0, queue=[4, 6, 7, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=4, access=15/20
+ACCESS RES: PAGE FAULT
+ 
+tick=116, quantum=1, queue=[4, 6, 7, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=4, access=16/20
+ACCESS RES: ACCESS DONE
+ 
+tick=117, quantum=2, queue=[4, 6, 7, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=4, access=17/20
+ACCESS RES: ACCESS DONE
+ 
+tick=118, quantum=3, queue=[4, 6, 7, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=4, access=18/20
+ACCESS RES: ACCESS DONE
+ 
+tick=119, quantum=0, queue=[6, 7, 5, 4]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=6, access=10/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 3
+PROCESS COUNT LIMIT REACHED
+ 
+tick=120, quantum=1, queue=[6, 7, 5, 4]
+memory: [0, 1, 2, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=6, access=11/17
+ACCESS RES: ACCESS DONE
+ 
+tick=121, quantum=2, queue=[6, 7, 5, 4]
+memory: [0, 1, 2, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=6, access=12/17
+ACCESS RES: ACCESS DONE
+ 
+tick=122, quantum=3, queue=[6, 7, 5, 4]
+memory: [0, 1, 2, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=6, access=13/17
+ACCESS RES: ACCESS DONE
+ 
+tick=123, quantum=0, queue=[7, 5, 4, 6]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=7, access=0/12
+ACCESS RES: PAGE FAULT
+ 
+tick=124, quantum=1, queue=[7, 5, 4, 6]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=7, access=1/12
+ACCESS RES: ACCESS DONE
+ 
+tick=125, quantum=2, queue=[7, 5, 4, 6]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=7, access=1/12
+ACCESS RES: PAGE FAULT
+ 
+tick=126, quantum=3, queue=[7, 5, 4, 6]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=7, access=2/12
+ACCESS RES: ACCESS DONE
+ 
+tick=127, quantum=0, queue=[5, 4, 6, 7]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=5, access=11/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 4
+PROCESS COUNT LIMIT REACHED
+ 
+tick=128, quantum=1, queue=[5, 4, 6, 7]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=5, access=11/19
+ACCESS RES: PAGE FAULT
+ 
+tick=129, quantum=2, queue=[5, 4, 6, 7]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=5, access=12/19
+ACCESS RES: ACCESS DONE
+ 
+tick=130, quantum=3, queue=[5, 4, 6, 7]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15]
+Current process info:
+pid=5, access=13/19
+ACCESS RES: ACCESS DONE
+ 
+tick=131, quantum=0, queue=[4, 6, 7, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15]
+Current process info:
+pid=4, access=18/20
+ACCESS RES: PAGE FAULT
+ 
+tick=132, quantum=1, queue=[4, 6, 7, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15]
+Current process info:
+pid=4, access=19/20
+ACCESS RES: ACCESS DONE
+ 
+tick=133, quantum=2, queue=[4, 6, 7, 5]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15]
+Current process info:
+pid=4, access=20/20
+ACCESS RES: ACCESS DONE
+ 
+tick=134, quantum=3, queue=[6, 7, 5]
+memory: [0, 1, 3, 4, 5, 6, 7, 10, 11, 12, 14]
+Current process info:
+pid=4, access=20/20
+ 
+tick=135, quantum=0, queue=[6, 7, 5]
+memory: [0, 1, 3, 4, 5, 6, 7, 10, 11, 12, 14]
+Current process info:
+pid=6, access=14/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 5
+ 
+tick=136, quantum=1, queue=[6, 7, 5]
+memory: [0, 1, 2, 3, 4, 6, 7, 10, 11, 12, 14]
+Current process info:
+pid=6, access=14/17
+ACCESS RES: PAGE FAULT
+ 
+tick=137, quantum=2, queue=[6, 7, 5]
+memory: [0, 1, 2, 3, 4, 6, 7, 10, 11, 12, 14]
+Current process info:
+pid=6, access=15/17
+ACCESS RES: ACCESS DONE
+ 
+tick=138, quantum=3, queue=[6, 7, 5]
+memory: [0, 1, 2, 3, 4, 6, 7, 10, 11, 12, 14]
+Current process info:
+pid=6, access=16/17
+ACCESS RES: ACCESS DONE
+ 
+tick=139, quantum=0, queue=[7, 5, 6]
+memory: [0, 1, 2, 3, 4, 6, 7, 10, 11, 12, 14]
+Current process info:
+pid=7, access=3/12
+ACCESS RES: ACCESS DONE
+ 
+tick=140, quantum=1, queue=[7, 5, 6]
+memory: [0, 1, 2, 3, 4, 6, 7, 10, 11, 12, 14]
+Current process info:
+pid=7, access=4/12
+ACCESS RES: ACCESS DONE
+ 
+tick=141, quantum=2, queue=[7, 5, 6]
+memory: [0, 1, 2, 3, 4, 6, 7, 10, 11, 12, 14]
+Current process info:
+pid=7, access=5/12
+ACCESS RES: ACCESS DONE
+ 
+tick=142, quantum=3, queue=[7, 5, 6]
+memory: [0, 1, 2, 3, 4, 6, 7, 10, 11, 12, 14]
+Current process info:
+pid=7, access=6/12
+ACCESS RES: ACCESS DONE
+ 
+tick=143, quantum=0, queue=[5, 6, 7]
+memory: [0, 1, 2, 3, 4, 6, 7, 10, 11, 12, 14]
+Current process info:
+pid=5, access=14/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 6
+ 
+tick=144, quantum=1, queue=[5, 6, 7, 8]
+memory: [0, 1, 2, 3, 4, 7, 10, 11, 12, 14]
+Current process info:
+pid=5, access=15/19
+ACCESS RES: ACCESS DONE
+ 
+tick=145, quantum=2, queue=[5, 6, 7, 8]
+memory: [0, 1, 2, 3, 4, 7, 10, 11, 12, 14]
+Current process info:
+pid=5, access=16/19
+ACCESS RES: ACCESS DONE
+ 
+tick=146, quantum=3, queue=[5, 6, 7, 8]
+memory: [0, 1, 2, 3, 4, 5, 7, 10, 11, 12, 14]
+Current process info:
+pid=5, access=16/19
+ACCESS RES: PAGE FAULT
+ 
+tick=147, quantum=0, queue=[6, 7, 8, 5]
+memory: [0, 1, 2, 3, 4, 5, 7, 10, 11, 12, 14]
+Current process info:
+pid=6, access=17/17
+ACCESS RES: ACCESS DONE
+ 
+tick=148, quantum=1, queue=[7, 8, 5]
+memory: [0, 1, 3, 4, 5, 7, 12]
+Current process info:
+pid=6, access=17/17
+ 
+tick=149, quantum=0, queue=[7, 8, 5]
+memory: [0, 1, 3, 4, 5, 7, 12]
+Current process info:
+pid=7, access=7/12
+ACCESS RES: ACCESS DONE
+ 
+tick=150, quantum=1, queue=[7, 8, 5]
+memory: [0, 1, 3, 4, 5, 7, 12]
+Current process info:
+pid=7, access=8/12
+ACCESS RES: ACCESS DONE
+ 
+tick=151, quantum=2, queue=[7, 8, 5]
+memory: [0, 1, 3, 4, 5, 7, 12]
+Current process info:
+pid=7, access=9/12
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 0
+ 
+tick=152, quantum=3, queue=[7, 8, 5, 9]
+memory: [0, 1, 3, 4, 5, 7, 12]
+Current process info:
+pid=7, access=9/12
+ACCESS RES: PAGE FAULT
+ 
+tick=153, quantum=0, queue=[8, 5, 9, 7]
+memory: [0, 1, 2, 3, 4, 5, 7, 12]
+Current process info:
+pid=8, access=0/16
+ACCESS RES: PAGE FAULT
+ 
+tick=154, quantum=1, queue=[8, 5, 9, 7]
+memory: [0, 1, 2, 3, 4, 5, 7, 12]
+Current process info:
+pid=8, access=1/16
+ACCESS RES: ACCESS DONE
+ 
+tick=155, quantum=2, queue=[8, 5, 9, 7]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 12]
+Current process info:
+pid=8, access=1/16
+ACCESS RES: PAGE FAULT
+ 
+tick=156, quantum=3, queue=[8, 5, 9, 7]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 12]
+Current process info:
+pid=8, access=2/16
+ACCESS RES: ACCESS DONE
+ 
+tick=157, quantum=0, queue=[5, 9, 7, 8]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 12]
+Current process info:
+pid=5, access=17/19
+ACCESS RES: ACCESS DONE
+ 
+tick=158, quantum=1, queue=[5, 9, 7, 8]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 12]
+Current process info:
+pid=5, access=18/19
+ACCESS RES: ACCESS DONE
+ 
+tick=159, quantum=2, queue=[5, 9, 7, 8]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 12]
+Current process info:
+pid=5, access=19/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 1
+PROCESS COUNT LIMIT REACHED
+ 
+tick=160, quantum=3, queue=[9, 7, 8]
+memory: [0, 2, 3, 6, 7]
+Current process info:
+pid=5, access=19/19
+ 
+tick=161, quantum=0, queue=[9, 7, 8]
+memory: [0, 1, 2, 3, 6, 7]
+Current process info:
+pid=9, access=0/12
+ACCESS RES: PAGE FAULT
+ 
+tick=162, quantum=1, queue=[9, 7, 8]
+memory: [0, 1, 2, 3, 6, 7]
+Current process info:
+pid=9, access=1/12
+ACCESS RES: ACCESS DONE
+ 
+tick=163, quantum=2, queue=[9, 7, 8]
+memory: [0, 1, 2, 3, 4, 6, 7]
+Current process info:
+pid=9, access=1/12
+ACCESS RES: PAGE FAULT
+ 
+tick=164, quantum=3, queue=[9, 7, 8]
+memory: [0, 1, 2, 3, 4, 6, 7]
+Current process info:
+pid=9, access=2/12
+ACCESS RES: ACCESS DONE
+ 
+tick=165, quantum=0, queue=[7, 8, 9]
+memory: [0, 1, 2, 3, 4, 6, 7]
+Current process info:
+pid=7, access=10/12
+ACCESS RES: ACCESS DONE
+ 
+tick=166, quantum=1, queue=[7, 8, 9]
+memory: [0, 1, 2, 3, 4, 6, 7]
+Current process info:
+pid=7, access=11/12
+ACCESS RES: ACCESS DONE
+ 
+tick=167, quantum=2, queue=[7, 8, 9]
+memory: [0, 1, 2, 3, 4, 6, 7]
+Current process info:
+pid=7, access=12/12
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=168, quantum=3, queue=[8, 9, 10]
+memory: [1, 2, 4, 6]
+Current process info:
+pid=7, access=12/12
+ 
+tick=169, quantum=0, queue=[8, 9, 10]
+memory: [1, 2, 4, 6]
+Current process info:
+pid=8, access=3/16
+ACCESS RES: ACCESS DONE
+ 
+tick=170, quantum=1, queue=[8, 9, 10]
+memory: [1, 2, 4, 6]
+Current process info:
+pid=8, access=4/16
+ACCESS RES: ACCESS DONE
+ 
+tick=171, quantum=2, queue=[8, 9, 10]
+memory: [1, 2, 4, 6]
+Current process info:
+pid=8, access=5/16
+ACCESS RES: ACCESS DONE
+ 
+tick=172, quantum=3, queue=[8, 9, 10]
+memory: [1, 2, 4, 6]
+Current process info:
+pid=8, access=6/16
+ACCESS RES: ACCESS DONE
+ 
+tick=173, quantum=0, queue=[9, 10, 8]
+memory: [1, 2, 4, 6]
+Current process info:
+pid=9, access=3/12
+ACCESS RES: ACCESS DONE
+ 
+tick=174, quantum=1, queue=[9, 10, 8]
+memory: [0, 1, 2, 4, 6]
+Current process info:
+pid=9, access=3/12
+ACCESS RES: PAGE FAULT
+ 
+tick=175, quantum=2, queue=[9, 10, 8]
+memory: [0, 1, 2, 4, 6]
+Current process info:
+pid=9, access=4/12
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=176, quantum=3, queue=[9, 10, 8, 11]
+memory: [0, 1, 2, 3, 4, 6]
+Current process info:
+pid=9, access=4/12
+ACCESS RES: PAGE FAULT
+ 
+tick=177, quantum=0, queue=[10, 8, 11, 9]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=10, access=0/20
+ACCESS RES: PAGE FAULT
+ 
+tick=178, quantum=1, queue=[10, 8, 11, 9]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=10, access=1/20
+ACCESS RES: ACCESS DONE
+ 
+tick=179, quantum=2, queue=[10, 8, 11, 9]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=10, access=1/20
+ACCESS RES: PAGE FAULT
+ 
+tick=180, quantum=3, queue=[10, 8, 11, 9]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=10, access=2/20
+ACCESS RES: ACCESS DONE
+ 
+tick=181, quantum=0, queue=[8, 11, 9, 10]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=8, access=7/16
+ACCESS RES: ACCESS DONE
+ 
+tick=182, quantum=1, queue=[8, 11, 9, 10]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=8, access=7/16
+ACCESS RES: PAGE FAULT
+ 
+tick=183, quantum=2, queue=[8, 11, 9, 10]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=8, access=8/16
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 1
+PROCESS COUNT LIMIT REACHED
+ 
+tick=184, quantum=3, queue=[8, 11, 9, 10]
+memory: [0, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=8, access=9/16
+ACCESS RES: ACCESS DONE
+ 
+tick=185, quantum=0, queue=[11, 9, 10, 8]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=11, access=0/10
+ACCESS RES: PAGE FAULT
+ 
+tick=186, quantum=1, queue=[11, 9, 10, 8]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=11, access=1/10
+ACCESS RES: ACCESS DONE
+ 
+tick=187, quantum=2, queue=[11, 9, 10, 8]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=11, access=1/10
+ACCESS RES: PAGE FAULT
+ 
+tick=188, quantum=3, queue=[11, 9, 10, 8]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=11, access=2/10
+ACCESS RES: ACCESS DONE
+ 
+tick=189, quantum=0, queue=[9, 10, 8, 11]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=9, access=5/12
+ACCESS RES: ACCESS DONE
+ 
+tick=190, quantum=1, queue=[9, 10, 8, 11]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=9, access=6/12
+ACCESS RES: ACCESS DONE
+ 
+tick=191, quantum=2, queue=[9, 10, 8, 11]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=9, access=7/12
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 2
+PROCESS COUNT LIMIT REACHED
+ 
+tick=192, quantum=3, queue=[9, 10, 8, 11]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=9, access=7/12
+ACCESS RES: PAGE FAULT
+ 
+tick=193, quantum=0, queue=[10, 8, 11, 9]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=10, access=3/20
+ACCESS RES: ACCESS DONE
+ 
+tick=194, quantum=1, queue=[10, 8, 11, 9]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=10, access=3/20
+ACCESS RES: PAGE FAULT
+ 
+tick=195, quantum=2, queue=[10, 8, 11, 9]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=10, access=4/20
+ACCESS RES: ACCESS DONE
+ 
+tick=196, quantum=3, queue=[10, 8, 11, 9]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=10, access=5/20
+ACCESS RES: ACCESS DONE
+ 
+tick=197, quantum=0, queue=[8, 11, 9, 10]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=8, access=10/16
+ACCESS RES: ACCESS DONE
+ 
+tick=198, quantum=1, queue=[8, 11, 9, 10]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=8, access=10/16
+ACCESS RES: PAGE FAULT
+ 
+tick=199, quantum=2, queue=[8, 11, 9, 10]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=8, access=11/16
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 4
+PROCESS COUNT LIMIT REACHED
+ 
+tick=200, quantum=3, queue=[8, 11, 9, 10]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=8, access=12/16
+ACCESS RES: ACCESS DONE
+ 
+tick=201, quantum=0, queue=[11, 9, 10, 8]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=11, access=3/10
+ACCESS RES: ACCESS DONE
+ 
+tick=202, quantum=1, queue=[11, 9, 10, 8]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=11, access=4/10
+ACCESS RES: ACCESS DONE
+ 
+tick=203, quantum=2, queue=[11, 9, 10, 8]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=11, access=5/10
+ACCESS RES: ACCESS DONE
+ 
+tick=204, quantum=3, queue=[11, 9, 10, 8]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=11, access=5/10
+ACCESS RES: PAGE FAULT
+ 
+tick=205, quantum=0, queue=[9, 10, 8, 11]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=9, access=8/12
+ACCESS RES: ACCESS DONE
+ 
+tick=206, quantum=1, queue=[9, 10, 8, 11]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=9, access=8/12
+ACCESS RES: PAGE FAULT
+ 
+tick=207, quantum=2, queue=[9, 10, 8, 11]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=9, access=9/12
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+PROCESS COUNT LIMIT REACHED
+ 
+tick=208, quantum=3, queue=[9, 10, 8, 11]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=9, access=10/12
+ACCESS RES: ACCESS DONE
+ 
+tick=209, quantum=0, queue=[10, 8, 11, 9]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=10, access=6/20
+ACCESS RES: ACCESS DONE
+ 
+tick=210, quantum=1, queue=[10, 8, 11, 9]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=10, access=7/20
+ACCESS RES: ACCESS DONE
+ 
+tick=211, quantum=2, queue=[10, 8, 11, 9]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=10, access=8/20
+ACCESS RES: ACCESS DONE
+ 
+tick=212, quantum=3, queue=[10, 8, 11, 9]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=10, access=9/20
+ACCESS RES: ACCESS DONE
+ 
+tick=213, quantum=0, queue=[8, 11, 9, 10]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=8, access=13/16
+ACCESS RES: ACCESS DONE
+ 
+tick=214, quantum=1, queue=[8, 11, 9, 10]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=8, access=14/16
+ACCESS RES: ACCESS DONE
+ 
+tick=215, quantum=2, queue=[8, 11, 9, 10]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=8, access=15/16
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 7
+PROCESS COUNT LIMIT REACHED
+ 
+tick=216, quantum=3, queue=[8, 11, 9, 10]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]
+Current process info:
+pid=8, access=16/16
+ACCESS RES: ACCESS DONE
+ 
+tick=217, quantum=0, queue=[11, 9, 10, 8]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]
+Current process info:
+pid=11, access=6/10
+ACCESS RES: ACCESS DONE
+ 
+tick=218, quantum=1, queue=[11, 9, 10, 8]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]
+Current process info:
+pid=11, access=7/10
+ACCESS RES: ACCESS DONE
+ 
+tick=219, quantum=2, queue=[11, 9, 10, 8]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]
+Current process info:
+pid=11, access=8/10
+ACCESS RES: ACCESS DONE
+ 
+tick=220, quantum=3, queue=[11, 9, 10, 8]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]
+Current process info:
+pid=11, access=9/10
+ACCESS RES: ACCESS DONE
+ 
+tick=221, quantum=0, queue=[9, 10, 8, 11]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]
+Current process info:
+pid=9, access=11/12
+ACCESS RES: ACCESS DONE
+ 
+tick=222, quantum=1, queue=[9, 10, 8, 11]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]
+Current process info:
+pid=9, access=12/12
+ACCESS RES: ACCESS DONE
+ 
+tick=223, quantum=2, queue=[10, 8, 11]
+memory: [1, 4, 5, 6, 8, 9, 10, 11]
+Current process info:
+pid=9, access=12/12
+REPLACING, force = False
+REPLACED: 8
+ 
+tick=224, quantum=0, queue=[10, 8, 11]
+memory: [1, 4, 5, 6, 9, 10, 11]
+Current process info:
+pid=10, access=10/20
+ACCESS RES: ACCESS DONE
+ 
+tick=225, quantum=1, queue=[10, 8, 11]
+memory: [0, 1, 4, 5, 6, 9, 10, 11]
+Current process info:
+pid=10, access=10/20
+ACCESS RES: PAGE FAULT
+ 
+tick=226, quantum=2, queue=[10, 8, 11]
+memory: [0, 1, 4, 5, 6, 9, 10, 11]
+Current process info:
+pid=10, access=11/20
+ACCESS RES: ACCESS DONE
+ 
+tick=227, quantum=3, queue=[10, 8, 11]
+memory: [0, 1, 2, 4, 5, 6, 9, 10, 11]
+Current process info:
+pid=10, access=11/20
+ACCESS RES: PAGE FAULT
+ 
+tick=228, quantum=0, queue=[11, 10]
+memory: [0, 1, 2, 4, 5, 9, 10]
+Current process info:
+pid=8, access=16/16
+ 
+tick=229, quantum=0, queue=[11, 10]
+memory: [0, 1, 2, 4, 5, 9, 10]
+Current process info:
+pid=11, access=10/10
+ACCESS RES: ACCESS DONE
+ 
+tick=230, quantum=1, queue=[10]
+memory: [0, 2, 5, 10]
+Current process info:
+pid=11, access=10/10
+ 
+tick=231, quantum=0, queue=[10]
+memory: [0, 2, 5, 10]
+Current process info:
+pid=10, access=12/20
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 10
+ 
+tick=232, quantum=1, queue=[10, 12]
+memory: [0, 2, 5]
+Current process info:
+pid=10, access=13/20
+ACCESS RES: ACCESS DONE
+ 
+tick=233, quantum=2, queue=[10, 12]
+memory: [0, 1, 2, 5]
+Current process info:
+pid=10, access=13/20
+ACCESS RES: PAGE FAULT
+ 
+tick=234, quantum=3, queue=[10, 12]
+memory: [0, 1, 2, 5]
+Current process info:
+pid=10, access=14/20
+ACCESS RES: ACCESS DONE
+ 
+tick=235, quantum=0, queue=[12, 10]
+memory: [0, 1, 2, 3, 5]
+Current process info:
+pid=12, access=0/19
+ACCESS RES: PAGE FAULT
+ 
+tick=236, quantum=1, queue=[12, 10]
+memory: [0, 1, 2, 3, 5]
+Current process info:
+pid=12, access=1/19
+ACCESS RES: ACCESS DONE
+ 
+tick=237, quantum=2, queue=[12, 10]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=12, access=1/19
+ACCESS RES: PAGE FAULT
+ 
+tick=238, quantum=3, queue=[12, 10]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=12, access=2/19
+ACCESS RES: ACCESS DONE
+ 
+tick=239, quantum=0, queue=[10, 12]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=10, access=15/20
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=240, quantum=1, queue=[10, 12, 13]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=10, access=16/20
+ACCESS RES: ACCESS DONE
+ 
+tick=241, quantum=2, queue=[10, 12, 13]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=10, access=17/20
+ACCESS RES: ACCESS DONE
+ 
+tick=242, quantum=3, queue=[10, 12, 13]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=10, access=18/20
+ACCESS RES: ACCESS DONE
+ 
+tick=243, quantum=0, queue=[12, 13, 10]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=12, access=2/19
+ACCESS RES: PAGE FAULT
+ 
+tick=244, quantum=1, queue=[12, 13, 10]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=12, access=3/19
+ACCESS RES: ACCESS DONE
+ 
+tick=245, quantum=2, queue=[12, 13, 10]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=12, access=4/19
+ACCESS RES: ACCESS DONE
+ 
+tick=246, quantum=3, queue=[12, 13, 10]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=12, access=5/19
+ACCESS RES: ACCESS DONE
+ 
+tick=247, quantum=0, queue=[13, 10, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=13, access=0/10
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+REPLACED: 5
+ 
+tick=248, quantum=1, queue=[13, 10, 12, 14]
+memory: [0, 1, 2, 3, 4, 6, 7]
+Current process info:
+pid=13, access=1/10
+ACCESS RES: ACCESS DONE
+ 
+tick=249, quantum=2, queue=[13, 10, 12, 14]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=13, access=1/10
+ACCESS RES: PAGE FAULT
+ 
+tick=250, quantum=3, queue=[13, 10, 12, 14]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=13, access=2/10
+ACCESS RES: ACCESS DONE
+ 
+tick=251, quantum=0, queue=[10, 12, 14, 13]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=10, access=19/20
+ACCESS RES: ACCESS DONE
+ 
+tick=252, quantum=1, queue=[10, 12, 14, 13]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=10, access=20/20
+ACCESS RES: ACCESS DONE
+ 
+tick=253, quantum=2, queue=[12, 14, 13]
+memory: [3, 4, 5, 6, 7]
+Current process info:
+pid=10, access=20/20
+ 
+tick=254, quantum=0, queue=[12, 14, 13]
+memory: [3, 4, 5, 6, 7]
+Current process info:
+pid=12, access=6/19
+ACCESS RES: ACCESS DONE
+ 
+tick=255, quantum=1, queue=[12, 14, 13]
+memory: [0, 3, 4, 5, 6, 7]
+Current process info:
+pid=12, access=6/19
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=256, quantum=2, queue=[12, 14, 13, 15]
+memory: [0, 3, 4, 5, 6, 7]
+Current process info:
+pid=12, access=7/19
+ACCESS RES: ACCESS DONE
+ 
+tick=257, quantum=3, queue=[12, 14, 13, 15]
+memory: [0, 3, 4, 5, 6, 7]
+Current process info:
+pid=12, access=8/19
+ACCESS RES: ACCESS DONE
+ 
+tick=258, quantum=0, queue=[14, 13, 15, 12]
+memory: [0, 1, 3, 4, 5, 6, 7]
+Current process info:
+pid=14, access=0/18
+ACCESS RES: PAGE FAULT
+ 
+tick=259, quantum=1, queue=[14, 13, 15, 12]
+memory: [0, 1, 3, 4, 5, 6, 7]
+Current process info:
+pid=14, access=1/18
+ACCESS RES: ACCESS DONE
+ 
+tick=260, quantum=2, queue=[14, 13, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=14, access=1/18
+ACCESS RES: PAGE FAULT
+ 
+tick=261, quantum=3, queue=[14, 13, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=14, access=2/18
+ACCESS RES: ACCESS DONE
+ 
+tick=262, quantum=0, queue=[13, 15, 12, 14]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=13, access=2/10
+ACCESS RES: PAGE FAULT
+ 
+tick=263, quantum=1, queue=[13, 15, 12, 14]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=13, access=3/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 4
+PROCESS COUNT LIMIT REACHED
+ 
+tick=264, quantum=2, queue=[13, 15, 12, 14]
+memory: [0, 1, 2, 3, 5, 6, 7, 8]
+Current process info:
+pid=13, access=4/10
+ACCESS RES: ACCESS DONE
+ 
+tick=265, quantum=3, queue=[13, 15, 12, 14]
+memory: [0, 1, 2, 3, 5, 6, 7, 8]
+Current process info:
+pid=13, access=5/10
+ACCESS RES: ACCESS DONE
+ 
+tick=266, quantum=0, queue=[15, 12, 14, 13]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=15, access=0/18
+ACCESS RES: PAGE FAULT
+ 
+tick=267, quantum=1, queue=[15, 12, 14, 13]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=15, access=1/18
+ACCESS RES: ACCESS DONE
+ 
+tick=268, quantum=2, queue=[15, 12, 14, 13]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=15, access=2/18
+ACCESS RES: ACCESS DONE
+ 
+tick=269, quantum=3, queue=[15, 12, 14, 13]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=15, access=2/18
+ACCESS RES: PAGE FAULT
+ 
+tick=270, quantum=0, queue=[12, 14, 13, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=12, access=9/19
+ACCESS RES: ACCESS DONE
+ 
+tick=271, quantum=1, queue=[12, 14, 13, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=12, access=10/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 5
+PROCESS COUNT LIMIT REACHED
+ 
+tick=272, quantum=2, queue=[12, 14, 13, 15]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+Current process info:
+pid=12, access=11/19
+ACCESS RES: ACCESS DONE
+ 
+tick=273, quantum=3, queue=[12, 14, 13, 15]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+Current process info:
+pid=12, access=12/19
+ACCESS RES: ACCESS DONE
+ 
+tick=274, quantum=0, queue=[14, 13, 15, 12]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+Current process info:
+pid=14, access=3/18
+ACCESS RES: ACCESS DONE
+ 
+tick=275, quantum=1, queue=[14, 13, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=14, access=3/18
+ACCESS RES: PAGE FAULT
+ 
+tick=276, quantum=2, queue=[14, 13, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=14, access=4/18
+ACCESS RES: ACCESS DONE
+ 
+tick=277, quantum=3, queue=[14, 13, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=14, access=5/18
+ACCESS RES: ACCESS DONE
+ 
+tick=278, quantum=0, queue=[13, 15, 12, 14]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=13, access=6/10
+ACCESS RES: ACCESS DONE
+ 
+tick=279, quantum=1, queue=[13, 15, 12, 14]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=13, access=7/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 3
+PROCESS COUNT LIMIT REACHED
+ 
+tick=280, quantum=2, queue=[13, 15, 12, 14]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=13, access=8/10
+ACCESS RES: ACCESS DONE
+ 
+tick=281, quantum=3, queue=[13, 15, 12, 14]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=13, access=8/10
+ACCESS RES: PAGE FAULT
+ 
+tick=282, quantum=0, queue=[15, 12, 14, 13]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=15, access=3/18
+ACCESS RES: ACCESS DONE
+ 
+tick=283, quantum=1, queue=[15, 12, 14, 13]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=15, access=4/18
+ACCESS RES: ACCESS DONE
+ 
+tick=284, quantum=2, queue=[15, 12, 14, 13]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=15, access=4/18
+ACCESS RES: PAGE FAULT
+ 
+tick=285, quantum=3, queue=[15, 12, 14, 13]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=15, access=5/18
+ACCESS RES: ACCESS DONE
+ 
+tick=286, quantum=0, queue=[12, 14, 13, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=12, access=13/19
+ACCESS RES: ACCESS DONE
+ 
+tick=287, quantum=1, queue=[12, 14, 13, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=12, access=14/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 8
+PROCESS COUNT LIMIT REACHED
+ 
+tick=288, quantum=2, queue=[12, 14, 13, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10]
+Current process info:
+pid=12, access=15/19
+ACCESS RES: ACCESS DONE
+ 
+tick=289, quantum=3, queue=[12, 14, 13, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10]
+Current process info:
+pid=12, access=16/19
+ACCESS RES: ACCESS DONE
+ 
+tick=290, quantum=0, queue=[14, 13, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=14, access=5/18
+ACCESS RES: PAGE FAULT
+ 
+tick=291, quantum=1, queue=[14, 13, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=14, access=6/18
+ACCESS RES: ACCESS DONE
+ 
+tick=292, quantum=2, queue=[14, 13, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=14, access=7/18
+ACCESS RES: ACCESS DONE
+ 
+tick=293, quantum=3, queue=[14, 13, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=14, access=8/18
+ACCESS RES: ACCESS DONE
+ 
+tick=294, quantum=0, queue=[13, 15, 12, 14]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=13, access=9/10
+ACCESS RES: ACCESS DONE
+ 
+tick=295, quantum=1, queue=[13, 15, 12, 14]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=13, access=9/10
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+REPLACED: 4
+PROCESS COUNT LIMIT REACHED
+ 
+tick=296, quantum=2, queue=[13, 15, 12, 14]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=13, access=10/10
+ACCESS RES: ACCESS DONE
+ 
+tick=297, quantum=3, queue=[15, 12, 14]
+memory: [0, 1, 2, 5, 6, 8, 9, 10]
+Current process info:
+pid=13, access=10/10
+ 
+tick=298, quantum=0, queue=[15, 12, 14]
+memory: [0, 1, 2, 5, 6, 8, 9, 10]
+Current process info:
+pid=15, access=6/18
+ACCESS RES: ACCESS DONE
+ 
+tick=299, quantum=1, queue=[15, 12, 14]
+memory: [0, 1, 2, 3, 5, 6, 8, 9, 10]
+Current process info:
+pid=15, access=6/18
+ACCESS RES: PAGE FAULT
+ 
+tick=300, quantum=2, queue=[15, 12, 14]
+memory: [0, 1, 2, 3, 5, 6, 8, 9, 10]
+Current process info:
+pid=15, access=7/18
+ACCESS RES: ACCESS DONE
+ 
+tick=301, quantum=3, queue=[15, 12, 14]
+memory: [0, 1, 2, 3, 5, 6, 8, 9, 10]
+Current process info:
+pid=15, access=8/18
+ACCESS RES: ACCESS DONE
+ 
+tick=302, quantum=0, queue=[12, 14, 15]
+memory: [0, 1, 2, 3, 5, 6, 8, 9, 10]
+Current process info:
+pid=12, access=17/19
+ACCESS RES: ACCESS DONE
+ 
+tick=303, quantum=1, queue=[12, 14, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10]
+Current process info:
+pid=12, access=17/19
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+REPLACED: 1
+ 
+tick=304, quantum=2, queue=[12, 14, 15]
+memory: [0, 2, 3, 4, 5, 6, 8, 9, 10]
+Current process info:
+pid=12, access=18/19
+ACCESS RES: ACCESS DONE
+ 
+tick=305, quantum=3, queue=[12, 14, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10]
+Current process info:
+pid=12, access=18/19
+ACCESS RES: PAGE FAULT
+ 
+tick=306, quantum=0, queue=[14, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10]
+Current process info:
+pid=14, access=9/18
+ACCESS RES: ACCESS DONE
+ 
+tick=307, quantum=1, queue=[14, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10]
+Current process info:
+pid=14, access=10/18
+ACCESS RES: ACCESS DONE
+ 
+tick=308, quantum=2, queue=[14, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10]
+Current process info:
+pid=14, access=11/18
+ACCESS RES: ACCESS DONE
+ 
+tick=309, quantum=3, queue=[14, 15, 12]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=14, access=11/18
+ACCESS RES: PAGE FAULT
+ 
+tick=310, quantum=0, queue=[15, 12, 14]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=15, access=9/18
+ACCESS RES: ACCESS DONE
+ 
+tick=311, quantum=1, queue=[15, 12, 14]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=15, access=10/18
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 6
+ 
+tick=312, quantum=2, queue=[15, 12, 14, 16]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=15, access=10/18
+ACCESS RES: PAGE FAULT
+ 
+tick=313, quantum=3, queue=[15, 12, 14, 16]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=15, access=11/18
+ACCESS RES: ACCESS DONE
+ 
+tick=314, quantum=0, queue=[12, 14, 16, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=12, access=19/19
+ACCESS RES: ACCESS DONE
+ 
+tick=315, quantum=1, queue=[14, 16, 15]
+memory: [2, 3, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=12, access=19/19
+ 
+tick=316, quantum=0, queue=[14, 16, 15]
+memory: [2, 3, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=14, access=12/18
+ACCESS RES: ACCESS DONE
+ 
+tick=317, quantum=1, queue=[14, 16, 15]
+memory: [2, 3, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=14, access=13/18
+ACCESS RES: ACCESS DONE
+ 
+tick=318, quantum=2, queue=[14, 16, 15]
+memory: [2, 3, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=14, access=14/18
+ACCESS RES: ACCESS DONE
+ 
+tick=319, quantum=3, queue=[14, 16, 15]
+memory: [2, 3, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=14, access=15/18
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 9
+ 
+tick=320, quantum=0, queue=[16, 15, 14, 17]
+memory: [0, 2, 3, 5, 6, 7, 8, 10]
+Current process info:
+pid=16, access=0/15
+ACCESS RES: PAGE FAULT
+ 
+tick=321, quantum=1, queue=[16, 15, 14, 17]
+memory: [0, 2, 3, 5, 6, 7, 8, 10]
+Current process info:
+pid=16, access=1/15
+ACCESS RES: ACCESS DONE
+ 
+tick=322, quantum=2, queue=[16, 15, 14, 17]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 10]
+Current process info:
+pid=16, access=1/15
+ACCESS RES: PAGE FAULT
+ 
+tick=323, quantum=3, queue=[16, 15, 14, 17]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 10]
+Current process info:
+pid=16, access=2/15
+ACCESS RES: ACCESS DONE
+ 
+tick=324, quantum=0, queue=[15, 14, 17, 16]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 10]
+Current process info:
+pid=15, access=12/18
+ACCESS RES: ACCESS DONE
+ 
+tick=325, quantum=1, queue=[15, 14, 17, 16]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 10]
+Current process info:
+pid=15, access=13/18
+ACCESS RES: ACCESS DONE
+ 
+tick=326, quantum=2, queue=[15, 14, 17, 16]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 10]
+Current process info:
+pid=15, access=14/18
+ACCESS RES: ACCESS DONE
+ 
+tick=327, quantum=3, queue=[15, 14, 17, 16]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 10]
+Current process info:
+pid=15, access=15/18
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 5
+PROCESS COUNT LIMIT REACHED
+ 
+tick=328, quantum=0, queue=[14, 17, 16, 15]
+memory: [0, 1, 2, 3, 6, 7, 8, 10]
+Current process info:
+pid=14, access=16/18
+ACCESS RES: ACCESS DONE
+ 
+tick=329, quantum=1, queue=[14, 17, 16, 15]
+memory: [0, 1, 2, 3, 6, 7, 8, 10]
+Current process info:
+pid=14, access=17/18
+ACCESS RES: ACCESS DONE
+ 
+tick=330, quantum=2, queue=[14, 17, 16, 15]
+memory: [0, 1, 2, 3, 6, 7, 8, 10]
+Current process info:
+pid=14, access=18/18
+ACCESS RES: ACCESS DONE
+ 
+tick=331, quantum=3, queue=[17, 16, 15]
+memory: [0, 1, 3, 6, 10]
+Current process info:
+pid=14, access=18/18
+ 
+tick=332, quantum=0, queue=[17, 16, 15]
+memory: [0, 1, 2, 3, 6, 10]
+Current process info:
+pid=17, access=0/19
+ACCESS RES: PAGE FAULT
+ 
+tick=333, quantum=1, queue=[17, 16, 15]
+memory: [0, 1, 2, 3, 6, 10]
+Current process info:
+pid=17, access=1/19
+ACCESS RES: ACCESS DONE
+ 
+tick=334, quantum=2, queue=[17, 16, 15]
+memory: [0, 1, 2, 3, 6, 10]
+Current process info:
+pid=17, access=2/19
+ACCESS RES: ACCESS DONE
+ 
+tick=335, quantum=3, queue=[17, 16, 15]
+memory: [0, 1, 2, 3, 6, 10]
+Current process info:
+pid=17, access=3/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 10
+ 
+tick=336, quantum=0, queue=[16, 15, 17, 18]
+memory: [0, 1, 2, 3, 4, 6]
+Current process info:
+pid=16, access=2/15
+ACCESS RES: PAGE FAULT
+ 
+tick=337, quantum=1, queue=[16, 15, 17, 18]
+memory: [0, 1, 2, 3, 4, 6]
+Current process info:
+pid=16, access=3/15
+ACCESS RES: ACCESS DONE
+ 
+tick=338, quantum=2, queue=[16, 15, 17, 18]
+memory: [0, 1, 2, 3, 4, 6]
+Current process info:
+pid=16, access=4/15
+ACCESS RES: ACCESS DONE
+ 
+tick=339, quantum=3, queue=[16, 15, 17, 18]
+memory: [0, 1, 2, 3, 4, 6]
+Current process info:
+pid=16, access=5/15
+ACCESS RES: ACCESS DONE
+ 
+tick=340, quantum=0, queue=[15, 17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=15, access=15/18
+ACCESS RES: PAGE FAULT
+ 
+tick=341, quantum=1, queue=[15, 17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=15, access=16/18
+ACCESS RES: ACCESS DONE
+ 
+tick=342, quantum=2, queue=[15, 17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=15, access=17/18
+ACCESS RES: ACCESS DONE
+ 
+tick=343, quantum=3, queue=[15, 17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=15, access=18/18
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+PROCESS COUNT LIMIT REACHED
+ 
+tick=344, quantum=0, queue=[17, 18, 16, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=17, access=3/19
+ACCESS RES: PAGE FAULT
+ 
+tick=345, quantum=1, queue=[17, 18, 16, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=17, access=4/19
+ACCESS RES: ACCESS DONE
+ 
+tick=346, quantum=2, queue=[17, 18, 16, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=17, access=5/19
+ACCESS RES: ACCESS DONE
+ 
+tick=347, quantum=3, queue=[17, 18, 16, 15]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=17, access=6/19
+ACCESS RES: ACCESS DONE
+ 
+tick=348, quantum=0, queue=[18, 16, 15, 17]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=18, access=0/16
+ACCESS RES: PAGE FAULT
+ 
+tick=349, quantum=1, queue=[18, 16, 15, 17]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=18, access=1/16
+ACCESS RES: ACCESS DONE
+ 
+tick=350, quantum=2, queue=[18, 16, 15, 17]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=18, access=1/16
+ACCESS RES: PAGE FAULT
+ 
+tick=351, quantum=3, queue=[18, 16, 15, 17]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=18, access=2/16
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 3
+PROCESS COUNT LIMIT REACHED
+ 
+tick=352, quantum=0, queue=[16, 15, 17, 18]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=16, access=6/15
+ACCESS RES: ACCESS DONE
+ 
+tick=353, quantum=1, queue=[16, 15, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=16, access=6/15
+ACCESS RES: PAGE FAULT
+ 
+tick=354, quantum=2, queue=[16, 15, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=16, access=7/15
+ACCESS RES: ACCESS DONE
+ 
+tick=355, quantum=3, queue=[16, 15, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=16, access=7/15
+ACCESS RES: PAGE FAULT
+ 
+tick=356, quantum=0, queue=[17, 18, 16]
+memory: [0, 1, 2, 3, 4, 7, 8, 9, 10]
+Current process info:
+pid=15, access=18/18
+ 
+tick=357, quantum=0, queue=[17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10]
+Current process info:
+pid=17, access=6/19
+ACCESS RES: PAGE FAULT
+ 
+tick=358, quantum=1, queue=[17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10]
+Current process info:
+pid=17, access=7/19
+ACCESS RES: ACCESS DONE
+ 
+tick=359, quantum=2, queue=[17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10]
+Current process info:
+pid=17, access=8/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 4
+ 
+tick=360, quantum=3, queue=[17, 18, 16, 19]
+memory: [0, 1, 2, 3, 5, 7, 8, 9, 10]
+Current process info:
+pid=17, access=9/19
+ACCESS RES: ACCESS DONE
+ 
+tick=361, quantum=0, queue=[18, 16, 19, 17]
+memory: [0, 1, 2, 3, 5, 7, 8, 9, 10]
+Current process info:
+pid=18, access=3/16
+ACCESS RES: ACCESS DONE
+ 
+tick=362, quantum=1, queue=[18, 16, 19, 17]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10]
+Current process info:
+pid=18, access=3/16
+ACCESS RES: PAGE FAULT
+ 
+tick=363, quantum=2, queue=[18, 16, 19, 17]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10]
+Current process info:
+pid=18, access=4/16
+ACCESS RES: ACCESS DONE
+ 
+tick=364, quantum=3, queue=[18, 16, 19, 17]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10]
+Current process info:
+pid=18, access=5/16
+ACCESS RES: ACCESS DONE
+ 
+tick=365, quantum=0, queue=[16, 19, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10]
+Current process info:
+pid=16, access=8/15
+ACCESS RES: ACCESS DONE
+ 
+tick=366, quantum=1, queue=[16, 19, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10]
+Current process info:
+pid=16, access=9/15
+ACCESS RES: ACCESS DONE
+ 
+tick=367, quantum=2, queue=[16, 19, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=16, access=9/15
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+REPLACED: 0
+PROCESS COUNT LIMIT REACHED
+ 
+tick=368, quantum=3, queue=[16, 19, 17, 18]
+memory: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=16, access=10/15
+ACCESS RES: ACCESS DONE
+ 
+tick=369, quantum=0, queue=[19, 17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=19, access=0/9
+ACCESS RES: PAGE FAULT
+ 
+tick=370, quantum=1, queue=[19, 17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=19, access=1/9
+ACCESS RES: ACCESS DONE
+ 
+tick=371, quantum=2, queue=[19, 17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=19, access=1/9
+ACCESS RES: PAGE FAULT
+ 
+tick=372, quantum=3, queue=[19, 17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=19, access=2/9
+ACCESS RES: ACCESS DONE
+ 
+tick=373, quantum=0, queue=[17, 18, 16, 19]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=17, access=10/19
+ACCESS RES: ACCESS DONE
+ 
+tick=374, quantum=1, queue=[17, 18, 16, 19]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=17, access=10/19
+ACCESS RES: PAGE FAULT
+ 
+tick=375, quantum=2, queue=[17, 18, 16, 19]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=17, access=11/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 3
+PROCESS COUNT LIMIT REACHED
+ 
+tick=376, quantum=3, queue=[17, 18, 16, 19]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=17, access=12/19
+ACCESS RES: ACCESS DONE
+ 
+tick=377, quantum=0, queue=[18, 16, 19, 17]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=18, access=6/16
+ACCESS RES: ACCESS DONE
+ 
+tick=378, quantum=1, queue=[18, 16, 19, 17]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=18, access=7/16
+ACCESS RES: ACCESS DONE
+ 
+tick=379, quantum=2, queue=[18, 16, 19, 17]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=18, access=8/16
+ACCESS RES: ACCESS DONE
+ 
+tick=380, quantum=3, queue=[18, 16, 19, 17]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=18, access=9/16
+ACCESS RES: ACCESS DONE
+ 
+tick=381, quantum=0, queue=[16, 19, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=16, access=10/15
+ACCESS RES: PAGE FAULT
+ 
+tick=382, quantum=1, queue=[16, 19, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=16, access=11/15
+ACCESS RES: ACCESS DONE
+ 
+tick=383, quantum=2, queue=[16, 19, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=16, access=12/15
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 5
+PROCESS COUNT LIMIT REACHED
+ 
+tick=384, quantum=3, queue=[16, 19, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=16, access=12/15
+ACCESS RES: PAGE FAULT
+ 
+tick=385, quantum=0, queue=[19, 17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=19, access=2/9
+ACCESS RES: PAGE FAULT
+ 
+tick=386, quantum=1, queue=[19, 17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=19, access=3/9
+ACCESS RES: ACCESS DONE
+ 
+tick=387, quantum=2, queue=[19, 17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=19, access=3/9
+ACCESS RES: PAGE FAULT
+ 
+tick=388, quantum=3, queue=[19, 17, 18, 16]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=19, access=4/9
+ACCESS RES: ACCESS DONE
+ 
+tick=389, quantum=0, queue=[17, 18, 16, 19]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=17, access=13/19
+ACCESS RES: ACCESS DONE
+ 
+tick=390, quantum=1, queue=[17, 18, 16, 19]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=17, access=13/19
+ACCESS RES: PAGE FAULT
+ 
+tick=391, quantum=2, queue=[17, 18, 16, 19]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=17, access=14/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 6
+PROCESS COUNT LIMIT REACHED
+ 
+tick=392, quantum=3, queue=[17, 18, 16, 19]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=17, access=15/19
+ACCESS RES: ACCESS DONE
+ 
+tick=393, quantum=0, queue=[18, 16, 19, 17]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=18, access=10/16
+ACCESS RES: ACCESS DONE
+ 
+tick=394, quantum=1, queue=[18, 16, 19, 17]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=18, access=11/16
+ACCESS RES: ACCESS DONE
+ 
+tick=395, quantum=2, queue=[18, 16, 19, 17]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=18, access=11/16
+ACCESS RES: PAGE FAULT
+ 
+tick=396, quantum=3, queue=[18, 16, 19, 17]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=18, access=12/16
+ACCESS RES: ACCESS DONE
+ 
+tick=397, quantum=0, queue=[16, 19, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=16, access=13/15
+ACCESS RES: ACCESS DONE
+ 
+tick=398, quantum=1, queue=[16, 19, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=16, access=14/15
+ACCESS RES: ACCESS DONE
+ 
+tick=399, quantum=2, queue=[16, 19, 17, 18]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=16, access=15/15
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 7
+PROCESS COUNT LIMIT REACHED
+ 
+tick=400, quantum=3, queue=[19, 17, 18]
+memory: [0, 2, 4, 6, 8, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=16, access=15/15
+ 
+tick=401, quantum=0, queue=[19, 17, 18]
+memory: [0, 2, 4, 6, 8, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=19, access=5/9
+ACCESS RES: ACCESS DONE
+ 
+tick=402, quantum=1, queue=[19, 17, 18]
+memory: [0, 2, 4, 6, 8, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=19, access=6/9
+ACCESS RES: ACCESS DONE
+ 
+tick=403, quantum=2, queue=[19, 17, 18]
+memory: [0, 1, 2, 4, 6, 8, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=19, access=6/9
+ACCESS RES: PAGE FAULT
+ 
+tick=404, quantum=3, queue=[19, 17, 18]
+memory: [0, 1, 2, 4, 6, 8, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=19, access=7/9
+ACCESS RES: ACCESS DONE
+ 
+tick=405, quantum=0, queue=[17, 18, 19]
+memory: [0, 1, 2, 4, 6, 8, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=17, access=16/19
+ACCESS RES: ACCESS DONE
+ 
+tick=406, quantum=1, queue=[17, 18, 19]
+memory: [0, 1, 2, 4, 6, 8, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=17, access=17/19
+ACCESS RES: ACCESS DONE
+ 
+tick=407, quantum=2, queue=[17, 18, 19]
+memory: [0, 1, 2, 4, 6, 8, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=17, access=18/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 8
+ 
+tick=408, quantum=3, queue=[17, 18, 19, 20]
+memory: [0, 1, 2, 4, 6, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=17, access=19/19
+ACCESS RES: ACCESS DONE
+ 
+tick=409, quantum=0, queue=[18, 19, 20, 17]
+memory: [0, 1, 2, 4, 6, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=18, access=13/16
+ACCESS RES: ACCESS DONE
+ 
+tick=410, quantum=1, queue=[18, 19, 20, 17]
+memory: [0, 1, 2, 4, 6, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=18, access=14/16
+ACCESS RES: ACCESS DONE
+ 
+tick=411, quantum=2, queue=[18, 19, 20, 17]
+memory: [0, 1, 2, 4, 6, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=18, access=15/16
+ACCESS RES: ACCESS DONE
+ 
+tick=412, quantum=3, queue=[18, 19, 20, 17]
+memory: [0, 1, 2, 4, 6, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=18, access=16/16
+ACCESS RES: ACCESS DONE
+ 
+tick=413, quantum=0, queue=[19, 20, 17, 18]
+memory: [0, 1, 2, 4, 6, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=19, access=8/9
+ACCESS RES: ACCESS DONE
+ 
+tick=414, quantum=1, queue=[19, 20, 17, 18]
+memory: [0, 1, 2, 4, 6, 9, 11, 12, 13, 14, 15]
+Current process info:
+pid=19, access=9/9
+ACCESS RES: ACCESS DONE
+ 
+tick=415, quantum=2, queue=[20, 17, 18]
+memory: [2, 4, 6, 9, 12, 15]
+Current process info:
+pid=19, access=9/9
+REPLACING, force = False
+REPLACED: 4
+ 
+tick=416, quantum=0, queue=[20, 17, 18, 21]
+memory: [0, 2, 6, 9, 12, 15]
+Current process info:
+pid=20, access=0/11
+ACCESS RES: PAGE FAULT
+ 
+tick=417, quantum=1, queue=[20, 17, 18, 21]
+memory: [0, 2, 6, 9, 12, 15]
+Current process info:
+pid=20, access=1/11
+ACCESS RES: ACCESS DONE
+ 
+tick=418, quantum=2, queue=[20, 17, 18, 21]
+memory: [0, 1, 2, 6, 9, 12, 15]
+Current process info:
+pid=20, access=1/11
+ACCESS RES: PAGE FAULT
+ 
+tick=419, quantum=3, queue=[20, 17, 18, 21]
+memory: [0, 1, 2, 6, 9, 12, 15]
+Current process info:
+pid=20, access=2/11
+ACCESS RES: ACCESS DONE
+ 
+tick=420, quantum=0, queue=[18, 21, 20]
+memory: [0, 1, 6, 9]
+Current process info:
+pid=17, access=19/19
+ 
+tick=421, quantum=0, queue=[21, 20]
+memory: [0, 1]
+Current process info:
+pid=18, access=16/16
+ 
+tick=422, quantum=0, queue=[21, 20]
+memory: [0, 1, 2]
+Current process info:
+pid=21, access=0/17
+ACCESS RES: PAGE FAULT
+ 
+tick=423, quantum=1, queue=[21, 20]
+memory: [0, 1, 2]
+Current process info:
+pid=21, access=1/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=424, quantum=2, queue=[21, 20, 22]
+memory: [0, 1, 2, 3]
+Current process info:
+pid=21, access=1/17
+ACCESS RES: PAGE FAULT
+ 
+tick=425, quantum=3, queue=[21, 20, 22]
+memory: [0, 1, 2, 3]
+Current process info:
+pid=21, access=2/17
+ACCESS RES: ACCESS DONE
+ 
+tick=426, quantum=0, queue=[20, 22, 21]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=20, access=2/11
+ACCESS RES: PAGE FAULT
+ 
+tick=427, quantum=1, queue=[20, 22, 21]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=20, access=3/11
+ACCESS RES: ACCESS DONE
+ 
+tick=428, quantum=2, queue=[20, 22, 21]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=20, access=4/11
+ACCESS RES: ACCESS DONE
+ 
+tick=429, quantum=3, queue=[20, 22, 21]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=20, access=4/11
+ACCESS RES: PAGE FAULT
+ 
+tick=430, quantum=0, queue=[22, 21, 20]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=22, access=0/17
+ACCESS RES: PAGE FAULT
+ 
+tick=431, quantum=1, queue=[22, 21, 20]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=22, access=1/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=432, quantum=2, queue=[22, 21, 20]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=22, access=1/17
+ACCESS RES: PAGE FAULT
+ 
+tick=433, quantum=3, queue=[22, 21, 20]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=22, access=2/17
+ACCESS RES: ACCESS DONE
+ 
+tick=434, quantum=0, queue=[21, 20, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=21, access=3/17
+ACCESS RES: ACCESS DONE
+ 
+tick=435, quantum=1, queue=[21, 20, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=21, access=4/17
+ACCESS RES: ACCESS DONE
+ 
+tick=436, quantum=2, queue=[21, 20, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=21, access=4/17
+ACCESS RES: PAGE FAULT
+ 
+tick=437, quantum=3, queue=[21, 20, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=21, access=5/17
+ACCESS RES: ACCESS DONE
+ 
+tick=438, quantum=0, queue=[20, 22, 21]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=20, access=5/11
+ACCESS RES: ACCESS DONE
+ 
+tick=439, quantum=1, queue=[20, 22, 21]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=20, access=6/11
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 0
+ 
+tick=440, quantum=2, queue=[20, 22, 21, 23]
+memory: [1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=20, access=7/11
+ACCESS RES: ACCESS DONE
+ 
+tick=441, quantum=3, queue=[20, 22, 21, 23]
+memory: [1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=20, access=8/11
+ACCESS RES: ACCESS DONE
+ 
+tick=442, quantum=0, queue=[22, 21, 23, 20]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=22, access=2/17
+ACCESS RES: PAGE FAULT
+ 
+tick=443, quantum=1, queue=[22, 21, 23, 20]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=22, access=3/17
+ACCESS RES: ACCESS DONE
+ 
+tick=444, quantum=2, queue=[22, 21, 23, 20]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=22, access=4/17
+ACCESS RES: ACCESS DONE
+ 
+tick=445, quantum=3, queue=[22, 21, 23, 20]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=22, access=5/17
+ACCESS RES: ACCESS DONE
+ 
+tick=446, quantum=0, queue=[21, 23, 20, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=21, access=6/17
+ACCESS RES: ACCESS DONE
+ 
+tick=447, quantum=1, queue=[21, 23, 20, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=21, access=7/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 3
+PROCESS COUNT LIMIT REACHED
+ 
+tick=448, quantum=2, queue=[21, 23, 20, 22]
+memory: [0, 1, 2, 4, 5, 6, 7, 8]
+Current process info:
+pid=21, access=8/17
+ACCESS RES: ACCESS DONE
+ 
+tick=449, quantum=3, queue=[21, 23, 20, 22]
+memory: [0, 1, 2, 4, 5, 6, 7, 8]
+Current process info:
+pid=21, access=9/17
+ACCESS RES: ACCESS DONE
+ 
+tick=450, quantum=0, queue=[23, 20, 22, 21]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=23, access=0/10
+ACCESS RES: PAGE FAULT
+ 
+tick=451, quantum=1, queue=[23, 20, 22, 21]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=23, access=1/10
+ACCESS RES: ACCESS DONE
+ 
+tick=452, quantum=2, queue=[23, 20, 22, 21]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=23, access=1/10
+ACCESS RES: PAGE FAULT
+ 
+tick=453, quantum=3, queue=[23, 20, 22, 21]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=23, access=2/10
+ACCESS RES: ACCESS DONE
+ 
+tick=454, quantum=0, queue=[20, 22, 21, 23]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=20, access=9/11
+ACCESS RES: ACCESS DONE
+ 
+tick=455, quantum=1, queue=[20, 22, 21, 23]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=20, access=10/11
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+PROCESS COUNT LIMIT REACHED
+ 
+tick=456, quantum=2, queue=[20, 22, 21, 23]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=20, access=11/11
+ACCESS RES: ACCESS DONE
+ 
+tick=457, quantum=3, queue=[22, 21, 23]
+memory: [0, 2, 3, 6, 7, 8, 9]
+Current process info:
+pid=20, access=11/11
+ 
+tick=458, quantum=0, queue=[22, 21, 23]
+memory: [0, 2, 3, 6, 7, 8, 9]
+Current process info:
+pid=22, access=6/17
+ACCESS RES: ACCESS DONE
+ 
+tick=459, quantum=1, queue=[22, 21, 23]
+memory: [0, 2, 3, 6, 7, 8, 9]
+Current process info:
+pid=22, access=7/17
+ACCESS RES: ACCESS DONE
+ 
+tick=460, quantum=2, queue=[22, 21, 23]
+memory: [0, 2, 3, 6, 7, 8, 9]
+Current process info:
+pid=22, access=8/17
+ACCESS RES: ACCESS DONE
+ 
+tick=461, quantum=3, queue=[22, 21, 23]
+memory: [0, 2, 3, 6, 7, 8, 9]
+Current process info:
+pid=22, access=9/17
+ACCESS RES: ACCESS DONE
+ 
+tick=462, quantum=0, queue=[21, 23, 22]
+memory: [0, 2, 3, 6, 7, 8, 9]
+Current process info:
+pid=21, access=10/17
+ACCESS RES: ACCESS DONE
+ 
+tick=463, quantum=1, queue=[21, 23, 22]
+memory: [0, 2, 3, 6, 7, 8, 9]
+Current process info:
+pid=21, access=11/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=464, quantum=2, queue=[21, 23, 22, 24]
+memory: [0, 2, 3, 6, 7, 8, 9]
+Current process info:
+pid=21, access=12/17
+ACCESS RES: ACCESS DONE
+ 
+tick=465, quantum=3, queue=[21, 23, 22, 24]
+memory: [0, 1, 2, 3, 6, 7, 8, 9]
+Current process info:
+pid=21, access=12/17
+ACCESS RES: PAGE FAULT
+ 
+tick=466, quantum=0, queue=[23, 22, 24, 21]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+Current process info:
+pid=23, access=2/10
+ACCESS RES: PAGE FAULT
+ 
+tick=467, quantum=1, queue=[23, 22, 24, 21]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+Current process info:
+pid=23, access=3/10
+ACCESS RES: ACCESS DONE
+ 
+tick=468, quantum=2, queue=[23, 22, 24, 21]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=23, access=3/10
+ACCESS RES: PAGE FAULT
+ 
+tick=469, quantum=3, queue=[23, 22, 24, 21]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=23, access=4/10
+ACCESS RES: ACCESS DONE
+ 
+tick=470, quantum=0, queue=[22, 24, 21, 23]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=22, access=10/17
+ACCESS RES: ACCESS DONE
+ 
+tick=471, quantum=1, queue=[22, 24, 21, 23]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=22, access=10/17
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+REPLACED: 3
+PROCESS COUNT LIMIT REACHED
+ 
+tick=472, quantum=2, queue=[22, 24, 21, 23]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=22, access=11/17
+ACCESS RES: ACCESS DONE
+ 
+tick=473, quantum=3, queue=[22, 24, 21, 23]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=22, access=12/17
+ACCESS RES: ACCESS DONE
+ 
+tick=474, quantum=0, queue=[24, 21, 23, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=24, access=0/10
+ACCESS RES: PAGE FAULT
+ 
+tick=475, quantum=1, queue=[24, 21, 23, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=24, access=1/10
+ACCESS RES: ACCESS DONE
+ 
+tick=476, quantum=2, queue=[24, 21, 23, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=24, access=1/10
+ACCESS RES: PAGE FAULT
+ 
+tick=477, quantum=3, queue=[24, 21, 23, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=24, access=2/10
+ACCESS RES: ACCESS DONE
+ 
+tick=478, quantum=0, queue=[21, 23, 22, 24]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=21, access=13/17
+ACCESS RES: ACCESS DONE
+ 
+tick=479, quantum=1, queue=[21, 23, 22, 24]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=21, access=14/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 7
+PROCESS COUNT LIMIT REACHED
+ 
+tick=480, quantum=2, queue=[21, 23, 22, 24]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11]
+Current process info:
+pid=21, access=15/17
+ACCESS RES: ACCESS DONE
+ 
+tick=481, quantum=3, queue=[21, 23, 22, 24]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11]
+Current process info:
+pid=21, access=16/17
+ACCESS RES: ACCESS DONE
+ 
+tick=482, quantum=0, queue=[23, 22, 24, 21]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11]
+Current process info:
+pid=23, access=5/10
+ACCESS RES: ACCESS DONE
+ 
+tick=483, quantum=1, queue=[23, 22, 24, 21]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11]
+Current process info:
+pid=23, access=6/10
+ACCESS RES: ACCESS DONE
+ 
+tick=484, quantum=2, queue=[23, 22, 24, 21]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11]
+Current process info:
+pid=23, access=7/10
+ACCESS RES: ACCESS DONE
+ 
+tick=485, quantum=3, queue=[23, 22, 24, 21]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11]
+Current process info:
+pid=23, access=8/10
+ACCESS RES: ACCESS DONE
+ 
+tick=486, quantum=0, queue=[22, 24, 21, 23]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11]
+Current process info:
+pid=22, access=13/17
+ACCESS RES: ACCESS DONE
+ 
+tick=487, quantum=1, queue=[22, 24, 21, 23]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=22, access=13/17
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+REPLACED: 9
+PROCESS COUNT LIMIT REACHED
+ 
+tick=488, quantum=2, queue=[22, 24, 21, 23]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11]
+Current process info:
+pid=22, access=14/17
+ACCESS RES: ACCESS DONE
+ 
+tick=489, quantum=3, queue=[22, 24, 21, 23]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11]
+Current process info:
+pid=22, access=15/17
+ACCESS RES: ACCESS DONE
+ 
+tick=490, quantum=0, queue=[24, 21, 23, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=24, access=2/10
+ACCESS RES: PAGE FAULT
+ 
+tick=491, quantum=1, queue=[24, 21, 23, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=24, access=3/10
+ACCESS RES: ACCESS DONE
+ 
+tick=492, quantum=2, queue=[24, 21, 23, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=24, access=4/10
+ACCESS RES: ACCESS DONE
+ 
+tick=493, quantum=3, queue=[24, 21, 23, 22]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=24, access=5/10
+ACCESS RES: ACCESS DONE
+ 
+tick=494, quantum=0, queue=[21, 23, 22, 24]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=21, access=17/17
+ACCESS RES: ACCESS DONE
+ 
+tick=495, quantum=1, queue=[23, 22, 24]
+memory: [0, 3, 4, 5, 6, 7, 9, 10, 11]
+Current process info:
+pid=21, access=17/17
+REPLACING, force = False
+REPLACED: 6
+ 
+tick=496, quantum=0, queue=[23, 22, 24, 25]
+memory: [0, 1, 3, 4, 5, 7, 9, 10, 11]
+Current process info:
+pid=23, access=8/10
+ACCESS RES: PAGE FAULT
+ 
+tick=497, quantum=1, queue=[23, 22, 24, 25]
+memory: [0, 1, 3, 4, 5, 7, 9, 10, 11]
+Current process info:
+pid=23, access=9/10
+ACCESS RES: ACCESS DONE
+ 
+tick=498, quantum=2, queue=[23, 22, 24, 25]
+memory: [0, 1, 3, 4, 5, 7, 9, 10, 11]
+Current process info:
+pid=23, access=10/10
+ACCESS RES: ACCESS DONE
+ 
+tick=499, quantum=3, queue=[22, 24, 25]
+memory: [0, 3, 7, 9, 10, 11]
+Current process info:
+pid=23, access=10/10
+ 
+tick=500, quantum=0, queue=[22, 24, 25]
+memory: [0, 3, 7, 9, 10, 11]
+Current process info:
+pid=22, access=16/17
+ACCESS RES: ACCESS DONE
+ 
+tick=501, quantum=1, queue=[22, 24, 25]
+memory: [0, 3, 7, 9, 10, 11]
+Current process info:
+pid=22, access=17/17
+ACCESS RES: ACCESS DONE
+ 
+tick=502, quantum=2, queue=[24, 25]
+memory: [3, 9, 11]
+Current process info:
+pid=22, access=17/17
+ 
+tick=503, quantum=0, queue=[24, 25]
+memory: [3, 9, 11]
+Current process info:
+pid=24, access=6/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=504, quantum=1, queue=[24, 25]
+memory: [3, 9, 11]
+Current process info:
+pid=24, access=7/10
+ACCESS RES: ACCESS DONE
+ 
+tick=505, quantum=2, queue=[24, 25]
+memory: [3, 9, 11]
+Current process info:
+pid=24, access=8/10
+ACCESS RES: ACCESS DONE
+ 
+tick=506, quantum=3, queue=[24, 25]
+memory: [3, 9, 11]
+Current process info:
+pid=24, access=9/10
+ACCESS RES: ACCESS DONE
+ 
+tick=507, quantum=0, queue=[25, 24]
+memory: [0, 3, 9, 11]
+Current process info:
+pid=25, access=0/8
+ACCESS RES: PAGE FAULT
+ 
+tick=508, quantum=1, queue=[25, 24]
+memory: [0, 3, 9, 11]
+Current process info:
+pid=25, access=1/8
+ACCESS RES: ACCESS DONE
+ 
+tick=509, quantum=2, queue=[25, 24]
+memory: [0, 1, 3, 9, 11]
+Current process info:
+pid=25, access=1/8
+ACCESS RES: PAGE FAULT
+ 
+tick=510, quantum=3, queue=[25, 24]
+memory: [0, 1, 3, 9, 11]
+Current process info:
+pid=25, access=2/8
+ACCESS RES: ACCESS DONE
+ 
+tick=511, quantum=0, queue=[24, 25]
+memory: [0, 1, 3, 9, 11]
+Current process info:
+pid=24, access=10/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=512, quantum=1, queue=[25, 26]
+memory: [0, 1]
+Current process info:
+pid=24, access=10/10
+ 
+tick=513, quantum=0, queue=[25, 26]
+memory: [0, 1, 2]
+Current process info:
+pid=25, access=2/8
+ACCESS RES: PAGE FAULT
+ 
+tick=514, quantum=1, queue=[25, 26]
+memory: [0, 1, 2]
+Current process info:
+pid=25, access=3/8
+ACCESS RES: ACCESS DONE
+ 
+tick=515, quantum=2, queue=[25, 26]
+memory: [0, 1, 2, 3]
+Current process info:
+pid=25, access=3/8
+ACCESS RES: PAGE FAULT
+ 
+tick=516, quantum=3, queue=[25, 26]
+memory: [0, 1, 2, 3]
+Current process info:
+pid=25, access=4/8
+ACCESS RES: ACCESS DONE
+ 
+tick=517, quantum=0, queue=[26, 25]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=26, access=0/13
+ACCESS RES: PAGE FAULT
+ 
+tick=518, quantum=1, queue=[26, 25]
+memory: [0, 1, 2, 3, 4]
+Current process info:
+pid=26, access=1/13
+ACCESS RES: ACCESS DONE
+ 
+tick=519, quantum=2, queue=[26, 25]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=26, access=1/13
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=520, quantum=3, queue=[26, 25, 27]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=26, access=2/13
+ACCESS RES: ACCESS DONE
+ 
+tick=521, quantum=0, queue=[25, 27, 26]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=25, access=5/8
+ACCESS RES: ACCESS DONE
+ 
+tick=522, quantum=1, queue=[25, 27, 26]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=25, access=6/8
+ACCESS RES: ACCESS DONE
+ 
+tick=523, quantum=2, queue=[25, 27, 26]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=25, access=7/8
+ACCESS RES: ACCESS DONE
+ 
+tick=524, quantum=3, queue=[25, 27, 26]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=25, access=8/8
+ACCESS RES: ACCESS DONE
+ 
+tick=525, quantum=0, queue=[27, 26, 25]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=27, access=0/17
+ACCESS RES: PAGE FAULT
+ 
+tick=526, quantum=1, queue=[27, 26, 25]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=27, access=1/17
+ACCESS RES: ACCESS DONE
+ 
+tick=527, quantum=2, queue=[27, 26, 25]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=27, access=2/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=528, quantum=3, queue=[27, 26, 25, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=27, access=2/17
+ACCESS RES: PAGE FAULT
+ 
+tick=529, quantum=0, queue=[26, 25, 28, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=26, access=2/13
+ACCESS RES: PAGE FAULT
+ 
+tick=530, quantum=1, queue=[26, 25, 28, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=26, access=3/13
+ACCESS RES: ACCESS DONE
+ 
+tick=531, quantum=2, queue=[26, 25, 28, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=26, access=4/13
+ACCESS RES: ACCESS DONE
+ 
+tick=532, quantum=3, queue=[26, 25, 28, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=26, access=5/13
+ACCESS RES: ACCESS DONE
+ 
+tick=533, quantum=0, queue=[28, 27, 26]
+memory: [4, 5, 6, 7, 8]
+Current process info:
+pid=25, access=8/8
+ 
+tick=534, quantum=0, queue=[28, 27, 26]
+memory: [0, 4, 5, 6, 7, 8]
+Current process info:
+pid=28, access=0/18
+ACCESS RES: PAGE FAULT
+ 
+tick=535, quantum=1, queue=[28, 27, 26]
+memory: [0, 4, 5, 6, 7, 8]
+Current process info:
+pid=28, access=1/18
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=536, quantum=2, queue=[28, 27, 26]
+memory: [0, 1, 4, 5, 6, 7, 8]
+Current process info:
+pid=28, access=1/18
+ACCESS RES: PAGE FAULT
+ 
+tick=537, quantum=3, queue=[28, 27, 26]
+memory: [0, 1, 4, 5, 6, 7, 8]
+Current process info:
+pid=28, access=2/18
+ACCESS RES: ACCESS DONE
+ 
+tick=538, quantum=0, queue=[27, 26, 28]
+memory: [0, 1, 4, 5, 6, 7, 8]
+Current process info:
+pid=27, access=3/17
+ACCESS RES: ACCESS DONE
+ 
+tick=539, quantum=1, queue=[27, 26, 28]
+memory: [0, 1, 4, 5, 6, 7, 8]
+Current process info:
+pid=27, access=4/17
+ACCESS RES: ACCESS DONE
+ 
+tick=540, quantum=2, queue=[27, 26, 28]
+memory: [0, 1, 4, 5, 6, 7, 8]
+Current process info:
+pid=27, access=5/17
+ACCESS RES: ACCESS DONE
+ 
+tick=541, quantum=3, queue=[27, 26, 28]
+memory: [0, 1, 2, 4, 5, 6, 7, 8]
+Current process info:
+pid=27, access=5/17
+ACCESS RES: PAGE FAULT
+ 
+tick=542, quantum=0, queue=[26, 28, 27]
+memory: [0, 1, 2, 4, 5, 6, 7, 8]
+Current process info:
+pid=26, access=6/13
+ACCESS RES: ACCESS DONE
+ 
+tick=543, quantum=1, queue=[26, 28, 27]
+memory: [0, 1, 2, 4, 5, 6, 7, 8]
+Current process info:
+pid=26, access=7/13
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=544, quantum=2, queue=[26, 28, 27, 29]
+memory: [0, 1, 2, 4, 5, 6, 7, 8]
+Current process info:
+pid=26, access=8/13
+ACCESS RES: ACCESS DONE
+ 
+tick=545, quantum=3, queue=[26, 28, 27, 29]
+memory: [0, 1, 2, 4, 5, 6, 7, 8]
+Current process info:
+pid=26, access=9/13
+ACCESS RES: ACCESS DONE
+ 
+tick=546, quantum=0, queue=[28, 27, 29, 26]
+memory: [0, 1, 2, 4, 5, 6, 7, 8]
+Current process info:
+pid=28, access=3/18
+ACCESS RES: ACCESS DONE
+ 
+tick=547, quantum=1, queue=[28, 27, 29, 26]
+memory: [0, 1, 2, 4, 5, 6, 7, 8]
+Current process info:
+pid=28, access=4/18
+ACCESS RES: ACCESS DONE
+ 
+tick=548, quantum=2, queue=[28, 27, 29, 26]
+memory: [0, 1, 2, 4, 5, 6, 7, 8]
+Current process info:
+pid=28, access=5/18
+ACCESS RES: ACCESS DONE
+ 
+tick=549, quantum=3, queue=[28, 27, 29, 26]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=28, access=5/18
+ACCESS RES: PAGE FAULT
+ 
+tick=550, quantum=0, queue=[27, 29, 26, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=27, access=6/17
+ACCESS RES: ACCESS DONE
+ 
+tick=551, quantum=1, queue=[27, 29, 26, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=27, access=7/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+PROCESS COUNT LIMIT REACHED
+ 
+tick=552, quantum=2, queue=[27, 29, 26, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=27, access=8/17
+ACCESS RES: ACCESS DONE
+ 
+tick=553, quantum=3, queue=[27, 29, 26, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=27, access=9/17
+ACCESS RES: ACCESS DONE
+ 
+tick=554, quantum=0, queue=[29, 26, 28, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=29, access=0/19
+ACCESS RES: PAGE FAULT
+ 
+tick=555, quantum=1, queue=[29, 26, 28, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=29, access=1/19
+ACCESS RES: ACCESS DONE
+ 
+tick=556, quantum=2, queue=[29, 26, 28, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=29, access=2/19
+ACCESS RES: ACCESS DONE
+ 
+tick=557, quantum=3, queue=[29, 26, 28, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=29, access=2/19
+ACCESS RES: PAGE FAULT
+ 
+tick=558, quantum=0, queue=[26, 28, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=26, access=10/13
+ACCESS RES: ACCESS DONE
+ 
+tick=559, quantum=1, queue=[26, 28, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=26, access=10/13
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+NO VICTIM FOUND
+PROCESS COUNT LIMIT REACHED
+ 
+tick=560, quantum=2, queue=[26, 28, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=26, access=11/13
+ACCESS RES: ACCESS DONE
+ 
+tick=561, quantum=3, queue=[26, 28, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=26, access=11/13
+ACCESS RES: PAGE FAULT
+ 
+tick=562, quantum=0, queue=[28, 27, 29, 26]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=28, access=6/18
+ACCESS RES: ACCESS DONE
+ 
+tick=563, quantum=1, queue=[28, 27, 29, 26]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=28, access=6/18
+ACCESS RES: PAGE FAULT
+ 
+tick=564, quantum=2, queue=[28, 27, 29, 26]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=28, access=7/18
+ACCESS RES: ACCESS DONE
+ 
+tick=565, quantum=3, queue=[28, 27, 29, 26]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=28, access=8/18
+ACCESS RES: ACCESS DONE
+ 
+tick=566, quantum=0, queue=[27, 29, 26, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=27, access=10/17
+ACCESS RES: ACCESS DONE
+ 
+tick=567, quantum=1, queue=[27, 29, 26, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=27, access=11/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 4
+PROCESS COUNT LIMIT REACHED
+ 
+tick=568, quantum=2, queue=[27, 29, 26, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=27, access=11/17
+ACCESS RES: PAGE FAULT
+ 
+tick=569, quantum=3, queue=[27, 29, 26, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=27, access=12/17
+ACCESS RES: ACCESS DONE
+ 
+tick=570, quantum=0, queue=[29, 26, 28, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=29, access=3/19
+ACCESS RES: ACCESS DONE
+ 
+tick=571, quantum=1, queue=[29, 26, 28, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=29, access=3/19
+ACCESS RES: PAGE FAULT
+ 
+tick=572, quantum=2, queue=[29, 26, 28, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=29, access=4/19
+ACCESS RES: ACCESS DONE
+ 
+tick=573, quantum=3, queue=[29, 26, 28, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=29, access=5/19
+ACCESS RES: ACCESS DONE
+ 
+tick=574, quantum=0, queue=[26, 28, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=26, access=12/13
+ACCESS RES: ACCESS DONE
+ 
+tick=575, quantum=1, queue=[26, 28, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=26, access=13/13
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 5
+PROCESS COUNT LIMIT REACHED
+ 
+tick=576, quantum=2, queue=[28, 27, 29]
+memory: [0, 1, 2, 3, 4, 6, 7, 9, 10, 13, 14]
+Current process info:
+pid=26, access=13/13
+ 
+tick=577, quantum=0, queue=[28, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 13, 14]
+Current process info:
+pid=28, access=8/18
+ACCESS RES: PAGE FAULT
+ 
+tick=578, quantum=1, queue=[28, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 13, 14]
+Current process info:
+pid=28, access=9/18
+ACCESS RES: ACCESS DONE
+ 
+tick=579, quantum=2, queue=[28, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 13, 14]
+Current process info:
+pid=28, access=10/18
+ACCESS RES: ACCESS DONE
+ 
+tick=580, quantum=3, queue=[28, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14]
+Current process info:
+pid=28, access=10/18
+ACCESS RES: PAGE FAULT
+ 
+tick=581, quantum=0, queue=[27, 29, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14]
+Current process info:
+pid=27, access=12/17
+ACCESS RES: PAGE FAULT
+ 
+tick=582, quantum=1, queue=[27, 29, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14]
+Current process info:
+pid=27, access=13/17
+ACCESS RES: ACCESS DONE
+ 
+tick=583, quantum=2, queue=[27, 29, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14]
+Current process info:
+pid=27, access=14/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 7
+ 
+tick=584, quantum=3, queue=[27, 29, 28, 30]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 13, 14]
+Current process info:
+pid=27, access=15/17
+ACCESS RES: ACCESS DONE
+ 
+tick=585, quantum=0, queue=[29, 28, 30, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14]
+Current process info:
+pid=29, access=5/19
+ACCESS RES: PAGE FAULT
+ 
+tick=586, quantum=1, queue=[29, 28, 30, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14]
+Current process info:
+pid=29, access=6/19
+ACCESS RES: ACCESS DONE
+ 
+tick=587, quantum=2, queue=[29, 28, 30, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14]
+Current process info:
+pid=29, access=7/19
+ACCESS RES: ACCESS DONE
+ 
+tick=588, quantum=3, queue=[29, 28, 30, 27]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=29, access=7/19
+ACCESS RES: PAGE FAULT
+ 
+tick=589, quantum=0, queue=[28, 30, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=28, access=11/18
+ACCESS RES: ACCESS DONE
+ 
+tick=590, quantum=1, queue=[28, 30, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=28, access=12/18
+ACCESS RES: ACCESS DONE
+ 
+tick=591, quantum=2, queue=[28, 30, 27, 29]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=28, access=13/18
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 0
+PROCESS COUNT LIMIT REACHED
+ 
+tick=592, quantum=3, queue=[28, 30, 27, 29]
+memory: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=28, access=14/18
+ACCESS RES: ACCESS DONE
+ 
+tick=593, quantum=0, queue=[30, 27, 29, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=30, access=0/20
+ACCESS RES: PAGE FAULT
+ 
+tick=594, quantum=1, queue=[30, 27, 29, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=30, access=1/20
+ACCESS RES: ACCESS DONE
+ 
+tick=595, quantum=2, queue=[30, 27, 29, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=30, access=2/20
+ACCESS RES: ACCESS DONE
+ 
+tick=596, quantum=3, queue=[30, 27, 29, 28]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Current process info:
+pid=30, access=3/20
+ACCESS RES: ACCESS DONE
+ 
+tick=597, quantum=0, queue=[27, 29, 28, 30]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=27, access=15/17
+ACCESS RES: PAGE FAULT
+ 
+tick=598, quantum=1, queue=[27, 29, 28, 30]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=27, access=16/17
+ACCESS RES: ACCESS DONE
+ 
+tick=599, quantum=2, queue=[27, 29, 28, 30]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Current process info:
+pid=27, access=17/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 1
+PROCESS COUNT LIMIT REACHED
+ 
+tick=600, quantum=3, queue=[29, 28, 30]
+memory: [0, 3, 5, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=27, access=17/17
+ 
+tick=601, quantum=0, queue=[29, 28, 30]
+memory: [0, 3, 5, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=29, access=8/19
+ACCESS RES: ACCESS DONE
+ 
+tick=602, quantum=1, queue=[29, 28, 30]
+memory: [0, 3, 5, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=29, access=9/19
+ACCESS RES: ACCESS DONE
+ 
+tick=603, quantum=2, queue=[29, 28, 30]
+memory: [0, 3, 5, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=29, access=10/19
+ACCESS RES: ACCESS DONE
+ 
+tick=604, quantum=3, queue=[29, 28, 30]
+memory: [0, 3, 5, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=29, access=11/19
+ACCESS RES: ACCESS DONE
+ 
+tick=605, quantum=0, queue=[28, 30, 29]
+memory: [0, 3, 5, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=28, access=15/18
+ACCESS RES: ACCESS DONE
+ 
+tick=606, quantum=1, queue=[28, 30, 29]
+memory: [0, 3, 5, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=28, access=16/18
+ACCESS RES: ACCESS DONE
+ 
+tick=607, quantum=2, queue=[28, 30, 29]
+memory: [0, 3, 5, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=28, access=17/18
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 5
+ 
+tick=608, quantum=3, queue=[28, 30, 29, 31]
+memory: [0, 3, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=28, access=18/18
+ACCESS RES: ACCESS DONE
+ 
+tick=609, quantum=0, queue=[30, 29, 31, 28]
+memory: [0, 1, 3, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=30, access=3/20
+ACCESS RES: PAGE FAULT
+ 
+tick=610, quantum=1, queue=[30, 29, 31, 28]
+memory: [0, 1, 3, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=30, access=4/20
+ACCESS RES: ACCESS DONE
+ 
+tick=611, quantum=2, queue=[30, 29, 31, 28]
+memory: [0, 1, 2, 3, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=30, access=4/20
+ACCESS RES: PAGE FAULT
+ 
+tick=612, quantum=3, queue=[30, 29, 31, 28]
+memory: [0, 1, 2, 3, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=30, access=5/20
+ACCESS RES: ACCESS DONE
+ 
+tick=613, quantum=0, queue=[29, 31, 28, 30]
+memory: [0, 1, 2, 3, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=29, access=12/19
+ACCESS RES: ACCESS DONE
+ 
+tick=614, quantum=1, queue=[29, 31, 28, 30]
+memory: [0, 1, 2, 3, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=29, access=13/19
+ACCESS RES: ACCESS DONE
+ 
+tick=615, quantum=2, queue=[29, 31, 28, 30]
+memory: [0, 1, 2, 3, 7, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=29, access=14/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 7
+PROCESS COUNT LIMIT REACHED
+ 
+tick=616, quantum=3, queue=[29, 31, 28, 30]
+memory: [0, 1, 2, 3, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=29, access=15/19
+ACCESS RES: ACCESS DONE
+ 
+tick=617, quantum=0, queue=[31, 28, 30, 29]
+memory: [0, 1, 2, 3, 4, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=31, access=0/9
+ACCESS RES: PAGE FAULT
+ 
+tick=618, quantum=1, queue=[31, 28, 30, 29]
+memory: [0, 1, 2, 3, 4, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=31, access=1/9
+ACCESS RES: ACCESS DONE
+ 
+tick=619, quantum=2, queue=[31, 28, 30, 29]
+memory: [0, 1, 2, 3, 4, 5, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=31, access=1/9
+ACCESS RES: PAGE FAULT
+ 
+tick=620, quantum=3, queue=[31, 28, 30, 29]
+memory: [0, 1, 2, 3, 4, 5, 8, 9, 10, 12, 13, 14]
+Current process info:
+pid=31, access=2/9
+ACCESS RES: ACCESS DONE
+ 
+tick=621, quantum=0, queue=[30, 29, 31]
+memory: [0, 1, 2, 4, 5, 9, 10, 12, 14]
+Current process info:
+pid=28, access=18/18
+ 
+tick=622, quantum=0, queue=[30, 29, 31]
+memory: [0, 1, 2, 4, 5, 9, 10, 12, 14]
+Current process info:
+pid=30, access=6/20
+ACCESS RES: ACCESS DONE
+ 
+tick=623, quantum=1, queue=[30, 29, 31]
+memory: [0, 1, 2, 4, 5, 9, 10, 12, 14]
+Current process info:
+pid=30, access=7/20
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 10
+ 
+tick=624, quantum=2, queue=[30, 29, 31, 32]
+memory: [0, 1, 2, 4, 5, 9, 12, 14]
+Current process info:
+pid=30, access=8/20
+ACCESS RES: ACCESS DONE
+ 
+tick=625, quantum=3, queue=[30, 29, 31, 32]
+memory: [0, 1, 2, 4, 5, 9, 12, 14]
+Current process info:
+pid=30, access=9/20
+ACCESS RES: ACCESS DONE
+ 
+tick=626, quantum=0, queue=[29, 31, 32, 30]
+memory: [0, 1, 2, 4, 5, 9, 12, 14]
+Current process info:
+pid=29, access=16/19
+ACCESS RES: ACCESS DONE
+ 
+tick=627, quantum=1, queue=[29, 31, 32, 30]
+memory: [0, 1, 2, 4, 5, 9, 12, 14]
+Current process info:
+pid=29, access=17/19
+ACCESS RES: ACCESS DONE
+ 
+tick=628, quantum=2, queue=[29, 31, 32, 30]
+memory: [0, 1, 2, 4, 5, 9, 12, 14]
+Current process info:
+pid=29, access=18/19
+ACCESS RES: ACCESS DONE
+ 
+tick=629, quantum=3, queue=[29, 31, 32, 30]
+memory: [0, 1, 2, 4, 5, 9, 12, 14]
+Current process info:
+pid=29, access=19/19
+ACCESS RES: ACCESS DONE
+ 
+tick=630, quantum=0, queue=[31, 32, 30, 29]
+memory: [0, 1, 2, 4, 5, 9, 12, 14]
+Current process info:
+pid=31, access=3/9
+ACCESS RES: ACCESS DONE
+ 
+tick=631, quantum=1, queue=[31, 32, 30, 29]
+memory: [0, 1, 2, 3, 4, 5, 9, 12, 14]
+Current process info:
+pid=31, access=3/9
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+NO VICTIM FOUND
+PROCESS COUNT LIMIT REACHED
+ 
+tick=632, quantum=2, queue=[31, 32, 30, 29]
+memory: [0, 1, 2, 3, 4, 5, 9, 12, 14]
+Current process info:
+pid=31, access=4/9
+ACCESS RES: ACCESS DONE
+ 
+tick=633, quantum=3, queue=[31, 32, 30, 29]
+memory: [0, 1, 2, 3, 4, 5, 9, 12, 14]
+Current process info:
+pid=31, access=5/9
+ACCESS RES: ACCESS DONE
+ 
+tick=634, quantum=0, queue=[32, 30, 29, 31]
+memory: [0, 1, 2, 3, 4, 5, 6, 9, 12, 14]
+Current process info:
+pid=32, access=0/10
+ACCESS RES: PAGE FAULT
+ 
+tick=635, quantum=1, queue=[32, 30, 29, 31]
+memory: [0, 1, 2, 3, 4, 5, 6, 9, 12, 14]
+Current process info:
+pid=32, access=1/10
+ACCESS RES: ACCESS DONE
+ 
+tick=636, quantum=2, queue=[32, 30, 29, 31]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 12, 14]
+Current process info:
+pid=32, access=1/10
+ACCESS RES: PAGE FAULT
+ 
+tick=637, quantum=3, queue=[32, 30, 29, 31]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 12, 14]
+Current process info:
+pid=32, access=2/10
+ACCESS RES: ACCESS DONE
+ 
+tick=638, quantum=0, queue=[30, 29, 31, 32]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 12, 14]
+Current process info:
+pid=30, access=10/20
+ACCESS RES: ACCESS DONE
+ 
+tick=639, quantum=1, queue=[30, 29, 31, 32]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 14]
+Current process info:
+pid=30, access=10/20
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+REPLACED: 4
+PROCESS COUNT LIMIT REACHED
+ 
+tick=640, quantum=2, queue=[30, 29, 31, 32]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 9, 12, 14]
+Current process info:
+pid=30, access=11/20
+ACCESS RES: ACCESS DONE
+ 
+tick=641, quantum=3, queue=[30, 29, 31, 32]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 9, 12, 14]
+Current process info:
+pid=30, access=12/20
+ACCESS RES: ACCESS DONE
+ 
+tick=642, quantum=0, queue=[31, 32, 30]
+memory: [0, 1, 2, 3, 5, 6, 7, 8]
+Current process info:
+pid=29, access=19/19
+ 
+tick=643, quantum=0, queue=[31, 32, 30]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=31, access=5/9
+ACCESS RES: PAGE FAULT
+ 
+tick=644, quantum=1, queue=[31, 32, 30]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=31, access=6/9
+ACCESS RES: ACCESS DONE
+ 
+tick=645, quantum=2, queue=[31, 32, 30]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=31, access=7/9
+ACCESS RES: ACCESS DONE
+ 
+tick=646, quantum=3, queue=[31, 32, 30]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=31, access=8/9
+ACCESS RES: ACCESS DONE
+ 
+tick=647, quantum=0, queue=[32, 30, 31]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=32, access=3/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 0
+ 
+tick=648, quantum=1, queue=[32, 30, 31, 33]
+memory: [1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=32, access=4/10
+ACCESS RES: ACCESS DONE
+ 
+tick=649, quantum=2, queue=[32, 30, 31, 33]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=32, access=4/10
+ACCESS RES: PAGE FAULT
+ 
+tick=650, quantum=3, queue=[32, 30, 31, 33]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=32, access=5/10
+ACCESS RES: ACCESS DONE
+ 
+tick=651, quantum=0, queue=[30, 31, 33, 32]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=30, access=12/20
+ACCESS RES: PAGE FAULT
+ 
+tick=652, quantum=1, queue=[30, 31, 33, 32]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=30, access=13/20
+ACCESS RES: ACCESS DONE
+ 
+tick=653, quantum=2, queue=[30, 31, 33, 32]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=30, access=14/20
+ACCESS RES: ACCESS DONE
+ 
+tick=654, quantum=3, queue=[30, 31, 33, 32]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=30, access=15/20
+ACCESS RES: ACCESS DONE
+ 
+tick=655, quantum=0, queue=[31, 33, 32, 30]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=31, access=9/9
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 3
+PROCESS COUNT LIMIT REACHED
+ 
+tick=656, quantum=1, queue=[33, 32, 30]
+memory: [0, 1, 2, 6, 7, 8, 9]
+Current process info:
+pid=31, access=9/9
+ 
+tick=657, quantum=0, queue=[33, 32, 30]
+memory: [0, 1, 2, 3, 6, 7, 8, 9]
+Current process info:
+pid=33, access=0/10
+ACCESS RES: PAGE FAULT
+ 
+tick=658, quantum=1, queue=[33, 32, 30]
+memory: [0, 1, 2, 3, 6, 7, 8, 9]
+Current process info:
+pid=33, access=1/10
+ACCESS RES: ACCESS DONE
+ 
+tick=659, quantum=2, queue=[33, 32, 30]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+Current process info:
+pid=33, access=1/10
+ACCESS RES: PAGE FAULT
+ 
+tick=660, quantum=3, queue=[33, 32, 30]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+Current process info:
+pid=33, access=2/10
+ACCESS RES: ACCESS DONE
+ 
+tick=661, quantum=0, queue=[32, 30, 33]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+Current process info:
+pid=32, access=6/10
+ACCESS RES: ACCESS DONE
+ 
+tick=662, quantum=1, queue=[32, 30, 33]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+Current process info:
+pid=32, access=7/10
+ACCESS RES: ACCESS DONE
+ 
+tick=663, quantum=2, queue=[32, 30, 33]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+Current process info:
+pid=32, access=8/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 8
+ 
+tick=664, quantum=3, queue=[32, 30, 33, 34]
+memory: [0, 1, 2, 3, 4, 6, 7, 9]
+Current process info:
+pid=32, access=9/10
+ACCESS RES: ACCESS DONE
+ 
+tick=665, quantum=0, queue=[30, 33, 34, 32]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+Current process info:
+pid=30, access=15/20
+ACCESS RES: PAGE FAULT
+ 
+tick=666, quantum=1, queue=[30, 33, 34, 32]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+Current process info:
+pid=30, access=16/20
+ACCESS RES: ACCESS DONE
+ 
+tick=667, quantum=2, queue=[30, 33, 34, 32]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+Current process info:
+pid=30, access=17/20
+ACCESS RES: ACCESS DONE
+ 
+tick=668, quantum=3, queue=[30, 33, 34, 32]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+Current process info:
+pid=30, access=18/20
+ACCESS RES: ACCESS DONE
+ 
+tick=669, quantum=0, queue=[33, 34, 32, 30]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+Current process info:
+pid=33, access=3/10
+ACCESS RES: ACCESS DONE
+ 
+tick=670, quantum=1, queue=[33, 34, 32, 30]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=33, access=3/10
+ACCESS RES: PAGE FAULT
+ 
+tick=671, quantum=2, queue=[33, 34, 32, 30]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=33, access=4/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 2
+PROCESS COUNT LIMIT REACHED
+ 
+tick=672, quantum=3, queue=[33, 34, 32, 30]
+memory: [0, 1, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=33, access=5/10
+ACCESS RES: ACCESS DONE
+ 
+tick=673, quantum=0, queue=[34, 32, 30, 33]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=34, access=0/19
+ACCESS RES: PAGE FAULT
+ 
+tick=674, quantum=1, queue=[34, 32, 30, 33]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=34, access=1/19
+ACCESS RES: ACCESS DONE
+ 
+tick=675, quantum=2, queue=[34, 32, 30, 33]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=34, access=1/19
+ACCESS RES: PAGE FAULT
+ 
+tick=676, quantum=3, queue=[34, 32, 30, 33]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=34, access=2/19
+ACCESS RES: ACCESS DONE
+ 
+tick=677, quantum=0, queue=[32, 30, 33, 34]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=32, access=10/10
+ACCESS RES: ACCESS DONE
+ 
+tick=678, quantum=1, queue=[30, 33, 34]
+memory: [1, 2, 3, 4, 5, 8, 9, 10]
+Current process info:
+pid=32, access=10/10
+ 
+tick=679, quantum=0, queue=[30, 33, 34]
+memory: [1, 2, 3, 4, 5, 8, 9, 10]
+Current process info:
+pid=30, access=19/20
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 1
+ 
+tick=680, quantum=1, queue=[30, 33, 34, 35]
+memory: [2, 3, 4, 5, 8, 9, 10]
+Current process info:
+pid=30, access=20/20
+ACCESS RES: ACCESS DONE
+ 
+tick=681, quantum=2, queue=[33, 34, 35]
+memory: [2, 3, 4, 8, 10]
+Current process info:
+pid=30, access=20/20
+ 
+tick=682, quantum=0, queue=[33, 34, 35]
+memory: [2, 3, 4, 8, 10]
+Current process info:
+pid=33, access=6/10
+ACCESS RES: ACCESS DONE
+ 
+tick=683, quantum=1, queue=[33, 34, 35]
+memory: [2, 3, 4, 8, 10]
+Current process info:
+pid=33, access=7/10
+ACCESS RES: ACCESS DONE
+ 
+tick=684, quantum=2, queue=[33, 34, 35]
+memory: [0, 2, 3, 4, 8, 10]
+Current process info:
+pid=33, access=7/10
+ACCESS RES: PAGE FAULT
+ 
+tick=685, quantum=3, queue=[33, 34, 35]
+memory: [0, 2, 3, 4, 8, 10]
+Current process info:
+pid=33, access=8/10
+ACCESS RES: ACCESS DONE
+ 
+tick=686, quantum=0, queue=[34, 35, 33]
+memory: [0, 1, 2, 3, 4, 8, 10]
+Current process info:
+pid=34, access=2/19
+ACCESS RES: PAGE FAULT
+ 
+tick=687, quantum=1, queue=[34, 35, 33]
+memory: [0, 1, 2, 3, 4, 8, 10]
+Current process info:
+pid=34, access=3/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=688, quantum=2, queue=[34, 35, 33, 36]
+memory: [0, 1, 2, 3, 4, 8, 10]
+Current process info:
+pid=34, access=4/19
+ACCESS RES: ACCESS DONE
+ 
+tick=689, quantum=3, queue=[34, 35, 33, 36]
+memory: [0, 1, 2, 3, 4, 5, 8, 10]
+Current process info:
+pid=34, access=4/19
+ACCESS RES: PAGE FAULT
+ 
+tick=690, quantum=0, queue=[35, 33, 36, 34]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 10]
+Current process info:
+pid=35, access=0/14
+ACCESS RES: PAGE FAULT
+ 
+tick=691, quantum=1, queue=[35, 33, 36, 34]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 10]
+Current process info:
+pid=35, access=1/14
+ACCESS RES: ACCESS DONE
+ 
+tick=692, quantum=2, queue=[35, 33, 36, 34]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+Current process info:
+pid=35, access=1/14
+ACCESS RES: PAGE FAULT
+ 
+tick=693, quantum=3, queue=[35, 33, 36, 34]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+Current process info:
+pid=35, access=2/14
+ACCESS RES: ACCESS DONE
+ 
+tick=694, quantum=0, queue=[33, 36, 34, 35]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+Current process info:
+pid=33, access=9/10
+ACCESS RES: ACCESS DONE
+ 
+tick=695, quantum=1, queue=[33, 36, 34, 35]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+Current process info:
+pid=33, access=10/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+PROCESS COUNT LIMIT REACHED
+ 
+tick=696, quantum=2, queue=[36, 34, 35]
+memory: [1, 2, 5, 6, 7, 10]
+Current process info:
+pid=33, access=10/10
+ 
+tick=697, quantum=0, queue=[36, 34, 35]
+memory: [0, 1, 2, 5, 6, 7, 10]
+Current process info:
+pid=36, access=0/17
+ACCESS RES: PAGE FAULT
+ 
+tick=698, quantum=1, queue=[36, 34, 35]
+memory: [0, 1, 2, 5, 6, 7, 10]
+Current process info:
+pid=36, access=1/17
+ACCESS RES: ACCESS DONE
+ 
+tick=699, quantum=2, queue=[36, 34, 35]
+memory: [0, 1, 2, 3, 5, 6, 7, 10]
+Current process info:
+pid=36, access=1/17
+ACCESS RES: PAGE FAULT
+ 
+tick=700, quantum=3, queue=[36, 34, 35]
+memory: [0, 1, 2, 3, 5, 6, 7, 10]
+Current process info:
+pid=36, access=2/17
+ACCESS RES: ACCESS DONE
+ 
+tick=701, quantum=0, queue=[34, 35, 36]
+memory: [0, 1, 2, 3, 5, 6, 7, 10]
+Current process info:
+pid=34, access=5/19
+ACCESS RES: ACCESS DONE
+ 
+tick=702, quantum=1, queue=[34, 35, 36]
+memory: [0, 1, 2, 3, 5, 6, 7, 10]
+Current process info:
+pid=34, access=6/19
+ACCESS RES: ACCESS DONE
+ 
+tick=703, quantum=2, queue=[34, 35, 36]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 10]
+Current process info:
+pid=34, access=6/19
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=704, quantum=3, queue=[34, 35, 36, 37]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 10]
+Current process info:
+pid=34, access=7/19
+ACCESS RES: ACCESS DONE
+ 
+tick=705, quantum=0, queue=[35, 36, 37, 34]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 10]
+Current process info:
+pid=35, access=3/14
+ACCESS RES: ACCESS DONE
+ 
+tick=706, quantum=1, queue=[35, 36, 37, 34]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 10]
+Current process info:
+pid=35, access=4/14
+ACCESS RES: ACCESS DONE
+ 
+tick=707, quantum=2, queue=[35, 36, 37, 34]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 10]
+Current process info:
+pid=35, access=5/14
+ACCESS RES: ACCESS DONE
+ 
+tick=708, quantum=3, queue=[35, 36, 37, 34]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+Current process info:
+pid=35, access=5/14
+ACCESS RES: PAGE FAULT
+ 
+tick=709, quantum=0, queue=[36, 37, 34, 35]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+Current process info:
+pid=36, access=3/17
+ACCESS RES: ACCESS DONE
+ 
+tick=710, quantum=1, queue=[36, 37, 34, 35]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+Current process info:
+pid=36, access=4/17
+ACCESS RES: ACCESS DONE
+ 
+tick=711, quantum=2, queue=[36, 37, 34, 35]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+Current process info:
+pid=36, access=5/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 2
+PROCESS COUNT LIMIT REACHED
+ 
+tick=712, quantum=3, queue=[36, 37, 34, 35]
+memory: [0, 1, 3, 4, 5, 6, 7, 8, 10]
+Current process info:
+pid=36, access=6/17
+ACCESS RES: ACCESS DONE
+ 
+tick=713, quantum=0, queue=[37, 34, 35, 36]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+Current process info:
+pid=37, access=0/8
+ACCESS RES: PAGE FAULT
+ 
+tick=714, quantum=1, queue=[37, 34, 35, 36]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+Current process info:
+pid=37, access=1/8
+ACCESS RES: ACCESS DONE
+ 
+tick=715, quantum=2, queue=[37, 34, 35, 36]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=37, access=1/8
+ACCESS RES: PAGE FAULT
+ 
+tick=716, quantum=3, queue=[37, 34, 35, 36]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=37, access=2/8
+ACCESS RES: ACCESS DONE
+ 
+tick=717, quantum=0, queue=[34, 35, 36, 37]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=34, access=8/19
+ACCESS RES: ACCESS DONE
+ 
+tick=718, quantum=1, queue=[34, 35, 36, 37]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=34, access=9/19
+ACCESS RES: ACCESS DONE
+ 
+tick=719, quantum=2, queue=[34, 35, 36, 37]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=34, access=9/19
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+REPLACED: 0
+PROCESS COUNT LIMIT REACHED
+ 
+tick=720, quantum=3, queue=[34, 35, 36, 37]
+memory: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=34, access=10/19
+ACCESS RES: ACCESS DONE
+ 
+tick=721, quantum=0, queue=[35, 36, 37, 34]
+memory: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=35, access=6/14
+ACCESS RES: ACCESS DONE
+ 
+tick=722, quantum=1, queue=[35, 36, 37, 34]
+memory: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=35, access=7/14
+ACCESS RES: ACCESS DONE
+ 
+tick=723, quantum=2, queue=[35, 36, 37, 34]
+memory: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=35, access=8/14
+ACCESS RES: ACCESS DONE
+ 
+tick=724, quantum=3, queue=[35, 36, 37, 34]
+memory: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=35, access=9/14
+ACCESS RES: ACCESS DONE
+ 
+tick=725, quantum=0, queue=[36, 37, 34, 35]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=36, access=6/17
+ACCESS RES: PAGE FAULT
+ 
+tick=726, quantum=1, queue=[36, 37, 34, 35]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=36, access=7/17
+ACCESS RES: ACCESS DONE
+ 
+tick=727, quantum=2, queue=[36, 37, 34, 35]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=36, access=8/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 1
+PROCESS COUNT LIMIT REACHED
+ 
+tick=728, quantum=3, queue=[36, 37, 34, 35]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=36, access=8/17
+ACCESS RES: PAGE FAULT
+ 
+tick=729, quantum=0, queue=[37, 34, 35, 36]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=37, access=3/8
+ACCESS RES: ACCESS DONE
+ 
+tick=730, quantum=1, queue=[37, 34, 35, 36]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=37, access=4/8
+ACCESS RES: ACCESS DONE
+ 
+tick=731, quantum=2, queue=[37, 34, 35, 36]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=37, access=4/8
+ACCESS RES: PAGE FAULT
+ 
+tick=732, quantum=3, queue=[37, 34, 35, 36]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=37, access=5/8
+ACCESS RES: ACCESS DONE
+ 
+tick=733, quantum=0, queue=[34, 35, 36, 37]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=34, access=10/19
+ACCESS RES: PAGE FAULT
+ 
+tick=734, quantum=1, queue=[34, 35, 36, 37]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=34, access=11/19
+ACCESS RES: ACCESS DONE
+ 
+tick=735, quantum=2, queue=[34, 35, 36, 37]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=34, access=12/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 3
+PROCESS COUNT LIMIT REACHED
+ 
+tick=736, quantum=3, queue=[34, 35, 36, 37]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=34, access=13/19
+ACCESS RES: ACCESS DONE
+ 
+tick=737, quantum=0, queue=[35, 36, 37, 34]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=35, access=10/14
+ACCESS RES: ACCESS DONE
+ 
+tick=738, quantum=1, queue=[35, 36, 37, 34]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=35, access=10/14
+ACCESS RES: PAGE FAULT
+ 
+tick=739, quantum=2, queue=[35, 36, 37, 34]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=35, access=11/14
+ACCESS RES: ACCESS DONE
+ 
+tick=740, quantum=3, queue=[35, 36, 37, 34]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=35, access=12/14
+ACCESS RES: ACCESS DONE
+ 
+tick=741, quantum=0, queue=[36, 37, 34, 35]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=36, access=9/17
+ACCESS RES: ACCESS DONE
+ 
+tick=742, quantum=1, queue=[36, 37, 34, 35]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=36, access=10/17
+ACCESS RES: ACCESS DONE
+ 
+tick=743, quantum=2, queue=[36, 37, 34, 35]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=36, access=11/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 4
+PROCESS COUNT LIMIT REACHED
+ 
+tick=744, quantum=3, queue=[36, 37, 34, 35]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=36, access=12/17
+ACCESS RES: ACCESS DONE
+ 
+tick=745, quantum=0, queue=[37, 34, 35, 36]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=37, access=6/8
+ACCESS RES: ACCESS DONE
+ 
+tick=746, quantum=1, queue=[37, 34, 35, 36]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=37, access=7/8
+ACCESS RES: ACCESS DONE
+ 
+tick=747, quantum=2, queue=[37, 34, 35, 36]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Current process info:
+pid=37, access=8/8
+ACCESS RES: ACCESS DONE
+ 
+tick=748, quantum=3, queue=[34, 35, 36]
+memory: [0, 1, 3, 5, 6, 7, 8, 10, 11, 13]
+Current process info:
+pid=37, access=8/8
+ 
+tick=749, quantum=0, queue=[34, 35, 36]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 10, 11, 13]
+Current process info:
+pid=34, access=13/19
+ACCESS RES: PAGE FAULT
+ 
+tick=750, quantum=1, queue=[34, 35, 36]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 10, 11, 13]
+Current process info:
+pid=34, access=14/19
+ACCESS RES: ACCESS DONE
+ 
+tick=751, quantum=2, queue=[34, 35, 36]
+memory: [0, 1, 2, 3, 5, 6, 7, 8, 10, 11, 13]
+Current process info:
+pid=34, access=15/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 5
+ 
+tick=752, quantum=3, queue=[34, 35, 36, 38]
+memory: [0, 1, 2, 3, 6, 7, 8, 10, 11, 13]
+Current process info:
+pid=34, access=16/19
+ACCESS RES: ACCESS DONE
+ 
+tick=753, quantum=0, queue=[35, 36, 38, 34]
+memory: [0, 1, 2, 3, 6, 7, 8, 10, 11, 13]
+Current process info:
+pid=35, access=13/14
+ACCESS RES: ACCESS DONE
+ 
+tick=754, quantum=1, queue=[35, 36, 38, 34]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 10, 11, 13]
+Current process info:
+pid=35, access=13/14
+ACCESS RES: PAGE FAULT
+ 
+tick=755, quantum=2, queue=[35, 36, 38, 34]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 10, 11, 13]
+Current process info:
+pid=35, access=14/14
+ACCESS RES: ACCESS DONE
+ 
+tick=756, quantum=3, queue=[36, 38, 34]
+memory: [0, 1, 2, 10, 11, 13]
+Current process info:
+pid=35, access=14/14
+ 
+tick=757, quantum=0, queue=[36, 38, 34]
+memory: [0, 1, 2, 10, 11, 13]
+Current process info:
+pid=36, access=13/17
+ACCESS RES: ACCESS DONE
+ 
+tick=758, quantum=1, queue=[36, 38, 34]
+memory: [0, 1, 2, 3, 10, 11, 13]
+Current process info:
+pid=36, access=13/17
+ACCESS RES: PAGE FAULT
+ 
+tick=759, quantum=2, queue=[36, 38, 34]
+memory: [0, 1, 2, 3, 10, 11, 13]
+Current process info:
+pid=36, access=14/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 10
+ 
+tick=760, quantum=3, queue=[36, 38, 34, 39]
+memory: [0, 1, 2, 3, 11, 13]
+Current process info:
+pid=36, access=15/17
+ACCESS RES: ACCESS DONE
+ 
+tick=761, quantum=0, queue=[38, 34, 39, 36]
+memory: [0, 1, 2, 3, 4, 11, 13]
+Current process info:
+pid=38, access=0/14
+ACCESS RES: PAGE FAULT
+ 
+tick=762, quantum=1, queue=[38, 34, 39, 36]
+memory: [0, 1, 2, 3, 4, 11, 13]
+Current process info:
+pid=38, access=1/14
+ACCESS RES: ACCESS DONE
+ 
+tick=763, quantum=2, queue=[38, 34, 39, 36]
+memory: [0, 1, 2, 3, 4, 5, 11, 13]
+Current process info:
+pid=38, access=1/14
+ACCESS RES: PAGE FAULT
+ 
+tick=764, quantum=3, queue=[38, 34, 39, 36]
+memory: [0, 1, 2, 3, 4, 5, 11, 13]
+Current process info:
+pid=38, access=2/14
+ACCESS RES: ACCESS DONE
+ 
+tick=765, quantum=0, queue=[34, 39, 36, 38]
+memory: [0, 1, 2, 3, 4, 5, 11, 13]
+Current process info:
+pid=34, access=17/19
+ACCESS RES: ACCESS DONE
+ 
+tick=766, quantum=1, queue=[34, 39, 36, 38]
+memory: [0, 1, 2, 3, 4, 5, 11, 13]
+Current process info:
+pid=34, access=18/19
+ACCESS RES: ACCESS DONE
+ 
+tick=767, quantum=2, queue=[34, 39, 36, 38]
+memory: [0, 1, 2, 3, 4, 5, 11, 13]
+Current process info:
+pid=34, access=19/19
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+PROCESS COUNT LIMIT REACHED
+ 
+tick=768, quantum=3, queue=[39, 36, 38]
+memory: [0, 1, 3, 4, 5]
+Current process info:
+pid=34, access=19/19
+ 
+tick=769, quantum=0, queue=[39, 36, 38]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=39, access=0/10
+ACCESS RES: PAGE FAULT
+ 
+tick=770, quantum=1, queue=[39, 36, 38]
+memory: [0, 1, 2, 3, 4, 5]
+Current process info:
+pid=39, access=1/10
+ACCESS RES: ACCESS DONE
+ 
+tick=771, quantum=2, queue=[39, 36, 38]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=39, access=1/10
+ACCESS RES: PAGE FAULT
+ 
+tick=772, quantum=3, queue=[39, 36, 38]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=39, access=2/10
+ACCESS RES: ACCESS DONE
+ 
+tick=773, quantum=0, queue=[36, 38, 39]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=36, access=16/17
+ACCESS RES: ACCESS DONE
+ 
+tick=774, quantum=1, queue=[36, 38, 39]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=36, access=17/17
+ACCESS RES: ACCESS DONE
+ 
+tick=775, quantum=2, queue=[38, 39]
+memory: [2, 4, 5, 6]
+Current process info:
+pid=36, access=17/17
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=776, quantum=0, queue=[38, 39, 40]
+memory: [2, 4, 5, 6]
+Current process info:
+pid=38, access=3/14
+ACCESS RES: ACCESS DONE
+ 
+tick=777, quantum=1, queue=[38, 39, 40]
+memory: [0, 2, 4, 5, 6]
+Current process info:
+pid=38, access=3/14
+ACCESS RES: PAGE FAULT
+ 
+tick=778, quantum=2, queue=[38, 39, 40]
+memory: [0, 2, 4, 5, 6]
+Current process info:
+pid=38, access=4/14
+ACCESS RES: ACCESS DONE
+ 
+tick=779, quantum=3, queue=[38, 39, 40]
+memory: [0, 2, 4, 5, 6]
+Current process info:
+pid=38, access=5/14
+ACCESS RES: ACCESS DONE
+ 
+tick=780, quantum=0, queue=[39, 40, 38]
+memory: [0, 1, 2, 4, 5, 6]
+Current process info:
+pid=39, access=2/10
+ACCESS RES: PAGE FAULT
+ 
+tick=781, quantum=1, queue=[39, 40, 38]
+memory: [0, 1, 2, 4, 5, 6]
+Current process info:
+pid=39, access=3/10
+ACCESS RES: ACCESS DONE
+ 
+tick=782, quantum=2, queue=[39, 40, 38]
+memory: [0, 1, 2, 4, 5, 6]
+Current process info:
+pid=39, access=4/10
+ACCESS RES: ACCESS DONE
+ 
+tick=783, quantum=3, queue=[39, 40, 38]
+memory: [0, 1, 2, 4, 5, 6]
+Current process info:
+pid=39, access=5/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 4
+ 
+tick=784, quantum=0, queue=[40, 38, 39, 41]
+memory: [0, 1, 2, 3, 5, 6]
+Current process info:
+pid=40, access=0/8
+ACCESS RES: PAGE FAULT
+ 
+tick=785, quantum=1, queue=[40, 38, 39, 41]
+memory: [0, 1, 2, 3, 5, 6]
+Current process info:
+pid=40, access=1/8
+ACCESS RES: ACCESS DONE
+ 
+tick=786, quantum=2, queue=[40, 38, 39, 41]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=40, access=1/8
+ACCESS RES: PAGE FAULT
+ 
+tick=787, quantum=3, queue=[40, 38, 39, 41]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=40, access=2/8
+ACCESS RES: ACCESS DONE
+ 
+tick=788, quantum=0, queue=[38, 39, 41, 40]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=38, access=6/14
+ACCESS RES: ACCESS DONE
+ 
+tick=789, quantum=1, queue=[38, 39, 41, 40]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=38, access=7/14
+ACCESS RES: ACCESS DONE
+ 
+tick=790, quantum=2, queue=[38, 39, 41, 40]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=38, access=7/14
+ACCESS RES: PAGE FAULT
+ 
+tick=791, quantum=3, queue=[38, 39, 41, 40]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=38, access=8/14
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+PROCESS COUNT LIMIT REACHED
+ 
+tick=792, quantum=0, queue=[39, 41, 40, 38]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=39, access=6/10
+ACCESS RES: ACCESS DONE
+ 
+tick=793, quantum=1, queue=[39, 41, 40, 38]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=39, access=7/10
+ACCESS RES: ACCESS DONE
+ 
+tick=794, quantum=2, queue=[39, 41, 40, 38]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=39, access=8/10
+ACCESS RES: ACCESS DONE
+ 
+tick=795, quantum=3, queue=[39, 41, 40, 38]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=39, access=9/10
+ACCESS RES: ACCESS DONE
+ 
+tick=796, quantum=0, queue=[41, 40, 38, 39]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=41, access=0/10
+ACCESS RES: PAGE FAULT
+ 
+tick=797, quantum=1, queue=[41, 40, 38, 39]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=41, access=1/10
+ACCESS RES: ACCESS DONE
+ 
+tick=798, quantum=2, queue=[41, 40, 38, 39]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=41, access=1/10
+ACCESS RES: PAGE FAULT
+ 
+tick=799, quantum=3, queue=[41, 40, 38, 39]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=41, access=2/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+PROCESS COUNT LIMIT REACHED
+ 
+tick=800, quantum=0, queue=[40, 38, 39, 41]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=40, access=3/8
+ACCESS RES: ACCESS DONE
+ 
+tick=801, quantum=1, queue=[40, 38, 39, 41]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=40, access=3/8
+ACCESS RES: PAGE FAULT
+ 
+tick=802, quantum=2, queue=[40, 38, 39, 41]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=40, access=4/8
+ACCESS RES: ACCESS DONE
+ 
+tick=803, quantum=3, queue=[40, 38, 39, 41]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=40, access=5/8
+ACCESS RES: ACCESS DONE
+ 
+tick=804, quantum=0, queue=[38, 39, 41, 40]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=38, access=9/14
+ACCESS RES: ACCESS DONE
+ 
+tick=805, quantum=1, queue=[38, 39, 41, 40]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=38, access=10/14
+ACCESS RES: ACCESS DONE
+ 
+tick=806, quantum=2, queue=[38, 39, 41, 40]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=38, access=11/14
+ACCESS RES: ACCESS DONE
+ 
+tick=807, quantum=3, queue=[38, 39, 41, 40]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=38, access=11/14
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+REPLACED: 2
+PROCESS COUNT LIMIT REACHED
+ 
+tick=808, quantum=0, queue=[39, 41, 40, 38]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=39, access=9/10
+ACCESS RES: PAGE FAULT
+ 
+tick=809, quantum=1, queue=[39, 41, 40, 38]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=39, access=10/10
+ACCESS RES: ACCESS DONE
+ 
+tick=810, quantum=2, queue=[41, 40, 38]
+memory: [0, 3, 4, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=39, access=10/10
+ 
+tick=811, quantum=0, queue=[41, 40, 38]
+memory: [0, 3, 4, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=41, access=3/10
+ACCESS RES: ACCESS DONE
+ 
+tick=812, quantum=1, queue=[41, 40, 38]
+memory: [0, 1, 3, 4, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=41, access=3/10
+ACCESS RES: PAGE FAULT
+ 
+tick=813, quantum=2, queue=[41, 40, 38]
+memory: [0, 1, 3, 4, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=41, access=4/10
+ACCESS RES: ACCESS DONE
+ 
+tick=814, quantum=3, queue=[41, 40, 38]
+memory: [0, 1, 3, 4, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=41, access=5/10
+ACCESS RES: ACCESS DONE
+ 
+tick=815, quantum=0, queue=[40, 38, 41]
+memory: [0, 1, 3, 4, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=40, access=6/8
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 4
+ 
+tick=816, quantum=1, queue=[40, 38, 41, 42]
+memory: [0, 1, 2, 3, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=40, access=6/8
+ACCESS RES: PAGE FAULT
+ 
+tick=817, quantum=2, queue=[40, 38, 41, 42]
+memory: [0, 1, 2, 3, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=40, access=7/8
+ACCESS RES: ACCESS DONE
+ 
+tick=818, quantum=3, queue=[40, 38, 41, 42]
+memory: [0, 1, 2, 3, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=40, access=8/8
+ACCESS RES: ACCESS DONE
+ 
+tick=819, quantum=0, queue=[38, 41, 42, 40]
+memory: [0, 1, 2, 3, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=38, access=12/14
+ACCESS RES: ACCESS DONE
+ 
+tick=820, quantum=1, queue=[38, 41, 42, 40]
+memory: [0, 1, 2, 3, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=38, access=13/14
+ACCESS RES: ACCESS DONE
+ 
+tick=821, quantum=2, queue=[38, 41, 42, 40]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=38, access=13/14
+ACCESS RES: PAGE FAULT
+ 
+tick=822, quantum=3, queue=[38, 41, 42, 40]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=38, access=14/14
+ACCESS RES: ACCESS DONE
+ 
+tick=823, quantum=0, queue=[41, 42, 40, 38]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=41, access=6/10
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 5
+PROCESS COUNT LIMIT REACHED
+ 
+tick=824, quantum=1, queue=[41, 42, 40, 38]
+memory: [0, 1, 2, 3, 4, 7, 8, 9, 10, 11]
+Current process info:
+pid=41, access=7/10
+ACCESS RES: ACCESS DONE
+ 
+tick=825, quantum=2, queue=[41, 42, 40, 38]
+memory: [0, 1, 2, 3, 4, 7, 8, 9, 10, 11]
+Current process info:
+pid=41, access=8/10
+ACCESS RES: ACCESS DONE
+ 
+tick=826, quantum=3, queue=[41, 42, 40, 38]
+memory: [0, 1, 2, 3, 4, 7, 8, 9, 10, 11]
+Current process info:
+pid=41, access=9/10
+ACCESS RES: ACCESS DONE
+ 
+tick=827, quantum=0, queue=[42, 40, 38, 41]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=42, access=0/15
+ACCESS RES: PAGE FAULT
+ 
+tick=828, quantum=1, queue=[42, 40, 38, 41]
+memory: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11]
+Current process info:
+pid=42, access=1/15
+ACCESS RES: ACCESS DONE
+ 
+tick=829, quantum=2, queue=[42, 40, 38, 41]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=42, access=1/15
+ACCESS RES: PAGE FAULT
+ 
+tick=830, quantum=3, queue=[42, 40, 38, 41]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=42, access=2/15
+ACCESS RES: ACCESS DONE
+ 
+tick=831, quantum=0, queue=[38, 41, 42]
+memory: [0, 1, 4, 5, 6, 7, 8, 9, 11]
+Current process info:
+pid=40, access=8/8
+REPLACING, force = False
+REPLACED: 7
+ 
+tick=832, quantum=0, queue=[41, 42, 43]
+memory: [1, 5, 6, 8, 9]
+Current process info:
+pid=38, access=14/14
+ 
+tick=833, quantum=0, queue=[41, 42, 43]
+memory: [1, 5, 6, 8, 9]
+Current process info:
+pid=41, access=10/10
+ACCESS RES: ACCESS DONE
+ 
+tick=834, quantum=1, queue=[42, 43]
+memory: [5, 6]
+Current process info:
+pid=41, access=10/10
+ 
+tick=835, quantum=0, queue=[42, 43]
+memory: [0, 5, 6]
+Current process info:
+pid=42, access=2/15
+ACCESS RES: PAGE FAULT
+ 
+tick=836, quantum=1, queue=[42, 43]
+memory: [0, 5, 6]
+Current process info:
+pid=42, access=3/15
+ACCESS RES: ACCESS DONE
+ 
+tick=837, quantum=2, queue=[42, 43]
+memory: [0, 5, 6]
+Current process info:
+pid=42, access=4/15
+ACCESS RES: ACCESS DONE
+ 
+tick=838, quantum=3, queue=[42, 43]
+memory: [0, 5, 6]
+Current process info:
+pid=42, access=5/15
+ACCESS RES: ACCESS DONE
+ 
+tick=839, quantum=0, queue=[43, 42]
+memory: [0, 1, 5, 6]
+Current process info:
+pid=43, access=0/11
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=840, quantum=1, queue=[43, 42, 44]
+memory: [0, 1, 5, 6]
+Current process info:
+pid=43, access=1/11
+ACCESS RES: ACCESS DONE
+ 
+tick=841, quantum=2, queue=[43, 42, 44]
+memory: [0, 1, 5, 6]
+Current process info:
+pid=43, access=2/11
+ACCESS RES: ACCESS DONE
+ 
+tick=842, quantum=3, queue=[43, 42, 44]
+memory: [0, 1, 2, 5, 6]
+Current process info:
+pid=43, access=2/11
+ACCESS RES: PAGE FAULT
+ 
+tick=843, quantum=0, queue=[42, 44, 43]
+memory: [0, 1, 2, 5, 6]
+Current process info:
+pid=42, access=6/15
+ACCESS RES: ACCESS DONE
+ 
+tick=844, quantum=1, queue=[42, 44, 43]
+memory: [0, 1, 2, 5, 6]
+Current process info:
+pid=42, access=7/15
+ACCESS RES: ACCESS DONE
+ 
+tick=845, quantum=2, queue=[42, 44, 43]
+memory: [0, 1, 2, 5, 6]
+Current process info:
+pid=42, access=8/15
+ACCESS RES: ACCESS DONE
+ 
+tick=846, quantum=3, queue=[42, 44, 43]
+memory: [0, 1, 2, 3, 5, 6]
+Current process info:
+pid=42, access=8/15
+ACCESS RES: PAGE FAULT
+ 
+tick=847, quantum=0, queue=[44, 43, 42]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=44, access=0/8
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=848, quantum=1, queue=[44, 43, 42, 45]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=44, access=1/8
+ACCESS RES: ACCESS DONE
+ 
+tick=849, quantum=2, queue=[44, 43, 42, 45]
+memory: [0, 1, 2, 3, 4, 5, 6]
+Current process info:
+pid=44, access=2/8
+ACCESS RES: ACCESS DONE
+ 
+tick=850, quantum=3, queue=[44, 43, 42, 45]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=44, access=2/8
+ACCESS RES: PAGE FAULT
+ 
+tick=851, quantum=0, queue=[43, 42, 45, 44]
+memory: [0, 1, 2, 3, 4, 5, 6, 7]
+Current process info:
+pid=43, access=3/11
+ACCESS RES: ACCESS DONE
+ 
+tick=852, quantum=1, queue=[43, 42, 45, 44]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=43, access=3/11
+ACCESS RES: PAGE FAULT
+ 
+tick=853, quantum=2, queue=[43, 42, 45, 44]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=43, access=4/11
+ACCESS RES: ACCESS DONE
+ 
+tick=854, quantum=3, queue=[43, 42, 45, 44]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=43, access=4/11
+ACCESS RES: PAGE FAULT
+ 
+tick=855, quantum=0, queue=[42, 45, 44, 43]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=42, access=9/15
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+NO VICTIM FOUND
+PROCESS COUNT LIMIT REACHED
+ 
+tick=856, quantum=1, queue=[42, 45, 44, 43]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=42, access=10/15
+ACCESS RES: ACCESS DONE
+ 
+tick=857, quantum=2, queue=[42, 45, 44, 43]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=42, access=10/15
+ACCESS RES: PAGE FAULT
+ 
+tick=858, quantum=3, queue=[42, 45, 44, 43]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=42, access=11/15
+ACCESS RES: ACCESS DONE
+ 
+tick=859, quantum=0, queue=[45, 44, 43, 42]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=45, access=0/12
+ACCESS RES: PAGE FAULT
+ 
+tick=860, quantum=1, queue=[45, 44, 43, 42]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=45, access=1/12
+ACCESS RES: ACCESS DONE
+ 
+tick=861, quantum=2, queue=[45, 44, 43, 42]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=45, access=2/12
+ACCESS RES: ACCESS DONE
+ 
+tick=862, quantum=3, queue=[45, 44, 43, 42]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=45, access=2/12
+ACCESS RES: PAGE FAULT
+ 
+tick=863, quantum=0, queue=[44, 43, 42, 45]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=44, access=3/8
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 1
+PROCESS COUNT LIMIT REACHED
+ 
+tick=864, quantum=1, queue=[44, 43, 42, 45]
+memory: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=44, access=4/8
+ACCESS RES: ACCESS DONE
+ 
+tick=865, quantum=2, queue=[44, 43, 42, 45]
+memory: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=44, access=5/8
+ACCESS RES: ACCESS DONE
+ 
+tick=866, quantum=3, queue=[44, 43, 42, 45]
+memory: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=44, access=6/8
+ACCESS RES: ACCESS DONE
+ 
+tick=867, quantum=0, queue=[43, 42, 45, 44]
+memory: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=43, access=5/11
+ACCESS RES: ACCESS DONE
+ 
+tick=868, quantum=1, queue=[43, 42, 45, 44]
+memory: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=43, access=6/11
+ACCESS RES: ACCESS DONE
+ 
+tick=869, quantum=2, queue=[43, 42, 45, 44]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=43, access=6/11
+ACCESS RES: PAGE FAULT
+ 
+tick=870, quantum=3, queue=[43, 42, 45, 44]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=43, access=7/11
+ACCESS RES: ACCESS DONE
+ 
+tick=871, quantum=0, queue=[42, 45, 44, 43]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=42, access=12/15
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 5
+PROCESS COUNT LIMIT REACHED
+ 
+tick=872, quantum=1, queue=[42, 45, 44, 43]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=42, access=13/15
+ACCESS RES: ACCESS DONE
+ 
+tick=873, quantum=2, queue=[42, 45, 44, 43]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=42, access=14/15
+ACCESS RES: ACCESS DONE
+ 
+tick=874, quantum=3, queue=[42, 45, 44, 43]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=42, access=15/15
+ACCESS RES: ACCESS DONE
+ 
+tick=875, quantum=0, queue=[45, 44, 43, 42]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=45, access=3/12
+ACCESS RES: ACCESS DONE
+ 
+tick=876, quantum=1, queue=[45, 44, 43, 42]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=45, access=4/12
+ACCESS RES: ACCESS DONE
+ 
+tick=877, quantum=2, queue=[45, 44, 43, 42]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=45, access=5/12
+ACCESS RES: ACCESS DONE
+ 
+tick=878, quantum=3, queue=[45, 44, 43, 42]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=45, access=6/12
+ACCESS RES: ACCESS DONE
+ 
+tick=879, quantum=0, queue=[44, 43, 42, 45]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=44, access=7/8
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 8
+PROCESS COUNT LIMIT REACHED
+ 
+tick=880, quantum=1, queue=[44, 43, 42, 45]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12]
+Current process info:
+pid=44, access=7/8
+ACCESS RES: PAGE FAULT
+ 
+tick=881, quantum=2, queue=[44, 43, 42, 45]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12]
+Current process info:
+pid=44, access=8/8
+ACCESS RES: ACCESS DONE
+ 
+tick=882, quantum=3, queue=[43, 42, 45]
+memory: [0, 1, 2, 3, 6, 9, 10, 11, 12]
+Current process info:
+pid=44, access=8/8
+ 
+tick=883, quantum=0, queue=[43, 42, 45]
+memory: [0, 1, 2, 3, 6, 9, 10, 11, 12]
+Current process info:
+pid=43, access=8/11
+ACCESS RES: ACCESS DONE
+ 
+tick=884, quantum=1, queue=[43, 42, 45]
+memory: [0, 1, 2, 3, 6, 9, 10, 11, 12]
+Current process info:
+pid=43, access=9/11
+ACCESS RES: ACCESS DONE
+ 
+tick=885, quantum=2, queue=[43, 42, 45]
+memory: [0, 1, 2, 3, 6, 9, 10, 11, 12]
+Current process info:
+pid=43, access=10/11
+ACCESS RES: ACCESS DONE
+ 
+tick=886, quantum=3, queue=[43, 42, 45]
+memory: [0, 1, 2, 3, 6, 9, 10, 11, 12]
+Current process info:
+pid=43, access=11/11
+ACCESS RES: ACCESS DONE
+ 
+tick=887, quantum=0, queue=[45, 43]
+memory: [1, 2, 9, 11, 12]
+Current process info:
+pid=42, access=15/15
+REPLACING, force = False
+REPLACED: 11
+ 
+tick=888, quantum=0, queue=[45, 43, 46]
+memory: [0, 1, 2, 9, 12]
+Current process info:
+pid=45, access=6/12
+ACCESS RES: PAGE FAULT
+ 
+tick=889, quantum=1, queue=[45, 43, 46]
+memory: [0, 1, 2, 9, 12]
+Current process info:
+pid=45, access=7/12
+ACCESS RES: ACCESS DONE
+ 
+tick=890, quantum=2, queue=[45, 43, 46]
+memory: [0, 1, 2, 3, 9, 12]
+Current process info:
+pid=45, access=7/12
+ACCESS RES: PAGE FAULT
+ 
+tick=891, quantum=3, queue=[45, 43, 46]
+memory: [0, 1, 2, 3, 9, 12]
+Current process info:
+pid=45, access=8/12
+ACCESS RES: ACCESS DONE
+ 
+tick=892, quantum=0, queue=[46, 45]
+memory: [0, 3, 12]
+Current process info:
+pid=43, access=11/11
+ 
+tick=893, quantum=0, queue=[46, 45]
+memory: [0, 1, 3, 12]
+Current process info:
+pid=46, access=0/10
+ACCESS RES: PAGE FAULT
+ 
+tick=894, quantum=1, queue=[46, 45]
+memory: [0, 1, 3, 12]
+Current process info:
+pid=46, access=1/10
+ACCESS RES: ACCESS DONE
+ 
+tick=895, quantum=2, queue=[46, 45]
+memory: [0, 1, 2, 3, 12]
+Current process info:
+pid=46, access=1/10
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=896, quantum=3, queue=[46, 45, 47]
+memory: [0, 1, 2, 3, 12]
+Current process info:
+pid=46, access=2/10
+ACCESS RES: ACCESS DONE
+ 
+tick=897, quantum=0, queue=[45, 47, 46]
+memory: [0, 1, 2, 3, 12]
+Current process info:
+pid=45, access=9/12
+ACCESS RES: ACCESS DONE
+ 
+tick=898, quantum=1, queue=[45, 47, 46]
+memory: [0, 1, 2, 3, 12]
+Current process info:
+pid=45, access=10/12
+ACCESS RES: ACCESS DONE
+ 
+tick=899, quantum=2, queue=[45, 47, 46]
+memory: [0, 1, 2, 3, 4, 12]
+Current process info:
+pid=45, access=10/12
+ACCESS RES: PAGE FAULT
+ 
+tick=900, quantum=3, queue=[45, 47, 46]
+memory: [0, 1, 2, 3, 4, 12]
+Current process info:
+pid=45, access=11/12
+ACCESS RES: ACCESS DONE
+ 
+tick=901, quantum=0, queue=[47, 46, 45]
+memory: [0, 1, 2, 3, 4, 5, 12]
+Current process info:
+pid=47, access=0/13
+ACCESS RES: PAGE FAULT
+ 
+tick=902, quantum=1, queue=[47, 46, 45]
+memory: [0, 1, 2, 3, 4, 5, 12]
+Current process info:
+pid=47, access=1/13
+ACCESS RES: ACCESS DONE
+ 
+tick=903, quantum=2, queue=[47, 46, 45]
+memory: [0, 1, 2, 3, 4, 5, 6, 12]
+Current process info:
+pid=47, access=1/13
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=904, quantum=3, queue=[47, 46, 45, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 12]
+Current process info:
+pid=47, access=2/13
+ACCESS RES: ACCESS DONE
+ 
+tick=905, quantum=0, queue=[46, 45, 48, 47]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 12]
+Current process info:
+pid=46, access=2/10
+ACCESS RES: PAGE FAULT
+ 
+tick=906, quantum=1, queue=[46, 45, 48, 47]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 12]
+Current process info:
+pid=46, access=3/10
+ACCESS RES: ACCESS DONE
+ 
+tick=907, quantum=2, queue=[46, 45, 48, 47]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 12]
+Current process info:
+pid=46, access=3/10
+ACCESS RES: PAGE FAULT
+ 
+tick=908, quantum=3, queue=[46, 45, 48, 47]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 12]
+Current process info:
+pid=46, access=4/10
+ACCESS RES: ACCESS DONE
+ 
+tick=909, quantum=0, queue=[45, 48, 47, 46]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12]
+Current process info:
+pid=45, access=11/12
+ACCESS RES: PAGE FAULT
+ 
+tick=910, quantum=1, queue=[45, 48, 47, 46]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12]
+Current process info:
+pid=45, access=12/12
+ACCESS RES: ACCESS DONE
+ 
+tick=911, quantum=2, queue=[48, 47, 46]
+memory: [1, 2, 5, 6, 7, 8]
+Current process info:
+pid=45, access=12/12
+REPLACING, force = False
+NO VICTIM FOUND
+ 
+tick=912, quantum=0, queue=[48, 47, 46, 49]
+memory: [0, 1, 2, 5, 6, 7, 8]
+Current process info:
+pid=48, access=0/17
+ACCESS RES: PAGE FAULT
+ 
+tick=913, quantum=1, queue=[48, 47, 46, 49]
+memory: [0, 1, 2, 5, 6, 7, 8]
+Current process info:
+pid=48, access=1/17
+ACCESS RES: ACCESS DONE
+ 
+tick=914, quantum=2, queue=[48, 47, 46, 49]
+memory: [0, 1, 2, 5, 6, 7, 8]
+Current process info:
+pid=48, access=2/17
+ACCESS RES: ACCESS DONE
+ 
+tick=915, quantum=3, queue=[48, 47, 46, 49]
+memory: [0, 1, 2, 3, 5, 6, 7, 8]
+Current process info:
+pid=48, access=2/17
+ACCESS RES: PAGE FAULT
+ 
+tick=916, quantum=0, queue=[47, 46, 49, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=47, access=2/13
+ACCESS RES: PAGE FAULT
+ 
+tick=917, quantum=1, queue=[47, 46, 49, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Current process info:
+pid=47, access=3/13
+ACCESS RES: ACCESS DONE
+ 
+tick=918, quantum=2, queue=[47, 46, 49, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=47, access=3/13
+ACCESS RES: PAGE FAULT
+ 
+tick=919, quantum=3, queue=[47, 46, 49, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=47, access=4/13
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 1
+PROCESS COUNT LIMIT REACHED
+ 
+tick=920, quantum=0, queue=[46, 49, 48, 47]
+memory: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=46, access=5/10
+ACCESS RES: ACCESS DONE
+ 
+tick=921, quantum=1, queue=[46, 49, 48, 47]
+memory: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=46, access=6/10
+ACCESS RES: ACCESS DONE
+ 
+tick=922, quantum=2, queue=[46, 49, 48, 47]
+memory: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=46, access=7/10
+ACCESS RES: ACCESS DONE
+ 
+tick=923, quantum=3, queue=[46, 49, 48, 47]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Current process info:
+pid=46, access=7/10
+ACCESS RES: PAGE FAULT
+ 
+tick=924, quantum=0, queue=[49, 48, 47, 46]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=49, access=0/17
+ACCESS RES: PAGE FAULT
+ 
+tick=925, quantum=1, queue=[49, 48, 47, 46]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Current process info:
+pid=49, access=1/17
+ACCESS RES: ACCESS DONE
+ 
+tick=926, quantum=2, queue=[49, 48, 47, 46]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=49, access=1/17
+ACCESS RES: PAGE FAULT
+ 
+tick=927, quantum=3, queue=[49, 48, 47, 46]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=49, access=2/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 5
+PROCESS COUNT LIMIT REACHED
+ 
+tick=928, quantum=0, queue=[48, 47, 46, 49]
+memory: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=48, access=3/17
+ACCESS RES: ACCESS DONE
+ 
+tick=929, quantum=1, queue=[48, 47, 46, 49]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=48, access=3/17
+ACCESS RES: PAGE FAULT
+ 
+tick=930, quantum=2, queue=[48, 47, 46, 49]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=48, access=4/17
+ACCESS RES: ACCESS DONE
+ 
+tick=931, quantum=3, queue=[48, 47, 46, 49]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=48, access=5/17
+ACCESS RES: ACCESS DONE
+ 
+tick=932, quantum=0, queue=[47, 46, 49, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=47, access=5/13
+ACCESS RES: ACCESS DONE
+ 
+tick=933, quantum=1, queue=[47, 46, 49, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=47, access=6/13
+ACCESS RES: ACCESS DONE
+ 
+tick=934, quantum=2, queue=[47, 46, 49, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=47, access=7/13
+ACCESS RES: ACCESS DONE
+ 
+tick=935, quantum=3, queue=[47, 46, 49, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=47, access=8/13
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 7
+PROCESS COUNT LIMIT REACHED
+ 
+tick=936, quantum=0, queue=[46, 49, 48, 47]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11]
+Current process info:
+pid=46, access=8/10
+ACCESS RES: ACCESS DONE
+ 
+tick=937, quantum=1, queue=[46, 49, 48, 47]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=46, access=8/10
+ACCESS RES: PAGE FAULT
+ 
+tick=938, quantum=2, queue=[46, 49, 48, 47]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=46, access=9/10
+ACCESS RES: ACCESS DONE
+ 
+tick=939, quantum=3, queue=[46, 49, 48, 47]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=46, access=10/10
+ACCESS RES: ACCESS DONE
+ 
+tick=940, quantum=0, queue=[49, 48, 47, 46]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=49, access=3/17
+ACCESS RES: ACCESS DONE
+ 
+tick=941, quantum=1, queue=[49, 48, 47, 46]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=49, access=4/17
+ACCESS RES: ACCESS DONE
+ 
+tick=942, quantum=2, queue=[49, 48, 47, 46]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=49, access=5/17
+ACCESS RES: ACCESS DONE
+ 
+tick=943, quantum=3, queue=[49, 48, 47, 46]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=49, access=6/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 8
+PROCESS COUNT LIMIT REACHED
+ 
+tick=944, quantum=0, queue=[48, 47, 46, 49]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11]
+Current process info:
+pid=48, access=6/17
+ACCESS RES: ACCESS DONE
+ 
+tick=945, quantum=1, queue=[48, 47, 46, 49]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11]
+Current process info:
+pid=48, access=7/17
+ACCESS RES: ACCESS DONE
+ 
+tick=946, quantum=2, queue=[48, 47, 46, 49]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11]
+Current process info:
+pid=48, access=8/17
+ACCESS RES: ACCESS DONE
+ 
+tick=947, quantum=3, queue=[48, 47, 46, 49]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11]
+Current process info:
+pid=48, access=9/17
+ACCESS RES: ACCESS DONE
+ 
+tick=948, quantum=0, queue=[47, 46, 49, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11]
+Current process info:
+pid=47, access=9/13
+ACCESS RES: ACCESS DONE
+ 
+tick=949, quantum=1, queue=[47, 46, 49, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=47, access=9/13
+ACCESS RES: PAGE FAULT
+ 
+tick=950, quantum=2, queue=[47, 46, 49, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=47, access=10/13
+ACCESS RES: ACCESS DONE
+ 
+tick=951, quantum=3, queue=[47, 46, 49, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=47, access=11/13
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 9
+PROCESS COUNT LIMIT REACHED
+ 
+tick=952, quantum=0, queue=[49, 48, 47]
+memory: [0, 3, 4, 5, 6, 8, 10, 11]
+Current process info:
+pid=46, access=10/10
+ 
+tick=953, quantum=0, queue=[49, 48, 47]
+memory: [0, 3, 4, 5, 6, 8, 10, 11]
+Current process info:
+pid=49, access=7/17
+ACCESS RES: ACCESS DONE
+ 
+tick=954, quantum=1, queue=[49, 48, 47]
+memory: [0, 3, 4, 5, 6, 8, 10, 11]
+Current process info:
+pid=49, access=8/17
+ACCESS RES: ACCESS DONE
+ 
+tick=955, quantum=2, queue=[49, 48, 47]
+memory: [0, 3, 4, 5, 6, 8, 10, 11]
+Current process info:
+pid=49, access=9/17
+ACCESS RES: ACCESS DONE
+ 
+tick=956, quantum=3, queue=[49, 48, 47]
+memory: [0, 1, 3, 4, 5, 6, 8, 10, 11]
+Current process info:
+pid=49, access=9/17
+ACCESS RES: PAGE FAULT
+ 
+tick=957, quantum=0, queue=[48, 47, 49]
+memory: [0, 1, 3, 4, 5, 6, 8, 10, 11]
+Current process info:
+pid=48, access=10/17
+ACCESS RES: ACCESS DONE
+ 
+tick=958, quantum=1, queue=[48, 47, 49]
+memory: [0, 1, 3, 4, 5, 6, 8, 10, 11]
+Current process info:
+pid=48, access=11/17
+ACCESS RES: ACCESS DONE
+ 
+tick=959, quantum=2, queue=[48, 47, 49]
+memory: [0, 1, 2, 3, 4, 5, 6, 8, 10, 11]
+Current process info:
+pid=48, access=11/17
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+REPLACED: 0
+ 
+tick=960, quantum=3, queue=[48, 47, 49, 50]
+memory: [1, 2, 3, 4, 5, 6, 8, 10, 11]
+Current process info:
+pid=48, access=12/17
+ACCESS RES: ACCESS DONE
+ 
+tick=961, quantum=0, queue=[47, 49, 50, 48]
+memory: [1, 2, 3, 4, 5, 6, 8, 10, 11]
+Current process info:
+pid=47, access=12/13
+ACCESS RES: ACCESS DONE
+ 
+tick=962, quantum=1, queue=[47, 49, 50, 48]
+memory: [1, 2, 3, 4, 5, 6, 8, 10, 11]
+Current process info:
+pid=47, access=13/13
+ACCESS RES: ACCESS DONE
+ 
+tick=963, quantum=2, queue=[49, 50, 48]
+memory: [1, 2, 3, 5, 10, 11]
+Current process info:
+pid=47, access=13/13
+ 
+tick=964, quantum=0, queue=[49, 50, 48]
+memory: [1, 2, 3, 5, 10, 11]
+Current process info:
+pid=49, access=10/17
+ACCESS RES: ACCESS DONE
+ 
+tick=965, quantum=1, queue=[49, 50, 48]
+memory: [1, 2, 3, 5, 10, 11]
+Current process info:
+pid=49, access=11/17
+ACCESS RES: ACCESS DONE
+ 
+tick=966, quantum=2, queue=[49, 50, 48]
+memory: [0, 1, 2, 3, 5, 10, 11]
+Current process info:
+pid=49, access=11/17
+ACCESS RES: PAGE FAULT
+ 
+tick=967, quantum=3, queue=[49, 50, 48]
+memory: [0, 1, 2, 3, 5, 10, 11]
+Current process info:
+pid=49, access=12/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 5
+ 
+tick=968, quantum=0, queue=[50, 48, 49, 51]
+memory: [0, 1, 2, 3, 4, 10, 11]
+Current process info:
+pid=50, access=0/11
+ACCESS RES: PAGE FAULT
+ 
+tick=969, quantum=1, queue=[50, 48, 49, 51]
+memory: [0, 1, 2, 3, 4, 10, 11]
+Current process info:
+pid=50, access=1/11
+ACCESS RES: ACCESS DONE
+ 
+tick=970, quantum=2, queue=[50, 48, 49, 51]
+memory: [0, 1, 2, 3, 4, 10, 11]
+Current process info:
+pid=50, access=2/11
+ACCESS RES: ACCESS DONE
+ 
+tick=971, quantum=3, queue=[50, 48, 49, 51]
+memory: [0, 1, 2, 3, 4, 5, 10, 11]
+Current process info:
+pid=50, access=2/11
+ACCESS RES: PAGE FAULT
+ 
+tick=972, quantum=0, queue=[48, 49, 51, 50]
+memory: [0, 1, 2, 3, 4, 5, 6, 10, 11]
+Current process info:
+pid=48, access=12/17
+ACCESS RES: PAGE FAULT
+ 
+tick=973, quantum=1, queue=[48, 49, 51, 50]
+memory: [0, 1, 2, 3, 4, 5, 6, 10, 11]
+Current process info:
+pid=48, access=13/17
+ACCESS RES: ACCESS DONE
+ 
+tick=974, quantum=2, queue=[48, 49, 51, 50]
+memory: [0, 1, 2, 3, 4, 5, 6, 10, 11]
+Current process info:
+pid=48, access=14/17
+ACCESS RES: ACCESS DONE
+ 
+tick=975, quantum=3, queue=[48, 49, 51, 50]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 10, 11]
+Current process info:
+pid=48, access=14/17
+ACCESS RES: PAGE FAULT
+REPLACING, force = False
+REPLACED: 10
+PROCESS COUNT LIMIT REACHED
+ 
+tick=976, quantum=0, queue=[49, 51, 50, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 11]
+Current process info:
+pid=49, access=12/17
+ACCESS RES: PAGE FAULT
+ 
+tick=977, quantum=1, queue=[49, 51, 50, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 11]
+Current process info:
+pid=49, access=13/17
+ACCESS RES: ACCESS DONE
+ 
+tick=978, quantum=2, queue=[49, 51, 50, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 11]
+Current process info:
+pid=49, access=14/17
+ACCESS RES: ACCESS DONE
+ 
+tick=979, quantum=3, queue=[49, 51, 50, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 11]
+Current process info:
+pid=49, access=15/17
+ACCESS RES: ACCESS DONE
+ 
+tick=980, quantum=0, queue=[51, 50, 48, 49]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+Current process info:
+pid=51, access=0/18
+ACCESS RES: PAGE FAULT
+ 
+tick=981, quantum=1, queue=[51, 50, 48, 49]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+Current process info:
+pid=51, access=1/18
+ACCESS RES: ACCESS DONE
+ 
+tick=982, quantum=2, queue=[51, 50, 48, 49]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=51, access=1/18
+ACCESS RES: PAGE FAULT
+ 
+tick=983, quantum=3, queue=[51, 50, 48, 49]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=51, access=2/18
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 3
+PROCESS COUNT LIMIT REACHED
+ 
+tick=984, quantum=0, queue=[50, 48, 49, 51]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=50, access=3/11
+ACCESS RES: ACCESS DONE
+ 
+tick=985, quantum=1, queue=[50, 48, 49, 51]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=50, access=4/11
+ACCESS RES: ACCESS DONE
+ 
+tick=986, quantum=2, queue=[50, 48, 49, 51]
+memory: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=50, access=5/11
+ACCESS RES: ACCESS DONE
+ 
+tick=987, quantum=3, queue=[50, 48, 49, 51]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=50, access=5/11
+ACCESS RES: PAGE FAULT
+ 
+tick=988, quantum=0, queue=[48, 49, 51, 50]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Current process info:
+pid=48, access=15/17
+ACCESS RES: ACCESS DONE
+ 
+tick=989, quantum=1, queue=[48, 49, 51, 50]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=48, access=15/17
+ACCESS RES: PAGE FAULT
+ 
+tick=990, quantum=2, queue=[48, 49, 51, 50]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=48, access=16/17
+ACCESS RES: ACCESS DONE
+ 
+tick=991, quantum=3, queue=[48, 49, 51, 50]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Current process info:
+pid=48, access=17/17
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 11
+PROCESS COUNT LIMIT REACHED
+ 
+tick=992, quantum=0, queue=[49, 51, 50, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+Current process info:
+pid=49, access=16/17
+ACCESS RES: ACCESS DONE
+ 
+tick=993, quantum=1, queue=[49, 51, 50, 48]
+memory: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+Current process info:
+pid=49, access=17/17
+ACCESS RES: ACCESS DONE
+ 
+tick=994, quantum=2, queue=[51, 50, 48]
+memory: [2, 3, 4, 5, 6, 7, 9, 10, 12]
+Current process info:
+pid=49, access=17/17
+ 
+tick=995, quantum=0, queue=[51, 50, 48]
+memory: [2, 3, 4, 5, 6, 7, 9, 10, 12]
+Current process info:
+pid=51, access=3/18
+ACCESS RES: ACCESS DONE
+ 
+tick=996, quantum=1, queue=[51, 50, 48]
+memory: [2, 3, 4, 5, 6, 7, 9, 10, 12]
+Current process info:
+pid=51, access=4/18
+ACCESS RES: ACCESS DONE
+ 
+tick=997, quantum=2, queue=[51, 50, 48]
+memory: [2, 3, 4, 5, 6, 7, 9, 10, 12]
+Current process info:
+pid=51, access=5/18
+ACCESS RES: ACCESS DONE
+ 
+tick=998, quantum=3, queue=[51, 50, 48]
+memory: [2, 3, 4, 5, 6, 7, 9, 10, 12]
+Current process info:
+pid=51, access=6/18
+ACCESS RES: ACCESS DONE
+ 
+tick=999, quantum=0, queue=[50, 48, 51]
+memory: [2, 3, 4, 5, 6, 7, 9, 10, 12]
+Current process info:
+pid=50, access=6/11
+ACCESS RES: ACCESS DONE
+REPLACING, force = False
+REPLACED: 2
+work time (1000) expired
