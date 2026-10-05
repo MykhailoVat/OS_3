@@ -1,27 +1,34 @@
-# ---------------
 # USED IN MAIN.PY
 # ---------------
 # memory info
 MEMORY_SIZE = 64
 PAGE_SIZE = FRAME_SIZE = 4
 
+WORK_TIME = 1000
+
 # -----------------
 # USED IN KERNEL.PY
 # -----------------
+# if random algorithm
+RAND = True
+# run delay
+DELAY = 0
+
+
 # accesses in processes
-MIN_ACCESSES = 5
-MAX_ACCESSES = 15
+MIN_ACCESSES = 8
+MAX_ACCESSES = 20
 
 # limit of active processes
 MAX_PROCS = 4
 
 # replacement interval
-REPLACE_INTERVAL = 6
+REPLACE_INTERVAL = 8
 # reset "R" interval
-RESET_INTERVAL = 3
+RESET_INTERVAL = 4
 
 # DELTA for WSClock algorithm
-DELTA = 5
+DELTA = 20
 
 # interval of spawning new process attempt
 SPAWN_INTERVAL = 8
@@ -35,7 +42,7 @@ QUANTUM_SIZE = 4
 # USED IN PROCESS
 # ---------------
 # interval of ws update
-WS_UPD_INTERVAL = 4
+WS_UPD_INTERVAL = 10
 
 # Number of ws entries
 WS_ENTRIES = 3

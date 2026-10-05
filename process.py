@@ -31,8 +31,6 @@ class Process:
                 self.page_size
             )
 
-            print(f"PID={self.pid}: working set -> {self.working_set.get_entries()}")
-
         return self.current_access
 
     def point_next(self):
@@ -41,6 +39,8 @@ class Process:
 
         if self.access_count % opt.consts.WS_UPD_INTERVAL == 0:
             self.working_set.update()
+
+        return True
 
     def get_name(self):
         return self.name

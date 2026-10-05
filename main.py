@@ -15,7 +15,7 @@ def run_system():
 
     kernel = Kernel(mmu, fs, memory)
 
-    kernel.run()
+    kernel.run(opt.consts.WORK_TIME)
 
 if __name__ == "__main__":
     run_system()

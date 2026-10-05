@@ -48,9 +48,6 @@ class PhysicalMemory(metaclass=Singleton):
         frame = self.frame_list[frame_id]
         frame.insert_data(data)
 
-        #print
-        print(frame.data)
-
     def find_free_frame(self):
         for i in range(self.frame_count):
             if self.metadata[i] is None:

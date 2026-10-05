@@ -41,9 +41,9 @@ class Kernel(metaclass=Singleton):
         self.fs_data = self.fs.data
         self.page_size = self.mmu.page_size
 
+    def run(self, time):
+        for _ in range(time):
 
-    def run(self):
-        while True:
             if self.tick % opt.consts.SPAWN_INTERVAL == 0:
                 self.s_attempt_spawn(
                     opt.consts.MIN_ACCESSES,
@@ -54,34 +54,34 @@ class Kernel(metaclass=Singleton):
 
             if not self.queue:
                 print("NO PROCESS TO DO")
+                self.report()
                 self.tick += 1
                 continue
-
-            print(
-                f"tick={self.tick}, "
-                f"quantum={self.quantum_tick}, "
-                f"queue={[p.pid for p in self.queue]}"
-            )
 
             access_res = self.access_sequence()
 
             if access_res == SequenceResult.PROCESS_FINISHED:
                 self.s_finish_process()
+                self.report()
                 self.quantum_tick = 0
-                self.tick += 1
 
             elif access_res == SequenceResult.PAGE_FAULT:
-                self.tick += 1
+                self.report()
+                print("ACCESS RES: PAGE FAULT")
                 self.quantum_tick += 1
 
             elif access_res == SequenceResult.ACCESS_DONE:
-                self.tick += 1
+                self.report()
+                print("ACCESS RES: ACCESS DONE")
                 self.quantum_tick += 1
 
             elif access_res == SequenceResult.NO_MEMORY:
-                self.s_replace()
-                self.tick += 1
+                self.report()
+                print("ACCESS RES: NO MEMORY")
+                self.s_replace(force = True)
                 self.quantum_tick += 1
+
+            self.tick += 1
 
             if self.quantum_tick >= opt.consts.QUANTUM_SIZE:
                 if len(self.queue) >= 2:
@@ -92,9 +92,27 @@ class Kernel(metaclass=Singleton):
                 self.s_reset_references()
 
             if self.tick % opt.consts.REPLACE_INTERVAL == 0:
-                self.s_replace()
+                self.s_replace(force = False)
 
-            sleep(1)
+            sleep(opt.consts.DELAY)
+
+        print(f"work time ({time}) expired")
+
+    def report(self):
+        print(" ")
+        print(
+            f"tick={self.tick}, "
+            f"quantum={self.quantum_tick}, "
+            f"queue={[p.pid for p in self.queue]}"
+        )
+        print(f"memory: {self.memory.m_get_active_frames()}")
+        if self.current_process is not None:
+            print(
+                "Current process info:\n"
+                f"pid={self.current_process.get_pid()}, "
+                f"access={self.current_process.access_count}/"
+                f"{self.current_process.access_number}"
+            )
 
     def access_sequence(self):
         self.current_process = self.queue[0]
@@ -121,18 +139,9 @@ class Kernel(metaclass=Singleton):
                 self.current_process.page_set_r(v_page, True)
                 self.current_process.page_set_m(v_page, True)
 
-            # print(f'process_name: {self.current_process.name}')
-            # print(f'PID: {self.current_process.pid}')
-            # print(f'v_address: {v_address}')
-            # print(f'p_address: {frame_id} + {offset}')
-            # print(f'operation: {access.operation}')
-            # print(data)
-            # print(" ")
+            self.current_process.point_next()
 
-            if self.current_process.point_next():
-                return SequenceResult.ACCESS_DONE
-            else:
-                return SequenceResult.NO_MEMORY
+            return SequenceResult.ACCESS_DONE
 
         except PageFault as fault:
             self.handle_page_fault(fault.v_page)
@@ -151,9 +160,6 @@ class Kernel(metaclass=Singleton):
 
         if data is None:
             data = self.fs.read_data(name, offset, page_size)
-            print("read from file")
-        else:
-            print("read saved")
 
         frame_id = self.memory.find_free_frame()
 
@@ -216,19 +222,32 @@ class Kernel(metaclass=Singleton):
         for frame_id in active:
             self.memory.m_set_bit(frame_id, "R", False)
 
+    def s_replace(self, force):
+        print(f"REPLACING, force = {force}")
 
-    def s_replace(self):
-        victim_id = self.s_wsclock()
-        # for random:
-        # victim_id = None
-
-        if victim_id is None:
+        if opt.consts.RAND:
             active = self.memory.m_get_active_frames()
 
             if not active:
                 return
 
             victim_id = random.choice(active)
+        else:
+            victim_id = self.s_wsclock()
+
+            if victim_id is None:
+                if force:
+                    print("NO VICTIM FOUND, CHOOSING RANDOMLY")
+
+                    active = self.memory.m_get_active_frames()
+
+                    if not active:
+                        return
+
+                    victim_id = random.choice(active)
+                else:
+                    print("NO VICTIM FOUND")
+                    return
 
         if self.memory.m_get_bit(victim_id, "M"):
             data = self.memory.get_frame_content(victim_id)
@@ -239,6 +258,7 @@ class Kernel(metaclass=Singleton):
             )
 
         self.memory.free_frame(victim_id)
+        print(f"REPLACED: {victim_id}")
 
     def s_wsclock(self):
         metadata = self.memory.get_metadata()
@@ -255,13 +275,5 @@ class Kernel(metaclass=Singleton):
                         if active_time > opt.consts.DELTA:
                             self.clock_pointer = (frame_id + 1) % frame_count
                             return frame_id
-
-            self.clock_pointer = (frame_id + 1) % frame_count
+            frame_id = (frame_id + 1) % frame_count
         return None
-
-
-
-
-
-
-
